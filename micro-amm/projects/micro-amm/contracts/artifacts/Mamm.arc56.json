@@ -14,6 +14,62 @@
         ],
         "call": []
       }
+    },
+    {
+      "name": "initApplication",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "primaryAssetId",
+          "type": "uint64"
+        },
+        {
+          "name": "secondaryAssetId",
+          "type": "uint64"
+        },
+        {
+          "name": "lpAssetName",
+          "type": "string"
+        },
+        {
+          "name": "lpAssetURL",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "addLiquidity",
+      "args": [
+        {
+          "name": "primaryAmount",
+          "type": "uint64"
+        },
+        {
+          "name": "secondaryAmount",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
     }
   ],
   "arcs": [
@@ -24,8 +80,8 @@
   "state": {
     "schema": {
       "global": {
-        "bytes": 0,
-        "ints": 0
+        "bytes": 4,
+        "ints": 10
       },
       "local": {
         "bytes": 0,
@@ -33,7 +89,78 @@
       }
     },
     "keys": {
-      "global": {},
+      "global": {
+        "primary_token_reserve": {
+          "key": "cHRy",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "secondary_token_reserve": {
+          "key": "c3Ry",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "primary_token_id": {
+          "key": "cHRp",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "secondary_token_id": {
+          "key": "c3Rp",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "total_lp_supply": {
+          "key": "dGxwcw==",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "k_value": {
+          "key": "aw==",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "lp_token_id": {
+          "key": "bHA=",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "lp_token_name": {
+          "key": "bHBu",
+          "keyType": "AVMBytes",
+          "valueType": "string"
+        },
+        "lp_token_symbol": {
+          "key": "bHBz",
+          "keyType": "AVMBytes",
+          "valueType": "string"
+        },
+        "lp_token_decimals": {
+          "key": "bHBk",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "lp_token_url": {
+          "key": "bHB1",
+          "keyType": "AVMBytes",
+          "valueType": "string"
+        },
+        "admin": {
+          "key": "YWRtaW4=",
+          "keyType": "AVMBytes",
+          "valueType": "address"
+        },
+        "minimum_balance": {
+          "key": "bWluYmFs",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        },
+        "contract_version": {
+          "key": "dmVyc2lvbg==",
+          "keyType": "AVMBytes",
+          "valueType": "uint64"
+        }
+      },
       "local": {},
       "box": {}
     },
@@ -52,59 +179,29 @@
       "sourceInfo": [
         {
           "teal": 1,
-          "source": "contracts/Mamm.algo.ts:5",
+          "source": "contracts/Mamm.algo.ts:6",
           "pc": [
             0
           ]
         },
         {
-          "teal": 13,
-          "source": "contracts/Mamm.algo.ts:5",
+          "teal": 2,
+          "source": "contracts/Mamm.algo.ts:6",
           "pc": [
             1,
-            2
-          ]
-        },
-        {
-          "teal": 14,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
-            3
-          ]
-        },
-        {
-          "teal": 15,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
+            2,
+            3,
             4,
-            5
-          ]
-        },
-        {
-          "teal": 16,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
-            6
-          ]
-        },
-        {
-          "teal": 17,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
+            5,
+            6,
             7,
-            8
-          ]
-        },
-        {
-          "teal": 18,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
+            8,
             9
           ]
         },
         {
-          "teal": 19,
-          "source": "contracts/Mamm.algo.ts:5",
+          "teal": 3,
+          "source": "contracts/Mamm.algo.ts:6",
           "pc": [
             10,
             11,
@@ -131,69 +228,2083 @@
             32,
             33,
             34,
-            35
-          ]
-        },
-        {
-          "teal": 23,
-          "source": "contracts/Mamm.algo.ts:5",
-          "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
-          "pc": [
-            36
-          ]
-        },
-        {
-          "teal": 26,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
+            35,
+            36,
             37,
-            38
-          ]
-        },
-        {
-          "teal": 27,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
-            39
-          ]
-        },
-        {
-          "teal": 30,
-          "source": "contracts/Mamm.algo.ts:5",
-          "pc": [
+            38,
+            39,
             40,
             41,
             42,
             43,
             44,
-            45
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ]
+        },
+        {
+          "teal": 15,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            61,
+            62
+          ]
+        },
+        {
+          "teal": 16,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            63
+          ]
+        },
+        {
+          "teal": 17,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            64,
+            65
+          ]
+        },
+        {
+          "teal": 18,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            66
+          ]
+        },
+        {
+          "teal": 19,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            67,
+            68
+          ]
+        },
+        {
+          "teal": 20,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            69
+          ]
+        },
+        {
+          "teal": 21,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95
+          ]
+        },
+        {
+          "teal": 25,
+          "source": "contracts/Mamm.algo.ts:6",
+          "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
+          "pc": [
+            96
+          ]
+        },
+        {
+          "teal": 30,
+          "source": "contracts/Mamm.algo.ts:38",
+          "pc": [
+            97,
+            98,
+            99
           ]
         },
         {
           "teal": 31,
-          "source": "contracts/Mamm.algo.ts:5",
+          "source": "contracts/Mamm.algo.ts:38",
           "pc": [
-            46,
-            47,
-            48
+            100
           ]
         },
         {
           "teal": 32,
-          "source": "contracts/Mamm.algo.ts:5",
+          "source": "contracts/Mamm.algo.ts:38",
           "pc": [
-            49,
-            50,
-            51,
-            52
+            101
           ]
         },
         {
-          "teal": 35,
-          "source": "contracts/Mamm.algo.ts:5",
+          "teal": 36,
+          "source": "contracts/Mamm.algo.ts:38",
+          "pc": [
+            102,
+            103,
+            104
+          ]
+        },
+        {
+          "teal": 40,
+          "source": "contracts/Mamm.algo.ts:39",
+          "pc": [
+            105,
+            106
+          ]
+        },
+        {
+          "teal": 41,
+          "source": "contracts/Mamm.algo.ts:39",
+          "pc": [
+            107,
+            108
+          ]
+        },
+        {
+          "teal": 42,
+          "source": "contracts/Mamm.algo.ts:39",
+          "pc": [
+            109
+          ]
+        },
+        {
+          "teal": 43,
+          "source": "contracts/Mamm.algo.ts:38",
+          "pc": [
+            110
+          ]
+        },
+        {
+          "teal": 48,
+          "source": "contracts/Mamm.algo.ts:47",
+          "pc": [
+            111,
+            112,
+            113
+          ]
+        },
+        {
+          "teal": 49,
+          "source": "contracts/Mamm.algo.ts:47",
+          "pc": [
+            114,
+            115,
+            116
+          ]
+        },
+        {
+          "teal": 52,
+          "source": "contracts/Mamm.algo.ts:46",
+          "pc": [
+            117,
+            118,
+            119
+          ]
+        },
+        {
+          "teal": 53,
+          "source": "contracts/Mamm.algo.ts:46",
+          "pc": [
+            120,
+            121,
+            122
+          ]
+        },
+        {
+          "teal": 56,
+          "source": "contracts/Mamm.algo.ts:45",
+          "pc": [
+            123,
+            124,
+            125
+          ]
+        },
+        {
+          "teal": 57,
+          "source": "contracts/Mamm.algo.ts:45",
+          "pc": [
+            126
+          ]
+        },
+        {
+          "teal": 60,
+          "source": "contracts/Mamm.algo.ts:44",
+          "pc": [
+            127,
+            128,
+            129
+          ]
+        },
+        {
+          "teal": 61,
+          "source": "contracts/Mamm.algo.ts:44",
+          "pc": [
+            130
+          ]
+        },
+        {
+          "teal": 64,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            131,
+            132
+          ]
+        },
+        {
+          "teal": 65,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            133
+          ]
+        },
+        {
+          "teal": 66,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            134
+          ]
+        },
+        {
+          "teal": 67,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            135
+          ]
+        },
+        {
+          "teal": 68,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            136,
+            137
+          ]
+        },
+        {
+          "teal": 69,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            138
+          ]
+        },
+        {
+          "teal": 70,
+          "source": "contracts/Mamm.algo.ts:43",
+          "pc": [
+            139
+          ]
+        },
+        {
+          "teal": 73,
+          "source": "contracts/Mamm.algo.ts:43",
+          "errorMessage": "argument 4 (mbrTxn) for initApplication must be a pay transaction",
+          "pc": [
+            140
+          ]
+        },
+        {
+          "teal": 76,
+          "source": "contracts/Mamm.algo.ts:42",
+          "pc": [
+            141,
+            142,
+            143
+          ]
+        },
+        {
+          "teal": 77,
+          "source": "contracts/Mamm.algo.ts:42",
+          "pc": [
+            144
+          ]
+        },
+        {
+          "teal": 78,
+          "source": "contracts/Mamm.algo.ts:42",
+          "pc": [
+            145
+          ]
+        },
+        {
+          "teal": 82,
+          "source": "contracts/Mamm.algo.ts:42",
+          "pc": [
+            146,
+            147,
+            148
+          ]
+        },
+        {
+          "teal": 85,
+          "source": "contracts/Mamm.algo.ts:42",
+          "pc": [
+            149
+          ]
+        },
+        {
+          "teal": 89,
+          "source": "contracts/Mamm.algo.ts:49",
+          "pc": [
+            150,
+            151
+          ]
+        },
+        {
+          "teal": 90,
+          "source": "contracts/Mamm.algo.ts:49",
+          "pc": [
+            152
+          ]
+        },
+        {
+          "teal": 91,
+          "source": "contracts/Mamm.algo.ts:49",
+          "pc": [
+            153,
+            154
+          ]
+        },
+        {
+          "teal": 92,
+          "source": "contracts/Mamm.algo.ts:49",
+          "pc": [
+            155
+          ]
+        },
+        {
+          "teal": 95,
+          "source": "contracts/Mamm.algo.ts:49",
+          "errorMessage": "Only admin can initialize the application",
+          "pc": [
+            156
+          ]
+        },
+        {
+          "teal": 99,
+          "source": "contracts/Mamm.algo.ts:51",
+          "pc": [
+            157
+          ]
+        },
+        {
+          "teal": 100,
+          "source": "contracts/Mamm.algo.ts:51",
+          "pc": [
+            158
+          ]
+        },
+        {
+          "teal": 101,
+          "source": "contracts/Mamm.algo.ts:51",
+          "pc": [
+            159
+          ]
+        },
+        {
+          "teal": 105,
+          "source": "contracts/Mamm.algo.ts:52",
+          "pc": [
+            160
+          ]
+        },
+        {
+          "teal": 106,
+          "source": "contracts/Mamm.algo.ts:52",
+          "pc": [
+            161
+          ]
+        },
+        {
+          "teal": 107,
+          "source": "contracts/Mamm.algo.ts:52",
+          "pc": [
+            162
+          ]
+        },
+        {
+          "teal": 111,
+          "source": "contracts/Mamm.algo.ts:53",
+          "pc": [
+            163
+          ]
+        },
+        {
+          "teal": 112,
+          "source": "contracts/Mamm.algo.ts:53",
+          "pc": [
+            164
+          ]
+        },
+        {
+          "teal": 113,
+          "source": "contracts/Mamm.algo.ts:53",
+          "pc": [
+            165
+          ]
+        },
+        {
+          "teal": 117,
+          "source": "contracts/Mamm.algo.ts:54",
+          "pc": [
+            166,
+            167
+          ]
+        },
+        {
+          "teal": 118,
+          "source": "contracts/Mamm.algo.ts:54",
+          "pc": [
+            168
+          ]
+        },
+        {
+          "teal": 119,
+          "source": "contracts/Mamm.algo.ts:54",
+          "pc": [
+            169
+          ]
+        },
+        {
+          "teal": 123,
+          "source": "contracts/Mamm.algo.ts:55",
+          "pc": [
+            170,
+            171
+          ]
+        },
+        {
+          "teal": 124,
+          "source": "contracts/Mamm.algo.ts:55",
+          "pc": [
+            172
+          ]
+        },
+        {
+          "teal": 125,
+          "source": "contracts/Mamm.algo.ts:55",
+          "pc": [
+            173
+          ]
+        },
+        {
+          "teal": 129,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            174,
+            175
+          ]
+        },
+        {
+          "teal": 130,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            176,
+            177
+          ]
+        },
+        {
+          "teal": 131,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            178
+          ]
+        },
+        {
+          "teal": 132,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            179
+          ]
+        },
+        {
+          "teal": 133,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            180
+          ]
+        },
+        {
+          "teal": 134,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            181,
+            182,
+            183
+          ]
+        },
+        {
+          "teal": 135,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            184
+          ]
+        },
+        {
+          "teal": 136,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            185
+          ]
+        },
+        {
+          "teal": 137,
+          "source": "contracts/Mamm.algo.ts:56",
+          "pc": [
+            186
+          ]
+        },
+        {
+          "teal": 141,
+          "source": "contracts/Mamm.algo.ts:57",
+          "pc": [
+            187,
+            188
+          ]
+        },
+        {
+          "teal": 142,
+          "source": "contracts/Mamm.algo.ts:57",
+          "pc": [
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195
+          ]
+        },
+        {
+          "teal": 143,
+          "source": "contracts/Mamm.algo.ts:57",
+          "pc": [
+            196
+          ]
+        },
+        {
+          "teal": 147,
+          "source": "contracts/Mamm.algo.ts:58",
+          "pc": [
+            197,
+            198
+          ]
+        },
+        {
+          "teal": 148,
+          "source": "contracts/Mamm.algo.ts:58",
+          "pc": [
+            199,
+            200
+          ]
+        },
+        {
+          "teal": 149,
+          "source": "contracts/Mamm.algo.ts:58",
+          "pc": [
+            201
+          ]
+        },
+        {
+          "teal": 153,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            202,
+            203
+          ]
+        },
+        {
+          "teal": 154,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            204,
+            205
+          ]
+        },
+        {
+          "teal": 155,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            206
+          ]
+        },
+        {
+          "teal": 156,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            207
+          ]
+        },
+        {
+          "teal": 157,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            208
+          ]
+        },
+        {
+          "teal": 158,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            209,
+            210,
+            211
+          ]
+        },
+        {
+          "teal": 159,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            212
+          ]
+        },
+        {
+          "teal": 160,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            213
+          ]
+        },
+        {
+          "teal": 161,
+          "source": "contracts/Mamm.algo.ts:59",
+          "pc": [
+            214
+          ]
+        },
+        {
+          "teal": 165,
+          "source": "contracts/Mamm.algo.ts:60",
+          "pc": [
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223
+          ]
+        },
+        {
+          "teal": 166,
+          "source": "contracts/Mamm.algo.ts:60",
+          "pc": [
+            224,
+            225,
+            226
+          ]
+        },
+        {
+          "teal": 167,
+          "source": "contracts/Mamm.algo.ts:60",
+          "pc": [
+            227
+          ]
+        },
+        {
+          "teal": 171,
+          "source": "contracts/Mamm.algo.ts:61",
+          "pc": [
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235
+          ]
+        },
+        {
+          "teal": 172,
+          "source": "contracts/Mamm.algo.ts:61",
+          "pc": [
+            236
+          ]
+        },
+        {
+          "teal": 173,
+          "source": "contracts/Mamm.algo.ts:61",
+          "pc": [
+            237
+          ]
+        },
+        {
+          "teal": 178,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            238,
+            239
+          ]
+        },
+        {
+          "teal": 179,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            240,
+            241
+          ]
+        },
+        {
+          "teal": 180,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            242,
+            243
+          ]
+        },
+        {
+          "teal": 181,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            244
+          ]
+        },
+        {
+          "teal": 184,
+          "source": "contracts/Mamm.algo.ts:63",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}",
+          "pc": [
+            245
+          ]
+        },
+        {
+          "teal": 187,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            246,
+            247
+          ]
+        },
+        {
+          "teal": 188,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            248,
+            249
+          ]
+        },
+        {
+          "teal": 189,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            250
+          ]
+        },
+        {
+          "teal": 190,
+          "source": "contracts/Mamm.algo.ts:63",
+          "pc": [
+            251
+          ]
+        },
+        {
+          "teal": 193,
+          "source": "contracts/Mamm.algo.ts:63",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"expected\":\"TOKEN_MBR * 3\"}",
+          "pc": [
+            252
+          ]
+        },
+        {
+          "teal": 197,
+          "source": "contracts/Mamm.algo.ts:65",
+          "pc": [
+            253,
+            254
+          ]
+        },
+        {
+          "teal": 198,
+          "source": "contracts/Mamm.algo.ts:65",
+          "pc": [
+            255,
+            256
+          ]
+        },
+        {
+          "teal": 199,
+          "source": "contracts/Mamm.algo.ts:65",
+          "pc": [
+            257
+          ]
+        },
+        {
+          "teal": 203,
+          "source": "contracts/Mamm.algo.ts:66",
+          "pc": [
+            258,
+            259
+          ]
+        },
+        {
+          "teal": 204,
+          "source": "contracts/Mamm.algo.ts:66",
+          "pc": [
+            260,
+            261
+          ]
+        },
+        {
+          "teal": 205,
+          "source": "contracts/Mamm.algo.ts:66",
+          "pc": [
+            262
+          ]
+        },
+        {
+          "teal": 213,
+          "source": "contracts/Mamm.algo.ts:69",
+          "pc": [
+            263
+          ]
+        },
+        {
+          "teal": 214,
+          "source": "contracts/Mamm.algo.ts:69",
+          "pc": [
+            264
+          ]
+        },
+        {
+          "teal": 215,
+          "source": "contracts/Mamm.algo.ts:69",
+          "pc": [
+            265,
+            266
+          ]
+        },
+        {
+          "teal": 219,
+          "source": "contracts/Mamm.algo.ts:70",
+          "pc": [
+            267,
+            268
+          ]
+        },
+        {
+          "teal": 220,
+          "source": "contracts/Mamm.algo.ts:70",
+          "pc": [
+            269
+          ]
+        },
+        {
+          "teal": 221,
+          "source": "contracts/Mamm.algo.ts:70",
+          "pc": [
+            270,
+            271
+          ]
+        },
+        {
+          "teal": 225,
+          "source": "contracts/Mamm.algo.ts:71",
+          "pc": [
+            272,
+            273
+          ]
+        },
+        {
+          "teal": 226,
+          "source": "contracts/Mamm.algo.ts:71",
+          "pc": [
+            274,
+            275
+          ]
+        },
+        {
+          "teal": 230,
+          "source": "contracts/Mamm.algo.ts:72",
+          "pc": [
+            276
+          ]
+        },
+        {
+          "teal": 231,
+          "source": "contracts/Mamm.algo.ts:72",
+          "pc": [
+            277,
+            278
+          ]
+        },
+        {
+          "teal": 234,
+          "source": "contracts/Mamm.algo.ts:69",
+          "pc": [
+            279
+          ]
+        },
+        {
+          "teal": 235,
+          "source": "contracts/Mamm.algo.ts:69",
+          "pc": [
+            280,
+            281
+          ]
+        },
+        {
+          "teal": 238,
+          "source": "contracts/Mamm.algo.ts:69",
+          "pc": [
+            282
+          ]
+        },
+        {
+          "teal": 246,
+          "source": "contracts/Mamm.algo.ts:74",
+          "pc": [
+            283
+          ]
+        },
+        {
+          "teal": 247,
+          "source": "contracts/Mamm.algo.ts:74",
+          "pc": [
+            284
+          ]
+        },
+        {
+          "teal": 248,
+          "source": "contracts/Mamm.algo.ts:74",
+          "pc": [
+            285,
+            286
+          ]
+        },
+        {
+          "teal": 252,
+          "source": "contracts/Mamm.algo.ts:75",
+          "pc": [
+            287,
+            288
+          ]
+        },
+        {
+          "teal": 253,
+          "source": "contracts/Mamm.algo.ts:75",
+          "pc": [
+            289
+          ]
+        },
+        {
+          "teal": 254,
+          "source": "contracts/Mamm.algo.ts:75",
+          "pc": [
+            290,
+            291
+          ]
+        },
+        {
+          "teal": 258,
+          "source": "contracts/Mamm.algo.ts:76",
+          "pc": [
+            292,
+            293
+          ]
+        },
+        {
+          "teal": 259,
+          "source": "contracts/Mamm.algo.ts:76",
+          "pc": [
+            294,
+            295
+          ]
+        },
+        {
+          "teal": 263,
+          "source": "contracts/Mamm.algo.ts:77",
+          "pc": [
+            296
+          ]
+        },
+        {
+          "teal": 264,
+          "source": "contracts/Mamm.algo.ts:77",
+          "pc": [
+            297,
+            298
+          ]
+        },
+        {
+          "teal": 267,
+          "source": "contracts/Mamm.algo.ts:74",
+          "pc": [
+            299
+          ]
+        },
+        {
+          "teal": 268,
+          "source": "contracts/Mamm.algo.ts:74",
+          "pc": [
+            300,
+            301
+          ]
+        },
+        {
+          "teal": 271,
+          "source": "contracts/Mamm.algo.ts:74",
+          "pc": [
+            302
+          ]
+        },
+        {
+          "teal": 281,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            303
+          ]
+        },
+        {
+          "teal": 282,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            304,
+            305
+          ]
+        },
+        {
+          "teal": 283,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            306,
+            307
+          ]
+        },
+        {
+          "teal": 287,
+          "source": "contracts/Mamm.algo.ts:82",
+          "pc": [
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            315
+          ]
+        },
+        {
+          "teal": 288,
+          "source": "contracts/Mamm.algo.ts:82",
+          "pc": [
+            316,
+            317
+          ]
+        },
+        {
+          "teal": 292,
+          "source": "contracts/Mamm.algo.ts:83",
+          "pc": [
+            318,
+            319
+          ]
+        },
+        {
+          "teal": 293,
+          "source": "contracts/Mamm.algo.ts:83",
+          "pc": [
+            320
+          ]
+        },
+        {
+          "teal": 294,
+          "source": "contracts/Mamm.algo.ts:83",
+          "pc": [
+            321,
+            322
+          ]
+        },
+        {
+          "teal": 298,
+          "source": "contracts/Mamm.algo.ts:84",
+          "pc": [
+            323,
+            324
+          ]
+        },
+        {
+          "teal": 299,
+          "source": "contracts/Mamm.algo.ts:84",
+          "pc": [
+            325
+          ]
+        },
+        {
+          "teal": 300,
+          "source": "contracts/Mamm.algo.ts:84",
+          "pc": [
+            326,
+            327,
+            328
+          ]
+        },
+        {
+          "teal": 301,
+          "source": "contracts/Mamm.algo.ts:84",
+          "pc": [
+            329,
+            330
+          ]
+        },
+        {
+          "teal": 305,
+          "source": "contracts/Mamm.algo.ts:85",
+          "pc": [
+            331,
+            332
+          ]
+        },
+        {
+          "teal": 306,
+          "source": "contracts/Mamm.algo.ts:85",
+          "pc": [
+            333
+          ]
+        },
+        {
+          "teal": 307,
+          "source": "contracts/Mamm.algo.ts:85",
+          "pc": [
+            334,
+            335,
+            336
+          ]
+        },
+        {
+          "teal": 308,
+          "source": "contracts/Mamm.algo.ts:85",
+          "pc": [
+            337,
+            338
+          ]
+        },
+        {
+          "teal": 312,
+          "source": "contracts/Mamm.algo.ts:86",
+          "pc": [
+            339,
+            340
+          ]
+        },
+        {
+          "teal": 313,
+          "source": "contracts/Mamm.algo.ts:86",
+          "pc": [
+            341
+          ]
+        },
+        {
+          "teal": 314,
+          "source": "contracts/Mamm.algo.ts:86",
+          "pc": [
+            342,
+            343,
+            344
+          ]
+        },
+        {
+          "teal": 315,
+          "source": "contracts/Mamm.algo.ts:86",
+          "pc": [
+            345,
+            346
+          ]
+        },
+        {
+          "teal": 318,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            347
+          ]
+        },
+        {
+          "teal": 319,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            348,
+            349
+          ]
+        },
+        {
+          "teal": 322,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            350
+          ]
+        },
+        {
+          "teal": 323,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            351,
+            352
+          ]
+        },
+        {
+          "teal": 324,
+          "source": "contracts/Mamm.algo.ts:81",
+          "pc": [
+            353,
+            354
+          ]
+        },
+        {
+          "teal": 328,
+          "source": "contracts/Mamm.algo.ts:88",
+          "pc": [
+            355,
+            356
+          ]
+        },
+        {
+          "teal": 329,
+          "source": "contracts/Mamm.algo.ts:88",
+          "pc": [
+            357,
+            358
+          ]
+        },
+        {
+          "teal": 330,
+          "source": "contracts/Mamm.algo.ts:88",
+          "pc": [
+            359
+          ]
+        },
+        {
+          "teal": 331,
+          "source": "contracts/Mamm.algo.ts:42",
+          "pc": [
+            360
+          ]
+        },
+        {
+          "teal": 336,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            361,
+            362,
+            363
+          ]
+        },
+        {
+          "teal": 337,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            364
+          ]
+        },
+        {
+          "teal": 340,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            365,
+            366,
+            367
+          ]
+        },
+        {
+          "teal": 341,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            368
+          ]
+        },
+        {
+          "teal": 344,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            369,
+            370,
+            371
+          ]
+        },
+        {
+          "teal": 345,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            372
+          ]
+        },
+        {
+          "teal": 346,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            373
+          ]
+        },
+        {
+          "teal": 350,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            374,
+            375,
+            376
+          ]
+        },
+        {
+          "teal": 353,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            377
+          ]
+        },
+        {
+          "teal": 354,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            378,
+            379
+          ]
+        },
+        {
+          "teal": 358,
+          "source": "contracts/Mamm.algo.ts:92",
+          "pc": [
+            380
+          ]
+        },
+        {
+          "teal": 359,
+          "source": "contracts/Mamm.algo.ts:92",
+          "pc": [
+            381
+          ]
+        },
+        {
+          "teal": 360,
+          "source": "contracts/Mamm.algo.ts:92",
+          "pc": [
+            382,
+            383
+          ]
+        },
+        {
+          "teal": 364,
+          "source": "contracts/Mamm.algo.ts:93",
+          "pc": [
+            384
+          ]
+        },
+        {
+          "teal": 365,
+          "source": "contracts/Mamm.algo.ts:93",
+          "pc": [
+            385
+          ]
+        },
+        {
+          "teal": 366,
+          "source": "contracts/Mamm.algo.ts:93",
+          "pc": [
+            386,
+            387
+          ]
+        },
+        {
+          "teal": 370,
+          "source": "contracts/Mamm.algo.ts:94",
+          "pc": [
+            388
+          ]
+        },
+        {
+          "teal": 371,
+          "source": "contracts/Mamm.algo.ts:94",
+          "pc": [
+            389
+          ]
+        },
+        {
+          "teal": 372,
+          "source": "contracts/Mamm.algo.ts:94",
+          "pc": [
+            390,
+            391
+          ]
+        },
+        {
+          "teal": 377,
+          "source": "contracts/Mamm.algo.ts:99",
+          "pc": [
+            392,
+            393
+          ]
+        },
+        {
+          "teal": 378,
+          "source": "contracts/Mamm.algo.ts:99",
+          "pc": [
+            394
+          ]
+        },
+        {
+          "teal": 379,
+          "source": "contracts/Mamm.algo.ts:99",
+          "pc": [
+            395
+          ]
+        },
+        {
+          "teal": 380,
+          "source": "contracts/Mamm.algo.ts:99",
+          "pc": [
+            396,
+            397,
+            398
+          ]
+        },
+        {
+          "teal": 385,
+          "source": "contracts/Mamm.algo.ts:100",
+          "pc": [
+            399,
+            400
+          ]
+        },
+        {
+          "teal": 386,
+          "source": "contracts/Mamm.algo.ts:100",
+          "pc": [
+            401,
+            402
+          ]
+        },
+        {
+          "teal": 387,
+          "source": "contracts/Mamm.algo.ts:100",
+          "pc": [
+            403
+          ]
+        },
+        {
+          "teal": 388,
+          "source": "contracts/Mamm.algo.ts:100",
+          "pc": [
+            404
+          ]
+        },
+        {
+          "teal": 389,
+          "source": "contracts/Mamm.algo.ts:100",
+          "pc": [
+            405,
+            406
+          ]
+        },
+        {
+          "teal": 390,
+          "source": "contracts/Mamm.algo.ts:99",
+          "pc": [
+            407,
+            408,
+            409
+          ]
+        },
+        {
+          "teal": 395,
+          "source": "contracts/Mamm.algo.ts:104",
+          "pc": [
+            410,
+            411
+          ]
+        },
+        {
+          "teal": 396,
+          "source": "contracts/Mamm.algo.ts:104",
+          "pc": [
+            412,
+            413
+          ]
+        },
+        {
+          "teal": 397,
+          "source": "contracts/Mamm.algo.ts:104",
+          "pc": [
+            414
+          ]
+        },
+        {
+          "teal": 398,
+          "source": "contracts/Mamm.algo.ts:104",
+          "pc": [
+            415,
+            416
+          ]
+        },
+        {
+          "teal": 399,
+          "source": "contracts/Mamm.algo.ts:104",
+          "pc": [
+            417
+          ]
+        },
+        {
+          "teal": 400,
+          "source": "contracts/Mamm.algo.ts:104",
+          "pc": [
+            418,
+            419
+          ]
+        },
+        {
+          "teal": 404,
+          "source": "contracts/Mamm.algo.ts:105",
+          "pc": [
+            420,
+            421
+          ]
+        },
+        {
+          "teal": 405,
+          "source": "contracts/Mamm.algo.ts:105",
+          "pc": [
+            422,
+            423
+          ]
+        },
+        {
+          "teal": 406,
+          "source": "contracts/Mamm.algo.ts:105",
+          "pc": [
+            424
+          ]
+        },
+        {
+          "teal": 407,
+          "source": "contracts/Mamm.algo.ts:105",
+          "pc": [
+            425,
+            426
+          ]
+        },
+        {
+          "teal": 408,
+          "source": "contracts/Mamm.algo.ts:105",
+          "pc": [
+            427
+          ]
+        },
+        {
+          "teal": 409,
+          "source": "contracts/Mamm.algo.ts:105",
+          "pc": [
+            428,
+            429
+          ]
+        },
+        {
+          "teal": 413,
+          "source": "contracts/Mamm.algo.ts:106",
+          "pc": [
+            430,
+            431
+          ]
+        },
+        {
+          "teal": 414,
+          "source": "contracts/Mamm.algo.ts:106",
+          "pc": [
+            432,
+            433
+          ]
+        },
+        {
+          "teal": 415,
+          "source": "contracts/Mamm.algo.ts:106",
+          "pc": [
+            434,
+            435,
+            436
+          ]
+        },
+        {
+          "teal": 416,
+          "source": "contracts/Mamm.algo.ts:106",
+          "pc": [
+            437,
+            438
+          ]
+        },
+        {
+          "teal": 421,
+          "source": "contracts/Mamm.algo.ts:110",
+          "pc": [
+            439
+          ]
+        },
+        {
+          "teal": 422,
+          "source": "contracts/Mamm.algo.ts:110",
+          "pc": [
+            440,
+            441
+          ]
+        },
+        {
+          "teal": 423,
+          "source": "contracts/Mamm.algo.ts:110",
+          "pc": [
+            442,
+            443
+          ]
+        },
+        {
+          "teal": 424,
+          "source": "contracts/Mamm.algo.ts:110",
+          "pc": [
+            444
+          ]
+        },
+        {
+          "teal": 425,
+          "source": "contracts/Mamm.algo.ts:110",
+          "pc": [
+            445
+          ]
+        },
+        {
+          "teal": 429,
+          "source": "contracts/Mamm.algo.ts:111",
+          "pc": [
+            446
+          ]
+        },
+        {
+          "teal": 430,
+          "source": "contracts/Mamm.algo.ts:111",
+          "pc": [
+            447,
+            448
+          ]
+        },
+        {
+          "teal": 431,
+          "source": "contracts/Mamm.algo.ts:111",
+          "pc": [
+            449,
+            450
+          ]
+        },
+        {
+          "teal": 432,
+          "source": "contracts/Mamm.algo.ts:111",
+          "pc": [
+            451
+          ]
+        },
+        {
+          "teal": 433,
+          "source": "contracts/Mamm.algo.ts:111",
+          "pc": [
+            452
+          ]
+        },
+        {
+          "teal": 437,
+          "source": "contracts/Mamm.algo.ts:112",
+          "pc": [
+            453
+          ]
+        },
+        {
+          "teal": 438,
+          "source": "contracts/Mamm.algo.ts:112",
+          "pc": [
+            454,
+            455
+          ]
+        },
+        {
+          "teal": 439,
+          "source": "contracts/Mamm.algo.ts:112",
+          "pc": [
+            456,
+            457
+          ]
+        },
+        {
+          "teal": 440,
+          "source": "contracts/Mamm.algo.ts:112",
+          "pc": [
+            458
+          ]
+        },
+        {
+          "teal": 441,
+          "source": "contracts/Mamm.algo.ts:112",
+          "pc": [
+            459
+          ]
+        },
+        {
+          "teal": 445,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            460,
+            461
+          ]
+        },
+        {
+          "teal": 446,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            462,
+            463
+          ]
+        },
+        {
+          "teal": 447,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            464,
+            465
+          ]
+        },
+        {
+          "teal": 448,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            466
+          ]
+        },
+        {
+          "teal": 449,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            467,
+            468
+          ]
+        },
+        {
+          "teal": 450,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            469,
+            470
+          ]
+        },
+        {
+          "teal": 451,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            471
+          ]
+        },
+        {
+          "teal": 452,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            472
+          ]
+        },
+        {
+          "teal": 453,
+          "source": "contracts/Mamm.algo.ts:113",
+          "pc": [
+            473
+          ]
+        },
+        {
+          "teal": 461,
+          "source": "contracts/Mamm.algo.ts:116",
+          "pc": [
+            474
+          ]
+        },
+        {
+          "teal": 462,
+          "source": "contracts/Mamm.algo.ts:116",
+          "pc": [
+            475
+          ]
+        },
+        {
+          "teal": 463,
+          "source": "contracts/Mamm.algo.ts:116",
+          "pc": [
+            476,
+            477
+          ]
+        },
+        {
+          "teal": 467,
+          "source": "contracts/Mamm.algo.ts:117",
+          "pc": [
+            478,
+            479
+          ]
+        },
+        {
+          "teal": 468,
+          "source": "contracts/Mamm.algo.ts:117",
+          "pc": [
+            480
+          ]
+        },
+        {
+          "teal": 469,
+          "source": "contracts/Mamm.algo.ts:117",
+          "pc": [
+            481,
+            482
+          ]
+        },
+        {
+          "teal": 473,
+          "source": "contracts/Mamm.algo.ts:118",
+          "pc": [
+            483,
+            484
+          ]
+        },
+        {
+          "teal": 474,
+          "source": "contracts/Mamm.algo.ts:118",
+          "pc": [
+            485,
+            486
+          ]
+        },
+        {
+          "teal": 478,
+          "source": "contracts/Mamm.algo.ts:119",
+          "pc": [
+            487,
+            488
+          ]
+        },
+        {
+          "teal": 479,
+          "source": "contracts/Mamm.algo.ts:119",
+          "pc": [
+            489,
+            490
+          ]
+        },
+        {
+          "teal": 482,
+          "source": "contracts/Mamm.algo.ts:116",
+          "pc": [
+            491
+          ]
+        },
+        {
+          "teal": 483,
+          "source": "contracts/Mamm.algo.ts:116",
+          "pc": [
+            492,
+            493
+          ]
+        },
+        {
+          "teal": 486,
+          "source": "contracts/Mamm.algo.ts:116",
+          "pc": [
+            494
+          ]
+        },
+        {
+          "teal": 487,
+          "source": "contracts/Mamm.algo.ts:91",
+          "pc": [
+            495
+          ]
+        },
+        {
+          "teal": 491,
+          "source": "contracts/Mamm.algo.ts:123",
+          "pc": [
+            496,
+            497,
+            498
+          ]
+        },
+        {
+          "teal": 495,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            499,
+            500
+          ]
+        },
+        {
+          "teal": 496,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            501,
+            502
+          ]
+        },
+        {
+          "teal": 497,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            503
+          ]
+        },
+        {
+          "teal": 498,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            504,
+            505,
+            506
+          ]
+        },
+        {
+          "teal": 499,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            507,
+            508
+          ]
+        },
+        {
+          "teal": 500,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            509,
+            510,
+            511
+          ]
+        },
+        {
+          "teal": 503,
+          "source": "contracts/Mamm.algo.ts:124",
+          "pc": [
+            512,
+            513
+          ]
+        },
+        {
+          "teal": 506,
+          "source": "contracts/Mamm.algo.ts:123",
+          "pc": [
+            514
+          ]
+        },
+        {
+          "teal": 509,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            515,
+            516,
+            517,
+            518,
+            519,
+            520
+          ]
+        },
+        {
+          "teal": 510,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            521,
+            522,
+            523
+          ]
+        },
+        {
+          "teal": 511,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            524,
+            525,
+            526,
+            527
+          ]
+        },
+        {
+          "teal": 514,
+          "source": "contracts/Mamm.algo.ts:6",
           "errorMessage": "this contract does not implement the given ABI method for create NoOp",
           "pc": [
-            53
+            528
+          ]
+        },
+        {
+          "teal": 517,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            529,
+            530,
+            531,
+            532,
+            533,
+            534
+          ]
+        },
+        {
+          "teal": 518,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            535,
+            536,
+            537,
+            538,
+            539,
+            540
+          ]
+        },
+        {
+          "teal": 519,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            541,
+            542,
+            543
+          ]
+        },
+        {
+          "teal": 520,
+          "source": "contracts/Mamm.algo.ts:6",
+          "pc": [
+            544,
+            545,
+            546,
+            547,
+            548,
+            549
+          ]
+        },
+        {
+          "teal": 523,
+          "source": "contracts/Mamm.algo.ts:6",
+          "errorMessage": "this contract does not implement the given ABI method for call NoOp",
+          "pc": [
+            550
           ]
         }
       ],
@@ -205,11 +2316,11 @@
     }
   },
   "source": {
-    "approval": "I3ByYWdtYSB2ZXJzaW9uIDExCgovLyBUaGlzIFRFQUwgd2FzIGdlbmVyYXRlZCBieSBURUFMU2NyaXB0IHYwLjEwNi4yCi8vIGh0dHBzOi8vZ2l0aHViLmNvbS9hbGdvcmFuZGZvdW5kYXRpb24vVEVBTFNjcmlwdAoKLy8gVGhpcyBjb250cmFjdCBpcyBjb21wbGlhbnQgd2l0aCBhbmQvb3IgaW1wbGVtZW50cyB0aGUgZm9sbG93aW5nIEFSQ3M6IFsgQVJDNCBdCgovLyBUaGUgZm9sbG93aW5nIHRlbiBsaW5lcyBvZiBURUFMIGhhbmRsZSBpbml0aWFsIHByb2dyYW0gZmxvdwovLyBUaGlzIHBhdHRlcm4gaXMgdXNlZCB0byBtYWtlIGl0IGVhc3kgZm9yIGFueW9uZSB0byBwYXJzZSB0aGUgc3RhcnQgb2YgdGhlIHByb2dyYW0gYW5kIGRldGVybWluZSBpZiBhIHNwZWNpZmljIGFjdGlvbiBpcyBhbGxvd2VkCi8vIEhlcmUsIGFjdGlvbiByZWZlcnMgdG8gdGhlIE9uQ29tcGxldGUgaW4gY29tYmluYXRpb24gd2l0aCB3aGV0aGVyIHRoZSBhcHAgaXMgYmVpbmcgY3JlYXRlZCBvciBjYWxsZWQKLy8gRXZlcnkgcG9zc2libGUgYWN0aW9uIGZvciB0aGlzIGNvbnRyYWN0IGlzIHJlcHJlc2VudGVkIGluIHRoZSBzd2l0Y2ggc3RhdGVtZW50Ci8vIElmIHRoZSBhY3Rpb24gaXMgbm90IGltcGxlbWVudGVkIGluIHRoZSBjb250cmFjdCwgaXRzIHJlc3BlY3RpdmUgYnJhbmNoIHdpbGwgYmUgIipOT1RfSU1QTEVNRU5URUQiIHdoaWNoIGp1c3QgY29udGFpbnMgImVyciIKdHhuIEFwcGxpY2F0aW9uSUQKIQpwdXNoaW50IDYKKgp0eG4gT25Db21wbGV0aW9uCisKc3dpdGNoICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpjcmVhdGVfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQKCipOT1RfSU1QTEVNRU5URUQ6CgkvLyBUaGUgcmVxdWVzdGVkIGFjdGlvbiBpcyBub3QgaW1wbGVtZW50ZWQgaW4gdGhpcyBjb250cmFjdC4gQXJlIHlvdSB1c2luZyB0aGUgY29ycmVjdCBPbkNvbXBsZXRlPyBEaWQgeW91IHNldCB5b3VyIGFwcCBJRD8KCWVycgoKKmFiaV9yb3V0ZV9jcmVhdGVBcHBsaWNhdGlvbjoKCXB1c2hpbnQgMQoJcmV0dXJuCgoqY3JlYXRlX05vT3A6CglwdXNoYnl0ZXMgMHhiODQ0N2IzNiAvLyBtZXRob2QgImNyZWF0ZUFwcGxpY2F0aW9uKCl2b2lkIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggKmFiaV9yb3V0ZV9jcmVhdGVBcHBsaWNhdGlvbgoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjcmVhdGUgTm9PcAoJZXJy",
+    "approval": "I3ByYWdtYSB2ZXJzaW9uIDExCmludGNibG9jayAwIDEgNCAzMDAwMDAgNgpieXRlY2Jsb2NrIDB4IDB4NzQ2YzcwNzMgMHg3MDc0NzIgMHg3Mzc0NzIgMHg2YzcwIDB4NjE2NDZkNjk2ZSAweDZjNzA2ZSAweDZjNzA3MyAweDZjNzA2NCAweDZjNzA3NSAweDcwNzQ2OSAweDczNzQ2OSAweDZiCgovLyBUaGlzIFRFQUwgd2FzIGdlbmVyYXRlZCBieSBURUFMU2NyaXB0IHYwLjEwNi4yCi8vIGh0dHBzOi8vZ2l0aHViLmNvbS9hbGdvcmFuZGZvdW5kYXRpb24vVEVBTFNjcmlwdAoKLy8gVGhpcyBjb250cmFjdCBpcyBjb21wbGlhbnQgd2l0aCBhbmQvb3IgaW1wbGVtZW50cyB0aGUgZm9sbG93aW5nIEFSQ3M6IFsgQVJDNCBdCgovLyBUaGUgZm9sbG93aW5nIHRlbiBsaW5lcyBvZiBURUFMIGhhbmRsZSBpbml0aWFsIHByb2dyYW0gZmxvdwovLyBUaGlzIHBhdHRlcm4gaXMgdXNlZCB0byBtYWtlIGl0IGVhc3kgZm9yIGFueW9uZSB0byBwYXJzZSB0aGUgc3RhcnQgb2YgdGhlIHByb2dyYW0gYW5kIGRldGVybWluZSBpZiBhIHNwZWNpZmljIGFjdGlvbiBpcyBhbGxvd2VkCi8vIEhlcmUsIGFjdGlvbiByZWZlcnMgdG8gdGhlIE9uQ29tcGxldGUgaW4gY29tYmluYXRpb24gd2l0aCB3aGV0aGVyIHRoZSBhcHAgaXMgYmVpbmcgY3JlYXRlZCBvciBjYWxsZWQKLy8gRXZlcnkgcG9zc2libGUgYWN0aW9uIGZvciB0aGlzIGNvbnRyYWN0IGlzIHJlcHJlc2VudGVkIGluIHRoZSBzd2l0Y2ggc3RhdGVtZW50Ci8vIElmIHRoZSBhY3Rpb24gaXMgbm90IGltcGxlbWVudGVkIGluIHRoZSBjb250cmFjdCwgaXRzIHJlc3BlY3RpdmUgYnJhbmNoIHdpbGwgYmUgIipOT1RfSU1QTEVNRU5URUQiIHdoaWNoIGp1c3QgY29udGFpbnMgImVyciIKdHhuIEFwcGxpY2F0aW9uSUQKIQppbnRjIDQgLy8gNgoqCnR4biBPbkNvbXBsZXRpb24KKwpzd2l0Y2ggKmNhbGxfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKmNyZWF0ZV9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRAoKKk5PVF9JTVBMRU1FTlRFRDoKCS8vIFRoZSByZXF1ZXN0ZWQgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGlzIGNvbnRyYWN0LiBBcmUgeW91IHVzaW5nIHRoZSBjb3JyZWN0IE9uQ29tcGxldGU/IERpZCB5b3Ugc2V0IHlvdXIgYXBwIElEPwoJZXJyCgovLyBjcmVhdGVBcHBsaWNhdGlvbigpdm9pZAoqYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uOgoJLy8gZXhlY3V0ZSBjcmVhdGVBcHBsaWNhdGlvbigpdm9pZAoJY2FsbHN1YiBjcmVhdGVBcHBsaWNhdGlvbgoJaW50YyAxIC8vIDEKCXJldHVybgoKLy8gY3JlYXRlQXBwbGljYXRpb24oKTogdm9pZApjcmVhdGVBcHBsaWNhdGlvbjoKCXByb3RvIDAgMAoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6MzkKCS8vIHRoaXMuYWRtaW4udmFsdWUgPSB0aGlzLnR4bi5zZW5kZXIKCWJ5dGVjIDUgLy8gICJhZG1pbiIKCXR4biBTZW5kZXIKCWFwcF9nbG9iYWxfcHV0CglyZXRzdWIKCi8vIGluaXRBcHBsaWNhdGlvbihwYXksdWludDY0LHVpbnQ2NCxzdHJpbmcsc3RyaW5nKXZvaWQKKmFiaV9yb3V0ZV9pbml0QXBwbGljYXRpb246CgkvLyBscEFzc2V0VVJMOiBzdHJpbmcKCXR4bmEgQXBwbGljYXRpb25BcmdzIDQKCWV4dHJhY3QgMiAwCgoJLy8gbHBBc3NldE5hbWU6IHN0cmluZwoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMwoJZXh0cmFjdCAyIDAKCgkvLyBzZWNvbmRhcnlBc3NldElkOiB1aW50NjQKCXR4bmEgQXBwbGljYXRpb25BcmdzIDIKCWJ0b2kKCgkvLyBwcmltYXJ5QXNzZXRJZDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8gbWJyVHhuOiBwYXkKCXR4biBHcm91cEluZGV4CglpbnRjIDEgLy8gMQoJLQoJZHVwCglndHhucyBUeXBlRW51bQoJaW50YyAxIC8vICBwYXkKCT09CgoJLy8gYXJndW1lbnQgNCAobWJyVHhuKSBmb3IgaW5pdEFwcGxpY2F0aW9uIG11c3QgYmUgYSBwYXkgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIGV4ZWN1dGUgaW5pdEFwcGxpY2F0aW9uKHBheSx1aW50NjQsdWludDY0LHN0cmluZyxzdHJpbmcpdm9pZAoJY2FsbHN1YiBpbml0QXBwbGljYXRpb24KCWludGMgMSAvLyAxCglyZXR1cm4KCi8vIGluaXRBcHBsaWNhdGlvbihtYnJUeG46IFBheVR4biwgcHJpbWFyeUFzc2V0SWQ6IHVpbnQ2NCwgc2Vjb25kYXJ5QXNzZXRJZDogdWludDY0LCBscEFzc2V0TmFtZTogc3RyaW5nLCBscEFzc2V0VVJMOiBzdHJpbmcpOiB2b2lkCmluaXRBcHBsaWNhdGlvbjoKCXByb3RvIDUgMAoKCS8vIFB1c2ggZW1wdHkgYnl0ZXMgYWZ0ZXIgdGhlIGZyYW1lIHBvaW50ZXIgdG8gcmVzZXJ2ZSBzcGFjZSBmb3IgbG9jYWwgdmFyaWFibGVzCglieXRlYyAwIC8vIDB4CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo0OQoJLy8gYXNzZXJ0KHRoaXMuYWRtaW4udmFsdWUgPT09IHRoaXMudHhuLnNlbmRlciwgJ09ubHkgYWRtaW4gY2FuIGluaXRpYWxpemUgdGhlIGFwcGxpY2F0aW9uJykKCWJ5dGVjIDUgLy8gICJhZG1pbiIKCWFwcF9nbG9iYWxfZ2V0Cgl0eG4gU2VuZGVyCgk9PQoKCS8vIE9ubHkgYWRtaW4gY2FuIGluaXRpYWxpemUgdGhlIGFwcGxpY2F0aW9uCglhc3NlcnQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjUxCgkvLyB0aGlzLnByaW1hcnlfdG9rZW5fcmVzZXJ2ZS52YWx1ZSA9IDAKCWJ5dGVjIDIgLy8gICJwdHIiCglpbnRjIDAgLy8gMAoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjUyCgkvLyB0aGlzLnNlY29uZGFyeV90b2tlbl9yZXNlcnZlLnZhbHVlID0gMAoJYnl0ZWMgMyAvLyAgInN0ciIKCWludGMgMCAvLyAwCglhcHBfZ2xvYmFsX3B1dAoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6NTMKCS8vIHRoaXMudG90YWxfbHBfc3VwcGx5LnZhbHVlID0gMAoJYnl0ZWMgMSAvLyAgInRscHMiCglpbnRjIDAgLy8gMAoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjU0CgkvLyB0aGlzLmtfdmFsdWUudmFsdWUgPSAwCglieXRlYyAxMiAvLyAgImsiCglpbnRjIDAgLy8gMAoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjU1CgkvLyB0aGlzLmxwX3Rva2VuX2lkLnZhbHVlID0gMAoJYnl0ZWMgNCAvLyAgImxwIgoJaW50YyAwIC8vIDAKCWFwcF9nbG9iYWxfcHV0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo1NgoJLy8gdGhpcy5scF90b2tlbl9uYW1lLnZhbHVlID0gbHBBc3NldE5hbWUKCWJ5dGVjIDYgLy8gICJscG4iCglmcmFtZV9kaWcgLTQgLy8gbHBBc3NldE5hbWU6IHN0cmluZwoJZHVwCglsZW4KCWl0b2IKCWV4dHJhY3QgNiAyCglzd2FwCgljb25jYXQKCWFwcF9nbG9iYWxfcHV0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo1NwoJLy8gdGhpcy5scF90b2tlbl9zeW1ib2wudmFsdWUgPSAnTUxQJwoJYnl0ZWMgNyAvLyAgImxwcyIKCXB1c2hieXRlcyAweDAwMDM0ZDRjNTAKCWFwcF9nbG9iYWxfcHV0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo1OAoJLy8gdGhpcy5scF90b2tlbl9kZWNpbWFscy52YWx1ZSA9IDYKCWJ5dGVjIDggLy8gICJscGQiCglpbnRjIDQgLy8gNgoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjU5CgkvLyB0aGlzLmxwX3Rva2VuX3VybC52YWx1ZSA9IGxwQXNzZXRVUkwKCWJ5dGVjIDkgLy8gICJscHUiCglmcmFtZV9kaWcgLTUgLy8gbHBBc3NldFVSTDogc3RyaW5nCglkdXAKCWxlbgoJaXRvYgoJZXh0cmFjdCA2IDIKCXN3YXAKCWNvbmNhdAoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjYwCgkvLyB0aGlzLmNvbnRyYWN0X3ZlcnNpb24udmFsdWUgPSBWRVJTSU9OCglwdXNoYnl0ZXMgMHg3NjY1NzI3MzY5NmY2ZSAvLyAidmVyc2lvbiIKCXB1c2hpbnQgMTAwMAoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjYxCgkvLyB0aGlzLm1pbmltdW1fYmFsYW5jZS52YWx1ZSA9IFRPS0VOX01CUiAqIDMKCXB1c2hieXRlcyAweDZkNjk2ZTYyNjE2YyAvLyAibWluYmFsIgoJaW50YyAzIC8vIDMwMDAwMAoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjYzCgkvLyB2ZXJpZnlQYXlUeG4obWJyVHhuLCB7IHJlY2VpdmVyOiB0aGlzLmFwcC5hZGRyZXNzLCBhbW91bnQ6IFRPS0VOX01CUiAqIDMgfSkKCS8vIHZlcmlmeSByZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIG1iclR4bjogUGF5VHhuCglndHhucyBSZWNlaXZlcgoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJtYnJUeG4iLCJmaWVsZCI6InJlY2VpdmVyIiwiZXhwZWN0ZWQiOiJ0aGlzLmFwcC5hZGRyZXNzIn0KCWFzc2VydAoKCS8vIHZlcmlmeSBhbW91bnQKCWZyYW1lX2RpZyAtMSAvLyBtYnJUeG46IFBheVR4bgoJZ3R4bnMgQW1vdW50CglpbnRjIDMgLy8gMzAwMDAwCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoibWJyVHhuIiwiZmllbGQiOiJhbW91bnQiLCJleHBlY3RlZCI6IlRPS0VOX01CUiAqIDMifQoJYXNzZXJ0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo2NQoJLy8gdGhpcy5wcmltYXJ5X3Rva2VuX2lkLnZhbHVlID0gcHJpbWFyeUFzc2V0SWQKCWJ5dGVjIDEwIC8vICAicHRpIgoJZnJhbWVfZGlnIC0yIC8vIHByaW1hcnlBc3NldElkOiB1aW50NjQKCWFwcF9nbG9iYWxfcHV0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo2NgoJLy8gdGhpcy5zZWNvbmRhcnlfdG9rZW5faWQudmFsdWUgPSBzZWNvbmRhcnlBc3NldElkCglieXRlYyAxMSAvLyAgInN0aSIKCWZyYW1lX2RpZyAtMyAvLyBzZWNvbmRhcnlBc3NldElkOiB1aW50NjQKCWFwcF9nbG9iYWxfcHV0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo2OQoJLy8gc2VuZEFzc2V0VHJhbnNmZXIoewoJLy8gICAgICAgeGZlckFzc2V0OiBBc3NldElELmZyb21VaW50NjQodGhpcy5wcmltYXJ5X3Rva2VuX2lkLnZhbHVlKSwKCS8vICAgICAgIGFzc2V0UmVjZWl2ZXI6IHRoaXMuYXBwLmFkZHJlc3MsCgkvLyAgICAgICBhc3NldEFtb3VudDogMCwKCS8vICAgICB9KQoJaXR4bl9iZWdpbgoJaW50YyAyIC8vICBheGZlcgoJaXR4bl9maWVsZCBUeXBlRW51bQoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6NzAKCS8vIHhmZXJBc3NldDogQXNzZXRJRC5mcm9tVWludDY0KHRoaXMucHJpbWFyeV90b2tlbl9pZC52YWx1ZSkKCWJ5dGVjIDEwIC8vICAicHRpIgoJYXBwX2dsb2JhbF9nZXQKCWl0eG5fZmllbGQgWGZlckFzc2V0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo3MQoJLy8gYXNzZXRSZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcwoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCWl0eG5fZmllbGQgQXNzZXRSZWNlaXZlcgoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6NzIKCS8vIGFzc2V0QW1vdW50OiAwCglpbnRjIDAgLy8gMAoJaXR4bl9maWVsZCBBc3NldEFtb3VudAoKCS8vIEZlZSBmaWVsZCBub3Qgc2V0LCBkZWZhdWx0aW5nIHRvIDAKCWludGMgMCAvLyAwCglpdHhuX2ZpZWxkIEZlZQoKCS8vIFN1Ym1pdCBpbm5lciB0cmFuc2FjdGlvbgoJaXR4bl9zdWJtaXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjc0CgkvLyBzZW5kQXNzZXRUcmFuc2Zlcih7CgkvLyAgICAgICB4ZmVyQXNzZXQ6IEFzc2V0SUQuZnJvbVVpbnQ2NCh0aGlzLnNlY29uZGFyeV90b2tlbl9pZC52YWx1ZSksCgkvLyAgICAgICBhc3NldFJlY2VpdmVyOiB0aGlzLmFwcC5hZGRyZXNzLAoJLy8gICAgICAgYXNzZXRBbW91bnQ6IDAsCgkvLyAgICAgfSkKCWl0eG5fYmVnaW4KCWludGMgMiAvLyAgYXhmZXIKCWl0eG5fZmllbGQgVHlwZUVudW0KCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjc1CgkvLyB4ZmVyQXNzZXQ6IEFzc2V0SUQuZnJvbVVpbnQ2NCh0aGlzLnNlY29uZGFyeV90b2tlbl9pZC52YWx1ZSkKCWJ5dGVjIDExIC8vICAic3RpIgoJYXBwX2dsb2JhbF9nZXQKCWl0eG5fZmllbGQgWGZlckFzc2V0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo3NgoJLy8gYXNzZXRSZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcwoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCWl0eG5fZmllbGQgQXNzZXRSZWNlaXZlcgoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6NzcKCS8vIGFzc2V0QW1vdW50OiAwCglpbnRjIDAgLy8gMAoJaXR4bl9maWVsZCBBc3NldEFtb3VudAoKCS8vIEZlZSBmaWVsZCBub3Qgc2V0LCBkZWZhdWx0aW5nIHRvIDAKCWludGMgMCAvLyAwCglpdHhuX2ZpZWxkIEZlZQoKCS8vIFN1Ym1pdCBpbm5lciB0cmFuc2FjdGlvbgoJaXR4bl9zdWJtaXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjgxCgkvLyBscEFzc2V0SWQgPSBzZW5kQXNzZXRDcmVhdGlvbih7CgkvLyAgICAgICBjb25maWdBc3NldFRvdGFsOiA5OV85OTlfOTk5Xzk5OV85OTksCgkvLyAgICAgICBjb25maWdBc3NldERlY2ltYWxzOiB0aGlzLmxwX3Rva2VuX2RlY2ltYWxzLnZhbHVlLAoJLy8gICAgICAgY29uZmlnQXNzZXROYW1lOiB0aGlzLmxwX3Rva2VuX25hbWUudmFsdWUsCgkvLyAgICAgICBjb25maWdBc3NldFVuaXROYW1lOiB0aGlzLmxwX3Rva2VuX3N5bWJvbC52YWx1ZSwKCS8vICAgICAgIGNvbmZpZ0Fzc2V0VVJMOiB0aGlzLmxwX3Rva2VuX3VybC52YWx1ZSwKCS8vICAgICB9KQoJaXR4bl9iZWdpbgoJcHVzaGludCAzIC8vIGFjZmcKCWl0eG5fZmllbGQgVHlwZUVudW0KCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjgyCgkvLyBjb25maWdBc3NldFRvdGFsOiA5OV85OTlfOTk5Xzk5OV85OTkKCXB1c2hpbnQgOTlfOTk5Xzk5OV85OTlfOTk5CglpdHhuX2ZpZWxkIENvbmZpZ0Fzc2V0VG90YWwKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjgzCgkvLyBjb25maWdBc3NldERlY2ltYWxzOiB0aGlzLmxwX3Rva2VuX2RlY2ltYWxzLnZhbHVlCglieXRlYyA4IC8vICAibHBkIgoJYXBwX2dsb2JhbF9nZXQKCWl0eG5fZmllbGQgQ29uZmlnQXNzZXREZWNpbWFscwoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6ODQKCS8vIGNvbmZpZ0Fzc2V0TmFtZTogdGhpcy5scF90b2tlbl9uYW1lLnZhbHVlCglieXRlYyA2IC8vICAibHBuIgoJYXBwX2dsb2JhbF9nZXQKCWV4dHJhY3QgMiAwCglpdHhuX2ZpZWxkIENvbmZpZ0Fzc2V0TmFtZQoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6ODUKCS8vIGNvbmZpZ0Fzc2V0VW5pdE5hbWU6IHRoaXMubHBfdG9rZW5fc3ltYm9sLnZhbHVlCglieXRlYyA3IC8vICAibHBzIgoJYXBwX2dsb2JhbF9nZXQKCWV4dHJhY3QgMiAwCglpdHhuX2ZpZWxkIENvbmZpZ0Fzc2V0VW5pdE5hbWUKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjg2CgkvLyBjb25maWdBc3NldFVSTDogdGhpcy5scF90b2tlbl91cmwudmFsdWUKCWJ5dGVjIDkgLy8gICJscHUiCglhcHBfZ2xvYmFsX2dldAoJZXh0cmFjdCAyIDAKCWl0eG5fZmllbGQgQ29uZmlnQXNzZXRVUkwKCgkvLyBGZWUgZmllbGQgbm90IHNldCwgZGVmYXVsdGluZyB0byAwCglpbnRjIDAgLy8gMAoJaXR4bl9maWVsZCBGZWUKCgkvLyBTdWJtaXQgaW5uZXIgdHJhbnNhY3Rpb24KCWl0eG5fc3VibWl0CglpdHhuIENyZWF0ZWRBc3NldElECglmcmFtZV9idXJ5IDAgLy8gbHBBc3NldElkOiB1aW50NjQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjg4CgkvLyB0aGlzLmxwX3Rva2VuX2lkLnZhbHVlID0gbHBBc3NldElkLmlkCglieXRlYyA0IC8vICAibHAiCglmcmFtZV9kaWcgMCAvLyBscEFzc2V0SWQ6IHVpbnQ2NAoJYXBwX2dsb2JhbF9wdXQKCXJldHN1YgoKLy8gYWRkTGlxdWlkaXR5KHVpbnQ2NCx1aW50NjQpdm9pZAoqYWJpX3JvdXRlX2FkZExpcXVpZGl0eToKCS8vIHNlY29uZGFyeUFtb3VudDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAyCglidG9pCgoJLy8gcHJpbWFyeUFtb3VudDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8gZXhlY3V0ZSBhZGRMaXF1aWRpdHkodWludDY0LHVpbnQ2NCl2b2lkCgljYWxsc3ViIGFkZExpcXVpZGl0eQoJaW50YyAxIC8vIDEKCXJldHVybgoKLy8gYWRkTGlxdWlkaXR5KHByaW1hcnlBbW91bnQ6IHVpbnQ2NCwgc2Vjb25kYXJ5QW1vdW50OiB1aW50NjQpOiB2b2lkCmFkZExpcXVpZGl0eToKCXByb3RvIDIgMAoKCS8vIFB1c2ggZW1wdHkgYnl0ZXMgYWZ0ZXIgdGhlIGZyYW1lIHBvaW50ZXIgdG8gcmVzZXJ2ZSBzcGFjZSBmb3IgbG9jYWwgdmFyaWFibGVzCglieXRlYyAwIC8vIDB4CglkdXBuIDUKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjkyCgkvLyBwcmltYXJ5UmVzZXJ2ZSA9IHRoaXMucHJpbWFyeV90b2tlbl9yZXNlcnZlLnZhbHVlCglieXRlYyAyIC8vICAicHRyIgoJYXBwX2dsb2JhbF9nZXQKCWZyYW1lX2J1cnkgMCAvLyBwcmltYXJ5UmVzZXJ2ZTogdWludDY0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czo5MwoJLy8gc2Vjb25kYXJ5UmVzZXJ2ZSA9IHRoaXMuc2Vjb25kYXJ5X3Rva2VuX3Jlc2VydmUudmFsdWUKCWJ5dGVjIDMgLy8gICJzdHIiCglhcHBfZ2xvYmFsX2dldAoJZnJhbWVfYnVyeSAxIC8vIHNlY29uZGFyeVJlc2VydmU6IHVpbnQ2NAoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6OTQKCS8vIHRvdGFsTFBTdXBwbHkgPSB0aGlzLnRvdGFsX2xwX3N1cHBseS52YWx1ZQoJYnl0ZWMgMSAvLyAgInRscHMiCglhcHBfZ2xvYmFsX2dldAoJZnJhbWVfYnVyeSAyIC8vIHRvdGFsTFBTdXBwbHk6IHVpbnQ2NAoKCS8vICppZjBfY29uZGl0aW9uCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjk5CgkvLyB0b3RhbExQU3VwcGx5ID09PSAwCglmcmFtZV9kaWcgMiAvLyB0b3RhbExQU3VwcGx5OiB1aW50NjQKCWludGMgMCAvLyAwCgk9PQoJYnogKmlmMF9lbHNlCgoJLy8gKmlmMF9jb25zZXF1ZW50CgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjEwMAoJLy8gbHBUb2tlbnNNaW50ZWQgPSBzcXJ0KHByaW1hcnlBbW91bnQgKiBzZWNvbmRhcnlBbW91bnQpCglmcmFtZV9kaWcgLTEgLy8gcHJpbWFyeUFtb3VudDogdWludDY0CglmcmFtZV9kaWcgLTIgLy8gc2Vjb25kYXJ5QW1vdW50OiB1aW50NjQKCSoKCXNxcnQKCWZyYW1lX2J1cnkgMyAvLyBscFRva2Vuc01pbnRlZDogdWludDY0CgliICppZjBfZW5kCgoqaWYwX2Vsc2U6CgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjEwNAoJLy8gbWludEZyb21PcmEgPSAocHJpbWFyeUFtb3VudCAqIHRvdGFsTFBTdXBwbHkpIC8gcHJpbWFyeVJlc2VydmUKCWZyYW1lX2RpZyAtMSAvLyBwcmltYXJ5QW1vdW50OiB1aW50NjQKCWZyYW1lX2RpZyAyIC8vIHRvdGFsTFBTdXBwbHk6IHVpbnQ2NAoJKgoJZnJhbWVfZGlnIDAgLy8gcHJpbWFyeVJlc2VydmU6IHVpbnQ2NAoJLwoJZnJhbWVfYnVyeSA0IC8vIG1pbnRGcm9tT3JhOiB1aW50NjQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjEwNQoJLy8gbWludEZyb21BbGdvID0gKHNlY29uZGFyeUFtb3VudCAqIHRvdGFsTFBTdXBwbHkpIC8gc2Vjb25kYXJ5UmVzZXJ2ZQoJZnJhbWVfZGlnIC0yIC8vIHNlY29uZGFyeUFtb3VudDogdWludDY0CglmcmFtZV9kaWcgMiAvLyB0b3RhbExQU3VwcGx5OiB1aW50NjQKCSoKCWZyYW1lX2RpZyAxIC8vIHNlY29uZGFyeVJlc2VydmU6IHVpbnQ2NAoJLwoJZnJhbWVfYnVyeSA1IC8vIG1pbnRGcm9tQWxnbzogdWludDY0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czoxMDYKCS8vIGxwVG9rZW5zTWludGVkID0gdGhpcy5taW4obWludEZyb21PcmEsIG1pbnRGcm9tQWxnbykKCWZyYW1lX2RpZyA1IC8vIG1pbnRGcm9tQWxnbzogdWludDY0CglmcmFtZV9kaWcgNCAvLyBtaW50RnJvbU9yYTogdWludDY0CgljYWxsc3ViIG1pbgoJZnJhbWVfYnVyeSAzIC8vIGxwVG9rZW5zTWludGVkOiB1aW50NjQKCippZjBfZW5kOgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czoxMTAKCS8vIHRoaXMucHJpbWFyeV90b2tlbl9yZXNlcnZlLnZhbHVlID0gcHJpbWFyeVJlc2VydmUgKyBwcmltYXJ5QW1vdW50CglieXRlYyAyIC8vICAicHRyIgoJZnJhbWVfZGlnIDAgLy8gcHJpbWFyeVJlc2VydmU6IHVpbnQ2NAoJZnJhbWVfZGlnIC0xIC8vIHByaW1hcnlBbW91bnQ6IHVpbnQ2NAoJKwoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjExMQoJLy8gdGhpcy5zZWNvbmRhcnlfdG9rZW5fcmVzZXJ2ZS52YWx1ZSA9IHNlY29uZGFyeVJlc2VydmUgKyBzZWNvbmRhcnlBbW91bnQKCWJ5dGVjIDMgLy8gICJzdHIiCglmcmFtZV9kaWcgMSAvLyBzZWNvbmRhcnlSZXNlcnZlOiB1aW50NjQKCWZyYW1lX2RpZyAtMiAvLyBzZWNvbmRhcnlBbW91bnQ6IHVpbnQ2NAoJKwoJYXBwX2dsb2JhbF9wdXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjExMgoJLy8gdGhpcy50b3RhbF9scF9zdXBwbHkudmFsdWUgPSB0b3RhbExQU3VwcGx5ICsgbHBUb2tlbnNNaW50ZWQKCWJ5dGVjIDEgLy8gICJ0bHBzIgoJZnJhbWVfZGlnIDIgLy8gdG90YWxMUFN1cHBseTogdWludDY0CglmcmFtZV9kaWcgMyAvLyBscFRva2Vuc01pbnRlZDogdWludDY0CgkrCglhcHBfZ2xvYmFsX3B1dAoKCS8vIGNvbnRyYWN0cy9NYW1tLmFsZ28udHM6MTEzCgkvLyB0aGlzLmtfdmFsdWUudmFsdWUgPSAocHJpbWFyeVJlc2VydmUgKyBwcmltYXJ5QW1vdW50KSAqIChzZWNvbmRhcnlSZXNlcnZlICsgc2Vjb25kYXJ5QW1vdW50KQoJYnl0ZWMgMTIgLy8gICJrIgoJZnJhbWVfZGlnIDAgLy8gcHJpbWFyeVJlc2VydmU6IHVpbnQ2NAoJZnJhbWVfZGlnIC0xIC8vIHByaW1hcnlBbW91bnQ6IHVpbnQ2NAoJKwoJZnJhbWVfZGlnIDEgLy8gc2Vjb25kYXJ5UmVzZXJ2ZTogdWludDY0CglmcmFtZV9kaWcgLTIgLy8gc2Vjb25kYXJ5QW1vdW50OiB1aW50NjQKCSsKCSoKCWFwcF9nbG9iYWxfcHV0CgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czoxMTYKCS8vIHNlbmRBc3NldFRyYW5zZmVyKHsKCS8vICAgICAgIHhmZXJBc3NldDogQXNzZXRJRC5mcm9tVWludDY0KHRoaXMubHBfdG9rZW5faWQudmFsdWUpLAoJLy8gICAgICAgYXNzZXRSZWNlaXZlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgYXNzZXRBbW91bnQ6IGxwVG9rZW5zTWludGVkLAoJLy8gICAgIH0pCglpdHhuX2JlZ2luCglpbnRjIDIgLy8gIGF4ZmVyCglpdHhuX2ZpZWxkIFR5cGVFbnVtCgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czoxMTcKCS8vIHhmZXJBc3NldDogQXNzZXRJRC5mcm9tVWludDY0KHRoaXMubHBfdG9rZW5faWQudmFsdWUpCglieXRlYyA0IC8vICAibHAiCglhcHBfZ2xvYmFsX2dldAoJaXR4bl9maWVsZCBYZmVyQXNzZXQKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjExOAoJLy8gYXNzZXRSZWNlaXZlcjogdGhpcy50eG4uc2VuZGVyCgl0eG4gU2VuZGVyCglpdHhuX2ZpZWxkIEFzc2V0UmVjZWl2ZXIKCgkvLyBjb250cmFjdHMvTWFtbS5hbGdvLnRzOjExOQoJLy8gYXNzZXRBbW91bnQ6IGxwVG9rZW5zTWludGVkCglmcmFtZV9kaWcgMyAvLyBscFRva2Vuc01pbnRlZDogdWludDY0CglpdHhuX2ZpZWxkIEFzc2V0QW1vdW50CgoJLy8gRmVlIGZpZWxkIG5vdCBzZXQsIGRlZmF1bHRpbmcgdG8gMAoJaW50YyAwIC8vIDAKCWl0eG5fZmllbGQgRmVlCgoJLy8gU3VibWl0IGlubmVyIHRyYW5zYWN0aW9uCglpdHhuX3N1Ym1pdAoJcmV0c3ViCgovLyBtaW4oYTogdWludDY0LCBiOiB1aW50NjQpOiB1aW50NjQKbWluOgoJcHJvdG8gMiAxCgoJLy8gY29udHJhY3RzL01hbW0uYWxnby50czoxMjQKCS8vIHJldHVybiBhIDwgYiA/IGEgOiBiOwoJZnJhbWVfZGlnIC0xIC8vIGE6IHVpbnQ2NAoJZnJhbWVfZGlnIC0yIC8vIGI6IHVpbnQ2NAoJPAoJYnogKnRlcm5hcnkwX2ZhbHNlCglmcmFtZV9kaWcgLTEgLy8gYTogdWludDY0CgliICp0ZXJuYXJ5MF9lbmQKCip0ZXJuYXJ5MF9mYWxzZToKCWZyYW1lX2RpZyAtMiAvLyBiOiB1aW50NjQKCip0ZXJuYXJ5MF9lbmQ6CglyZXRzdWIKCipjcmVhdGVfTm9PcDoKCXB1c2hieXRlcyAweGI4NDQ3YjM2IC8vIG1ldGhvZCAiY3JlYXRlQXBwbGljYXRpb24oKXZvaWQiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCAqYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uCgoJLy8gdGhpcyBjb250cmFjdCBkb2VzIG5vdCBpbXBsZW1lbnQgdGhlIGdpdmVuIEFCSSBtZXRob2QgZm9yIGNyZWF0ZSBOb09wCgllcnIKCipjYWxsX05vT3A6CglwdXNoYnl0ZXMgMHhiNjQzNmRmMiAvLyBtZXRob2QgImluaXRBcHBsaWNhdGlvbihwYXksdWludDY0LHVpbnQ2NCxzdHJpbmcsc3RyaW5nKXZvaWQiCglwdXNoYnl0ZXMgMHgxMzJkZDU2NyAvLyBtZXRob2QgImFkZExpcXVpZGl0eSh1aW50NjQsdWludDY0KXZvaWQiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCAqYWJpX3JvdXRlX2luaXRBcHBsaWNhdGlvbiAqYWJpX3JvdXRlX2FkZExpcXVpZGl0eQoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjYWxsIE5vT3AKCWVycg==",
     "clear": "I3ByYWdtYSB2ZXJzaW9uIDEx"
   },
   "byteCode": {
-    "approval": "CzEYFIEGCzEZCI0MAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAIEBQ4AEuER7NjYaAI4B//AA",
+    "approval": "CyAFAAEE4KcSBiYNAAR0bHBzA3B0cgNzdHICbHAFYWRtaW4DbHBuA2xwcwNscGQDbHB1A3B0aQNzdGkBazEYFCEECzEZCI0MAbEAAAAAAAAAAAAAAaMAAAAAAAAAAAAAAIgAAiNDigAAJwUxAGeJNhoEVwIANhoDVwIANhoCFzYaARcxFiMJSTgQIxJEiAACI0OKBQAoJwVkMQASRCoiZysiZykiZycMImcnBCJnJwaL/EkVFlcGAkxQZycHgAUAA01MUGcnCCEEZycJi/tJFRZXBgJMUGeAB3ZlcnNpb26B6AdngAZtaW5iYWwlZ4v/OAcyChJEi/84CCUSRCcKi/5nJwuL/WexJLIQJwpkshEyCrIUIrISIrIBs7EkshAnC2SyETIKshQishIisgGzsYEDshCB///og7HeFrIiJwhksiMnBmRXAgCyJicHZFcCALIlJwlkVwIAsicisgGztDyMACcEiwBniTYaAhc2GgEXiAACI0OKAgAoRwUqZIwAK2SMASlkjAKLAiISQQALi/+L/guSjANCAB2L/4sCC4sACowEi/6LAguLAQqMBYsFiwSIADuMAyqLAIv/CGcriwGL/ghnKYsCiwMIZycMiwCL/wiLAYv+CAtnsSSyECcEZLIRMQCyFIsDshIisgGziYoCAYv/i/4MQQAFi/9CAAKL/omABLhEezY2GgCOAf5RAIAEtkNt8oAEEy3VZzYaAI4C/kn/QwA=",
     "clear": "Cw=="
   },
   "compilerInfo": {

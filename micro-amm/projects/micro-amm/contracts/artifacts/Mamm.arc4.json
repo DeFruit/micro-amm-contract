@@ -8,6 +8,50 @@
       "returns": {
         "type": "void"
       }
+    },
+    {
+      "name": "initApplication",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "primaryAssetId",
+          "type": "uint64"
+        },
+        {
+          "name": "secondaryAssetId",
+          "type": "uint64"
+        },
+        {
+          "name": "lpAssetName",
+          "type": "string"
+        },
+        {
+          "name": "lpAssetURL",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "addLiquidity",
+      "args": [
+        {
+          "name": "primaryAmount",
+          "type": "uint64"
+        },
+        {
+          "name": "secondaryAmount",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
     }
   ]
 }

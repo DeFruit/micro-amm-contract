@@ -87,6 +87,42 @@ export class Mamm extends Contract {
     }); // 1000 fee covered by sender
     this.lp_token_id.value = lpAssetId.id;
   }
+
+  addLiquidity(primaryAmount: uint64, secondaryAmount: uint64): void {
+    const primaryReserve = this.primary_token_reserve.value;
+    const secondaryReserve = this.secondary_token_reserve.value;
+    const totalLPSupply = this.total_lp_supply.value;
+
+    let lpTokensMinted: uint64;
+
+    // Case 1: Initial Liquidity
+    if (totalLPSupply === 0) {
+      lpTokensMinted = sqrt(primaryAmount * secondaryAmount);
+    }
+    // Case 2: Adding Liquidity (Matching Pool Ratio)
+    else {
+      const mintFromOra = (primaryAmount * totalLPSupply) / primaryReserve;
+      const mintFromAlgo = (secondaryAmount * totalLPSupply) / secondaryReserve;
+      lpTokensMinted = this.min(mintFromOra, mintFromAlgo);
+    }
+
+    // Update global state
+    this.primary_token_reserve.value = primaryReserve + primaryAmount;
+    this.secondary_token_reserve.value = secondaryReserve + secondaryAmount;
+    this.total_lp_supply.value = totalLPSupply + lpTokensMinted;
+    this.k_value.value = (primaryReserve + primaryAmount) * (secondaryReserve + secondaryAmount);
+
+    // Mint LP tokens
+    sendAssetTransfer({
+      xferAsset: AssetID.fromUint64(this.lp_token_id.value),
+      assetReceiver: this.txn.sender,
+      assetAmount: lpTokensMinted,
+    });
+  }
+
+  private min(a: uint64, b: uint64): uint64 {
+    return a < b ? a : b;
+  }
 }
 
 /*
