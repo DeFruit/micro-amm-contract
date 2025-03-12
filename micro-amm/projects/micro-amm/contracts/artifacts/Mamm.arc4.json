@@ -31,6 +31,18 @@
         {
           "name": "lpAssetURL",
           "type": "string"
+        },
+        {
+          "name": "swapFeeBps",
+          "type": "uint64"
+        },
+        {
+          "name": "protocolFeeBps",
+          "type": "uint64"
+        },
+        {
+          "name": "treasuryAddress",
+          "type": "address"
         }
       ],
       "returns": {

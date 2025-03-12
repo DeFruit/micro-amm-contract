@@ -1,3 +1,4 @@
+/* eslint-disable no-lonely-if */
 // This file implements a Micro-AMM (Automated Market Maker) contract on Algorand using TEALScript
 
 import { Contract } from '@algorandfoundation/tealscript';
@@ -40,7 +41,11 @@ export class Mamm extends Contract {
 
   swap_fee_bps = GlobalStateKey<uint64>({ key: 'sfbps' });
 
+  protocol_fee_bps = GlobalStateKey<uint64>({ key: 'pfbps' });
+
   admin = GlobalStateKey<Address>({ key: 'admin' });
+
+  treasury_address = GlobalStateKey<Address>({ key: 'treasury' });
 
   minimum_balance = GlobalStateKey<uint64>({ key: 'minbal' });
 
@@ -57,7 +62,10 @@ export class Mamm extends Contract {
     primaryAssetId: uint64,
     secondaryAssetId: uint64,
     lpAssetName: string,
-    lpAssetURL: string
+    lpAssetURL: string,
+    swapFeeBps: uint64,
+    protocolFeeBps: uint64,
+    treasuryAddress: Address
   ): void {
     assert(this.admin.value === this.txn.sender, 'Only admin can initialize the application');
 
@@ -72,6 +80,9 @@ export class Mamm extends Contract {
     this.lp_token_url.value = lpAssetURL;
     this.contract_version.value = VERSION;
     this.minimum_balance.value = TOKEN_MBR * 3;
+    this.swap_fee_bps.value = swapFeeBps;
+    this.protocol_fee_bps.value = protocolFeeBps;
+    this.treasury_address.value = treasuryAddress;
 
     verifyPayTxn(mbrTxn, { receiver: this.app.address, amount: TOKEN_MBR * 3 });
 
@@ -198,6 +209,8 @@ export class Mamm extends Contract {
     const primaryReserve = this.primary_token_reserve.value;
     const secondaryReserve = this.secondary_token_reserve.value;
     const swapFeeBps = this.swap_fee_bps.value; // Fee in basis points (bps)
+    const protocolFeeBps = this.protocol_fee_bps.value; // Fee in basis points (bps)
+    const protocolReceiver = this.treasury_address.value;
 
     let reserveIn: uint64 = 0;
     let reserveOut: uint64 = 0;
@@ -217,7 +230,15 @@ export class Mamm extends Contract {
     assert(inputAmount > 0, 'Invalid input amount');
 
     // Calculate output using constant product formula
-    const inputAfterFee = (inputAmount * (10000 - swapFeeBps)) / 10000;
+    // Calculate total swap fee
+    const totalFee = wideRatio([inputAmount, swapFeeBps], [10000]);
+    const protocolFee = wideRatio([totalFee, protocolFeeBps], [swapFeeBps]); // Subset of total fee
+    const lpFee = totalFee - protocolFee; // Remaining fee goes to LPs
+
+    // Deduct fee from input amount
+    const inputAfterFee = inputAmount - totalFee;
+
+    // Calculate output using constant product formula
     const numerator = reserveOut * inputAfterFee;
     const denominator = reserveIn + inputAfterFee;
     const outputAmount = numerator / denominator;
@@ -226,7 +247,7 @@ export class Mamm extends Contract {
     assert(outputAmount > 0, 'Swap too small');
 
     // Update reserves
-    const newReserveIn = reserveIn + inputAfterFee;
+    const newReserveIn = reserveIn + inputAfterFee + lpFee;
     const newReserveOut = reserveOut - outputAmount;
 
     if (swapType === 0) {
@@ -239,6 +260,37 @@ export class Mamm extends Contract {
 
     // Maintain constant product rule
     this.k_value.value = newReserveIn * newReserveOut;
+
+    // Send protocol fee if applicable
+    if (protocolFee > 0) {
+      if (swapType === 0) {
+        if (this.primary_token_id.value !== 0) {
+          sendAssetTransfer({
+            xferAsset: AssetID.fromUint64(this.primary_token_id.value),
+            assetReceiver: protocolReceiver,
+            assetAmount: protocolFee,
+          });
+        } else {
+          sendPayment({
+            receiver: protocolReceiver,
+            amount: protocolFee,
+          });
+        }
+      } else {
+        if (this.secondary_token_id.value !== 0) {
+          sendAssetTransfer({
+            xferAsset: AssetID.fromUint64(this.secondary_token_id.value),
+            assetReceiver: protocolReceiver,
+            assetAmount: protocolFee,
+          });
+        } else {
+          sendPayment({
+            receiver: protocolReceiver,
+            amount: protocolFee,
+          });
+        }
+      }
+    }
 
     // Send output asset to user
     if (swapType === 0) {
@@ -277,15 +329,15 @@ export class Mamm extends Contract {
   }
 }
 
-/* export function swap(inputAmount: uint64, swapType: string): void {
-    const oraReserve = GLOBAL_STATE.ORA_RESERVE.get();
-    const algoReserve = GLOBAL_STATE.ALGO_RESERVE.get();
-    const swapFeeBps = GLOBAL_STATE.SWAP_FEE_BPS.get();  // Fee in basis points (bps)
+/* import { GlobalState, Application, GlobalStateKey, Txn, uint64 } from '@algo-builder/tealscript';
+
+// Function: Swap ORA ⇄ ALGO with Fees
+export function swap(inputAmount: uint64, swapType: string): void {
 
     let reserveIn: uint64;
     let reserveOut: uint64;
 
-    // Determine if swapping ORA -> ALGO or ALGO -> ORA
+    // Determine swap type
     if (swapType == "ORA_TO_ALGO") {
         reserveIn = oraReserve;
         reserveOut = algoReserve;
@@ -299,17 +351,24 @@ export class Mamm extends Contract {
     // Ensure input is valid
     assert(inputAmount > 0, "Invalid input amount");
 
+    // Calculate total swap fee
+    const totalFee = (inputAmount * swapFeeBps) / 10000;
+    const protocolFee = (totalFee * protocolFeeBps) / swapFeeBps;  // Subset of total fee
+    const lpFee = totalFee - protocolFee;  // Remaining fee goes to LPs
+
+    // Deduct fee from input amount
+    const inputAfterFee = inputAmount - totalFee;
+
     // Calculate output using constant product formula
-    const inputAfterFee = (inputAmount * (10000 - swapFeeBps)) / 10000;
     const numerator = reserveOut * inputAfterFee;
     const denominator = reserveIn + inputAfterFee;
     const outputAmount = numerator / denominator;
 
-    // Ensure output is valid
+    // Ensure valid output
     assert(outputAmount > 0, "Swap too small");
 
     // Update reserves
-    const newReserveIn = reserveIn + inputAfterFee;
+    const newReserveIn = reserveIn + inputAfterFee + lpFee;  // LP fee stays in pool
     const newReserveOut = reserveOut - outputAmount;
 
     if (swapType == "ORA_TO_ALGO") {
@@ -323,9 +382,20 @@ export class Mamm extends Contract {
     // Maintain constant product rule
     GLOBAL_STATE.K_VALUE.put(newReserveIn * newReserveOut);
 
-    // Send output asset to user
+    // Send protocol fee if applicable
+    if (protocolFee > 0) {
+        if (swapType == "ORA_TO_ALGO") {
+            sendAsset(protocolReceiver, GLOBAL_STATE.LP_TOKEN_ID.get(), protocolFee);
+        } else {
+            sendAlgo(protocolReceiver, protocolFee);
+        }
+    }
+
+    // Send swapped asset to user
     if (swapType == "ORA_TO_ALGO") {
         sendAlgo(Txn.sender(), outputAmount);
     } else {
         sendAsset(Txn.sender(), GLOBAL_STATE.LP_TOKEN_ID.get(), outputAmount);
-    } */
+    }
+}
+ */
