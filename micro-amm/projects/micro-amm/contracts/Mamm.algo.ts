@@ -39,15 +39,15 @@ export class Mamm extends Contract {
 
   lp_token_url = GlobalStateKey<string>({ key: 'lpu' });
 
-  swap_fee_bps = GlobalStateKey<uint64>({ key: 'sfbps' });
+  swap_fee_bps = GlobalStateKey<uint64>({ key: 'sfbps' }); // admin can update
 
-  protocol_fee_bps = GlobalStateKey<uint64>({ key: 'pfbps' });
+  protocol_fee_bps = GlobalStateKey<uint64>({ key: 'pfbps' }); // admin can update
 
-  admin = GlobalStateKey<Address>({ key: 'admin' });
+  admin = GlobalStateKey<Address>({ key: 'admin' }); // can be updated
 
-  treasury_address = GlobalStateKey<Address>({ key: 'treasury' });
+  treasury_address = GlobalStateKey<Address>({ key: 'treasury' }); // can be updated
 
-  minimum_balance = GlobalStateKey<uint64>({ key: 'minbal' });
+  minimum_balance = GlobalStateKey<uint64>({ key: 'minbal' }); // can be updated
 
   contract_version = GlobalStateKey<uint64>({ key: 'version' });
 
@@ -327,75 +327,36 @@ export class Mamm extends Contract {
   private min(a: uint64, b: uint64): uint64 {
     return a < b ? a : b;
   }
+
+  // Admin functions
+
+  // Update the swap fee
+  updateSwapFee(newFee: uint64): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can update the swap fee');
+    this.swap_fee_bps.value = newFee;
+  }
+
+  // Update the protocol fee
+  updateProtocolFee(newFee: uint64): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can update the protocol fee');
+    this.protocol_fee_bps.value = newFee;
+  }
+
+  // Update the admin address
+  updateAdmin(newAdmin: Address): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can update the admin address');
+    this.admin.value = newAdmin;
+  }
+
+  // Update the treasury address
+  updateTreasury(newTreasury: Address): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can update the treasury address');
+    this.treasury_address.value = newTreasury;
+  }
+
+  // Update the minimum balance requirement
+  updateMinimumBalance(newMBR: uint64): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can update the minimum balance requirement');
+    this.minimum_balance.value = newMBR;
+  }
 }
-
-/* import { GlobalState, Application, GlobalStateKey, Txn, uint64 } from '@algo-builder/tealscript';
-
-// Function: Swap ORA ⇄ ALGO with Fees
-export function swap(inputAmount: uint64, swapType: string): void {
-
-    let reserveIn: uint64;
-    let reserveOut: uint64;
-
-    // Determine swap type
-    if (swapType == "ORA_TO_ALGO") {
-        reserveIn = oraReserve;
-        reserveOut = algoReserve;
-    } else if (swapType == "ALGO_TO_ORA") {
-        reserveIn = algoReserve;
-        reserveOut = oraReserve;
-    } else {
-        assert(false, "Invalid swap type");
-    }
-
-    // Ensure input is valid
-    assert(inputAmount > 0, "Invalid input amount");
-
-    // Calculate total swap fee
-    const totalFee = (inputAmount * swapFeeBps) / 10000;
-    const protocolFee = (totalFee * protocolFeeBps) / swapFeeBps;  // Subset of total fee
-    const lpFee = totalFee - protocolFee;  // Remaining fee goes to LPs
-
-    // Deduct fee from input amount
-    const inputAfterFee = inputAmount - totalFee;
-
-    // Calculate output using constant product formula
-    const numerator = reserveOut * inputAfterFee;
-    const denominator = reserveIn + inputAfterFee;
-    const outputAmount = numerator / denominator;
-
-    // Ensure valid output
-    assert(outputAmount > 0, "Swap too small");
-
-    // Update reserves
-    const newReserveIn = reserveIn + inputAfterFee + lpFee;  // LP fee stays in pool
-    const newReserveOut = reserveOut - outputAmount;
-
-    if (swapType == "ORA_TO_ALGO") {
-        GLOBAL_STATE.ORA_RESERVE.put(newReserveIn);
-        GLOBAL_STATE.ALGO_RESERVE.put(newReserveOut);
-    } else {
-        GLOBAL_STATE.ALGO_RESERVE.put(newReserveIn);
-        GLOBAL_STATE.ORA_RESERVE.put(newReserveOut);
-    }
-
-    // Maintain constant product rule
-    GLOBAL_STATE.K_VALUE.put(newReserveIn * newReserveOut);
-
-    // Send protocol fee if applicable
-    if (protocolFee > 0) {
-        if (swapType == "ORA_TO_ALGO") {
-            sendAsset(protocolReceiver, GLOBAL_STATE.LP_TOKEN_ID.get(), protocolFee);
-        } else {
-            sendAlgo(protocolReceiver, protocolFee);
-        }
-    }
-
-    // Send swapped asset to user
-    if (swapType == "ORA_TO_ALGO") {
-        sendAlgo(Txn.sender(), outputAmount);
-    } else {
-        sendAsset(Txn.sender(), GLOBAL_STATE.LP_TOKEN_ID.get(), outputAmount);
-    }
-}
- */
