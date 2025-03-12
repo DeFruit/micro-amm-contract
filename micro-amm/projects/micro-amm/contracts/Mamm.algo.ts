@@ -38,6 +38,8 @@ export class Mamm extends Contract {
 
   lp_token_url = GlobalStateKey<string>({ key: 'lpu' });
 
+  swap_fee_bps = GlobalStateKey<uint64>({ key: 'sfbps' });
+
   admin = GlobalStateKey<Address>({ key: 'admin' });
 
   minimum_balance = GlobalStateKey<uint64>({ key: 'minbal' });
@@ -190,44 +192,140 @@ export class Mamm extends Contract {
     }
   }
 
+  // Swap function for swapping between two assets
+  // swapType = 0 for Primary -> Secondary, 1 for Secondary -> Primary
+  swap(inputAmount: uint64, swapType: uint64): void {
+    const primaryReserve = this.primary_token_reserve.value;
+    const secondaryReserve = this.secondary_token_reserve.value;
+    const swapFeeBps = this.swap_fee_bps.value; // Fee in basis points (bps)
+
+    let reserveIn: uint64 = 0;
+    let reserveOut: uint64 = 0;
+
+    // Determine if swapping Primary -> Secondary or Secondary -> Primary
+    if (swapType === 0) {
+      reserveIn = primaryReserve;
+      reserveOut = secondaryReserve;
+    } else if (swapType === 1) {
+      reserveIn = secondaryReserve;
+      reserveOut = primaryReserve;
+    } else {
+      assert(false, 'Invalid swap type');
+    }
+
+    // Ensure input is valid
+    assert(inputAmount > 0, 'Invalid input amount');
+
+    // Calculate output using constant product formula
+    const inputAfterFee = (inputAmount * (10000 - swapFeeBps)) / 10000;
+    const numerator = reserveOut * inputAfterFee;
+    const denominator = reserveIn + inputAfterFee;
+    const outputAmount = numerator / denominator;
+
+    // Ensure output is valid
+    assert(outputAmount > 0, 'Swap too small');
+
+    // Update reserves
+    const newReserveIn = reserveIn + inputAfterFee;
+    const newReserveOut = reserveOut - outputAmount;
+
+    if (swapType === 0) {
+      this.primary_token_reserve.value = newReserveIn;
+      this.secondary_token_reserve.value = newReserveOut;
+    } else {
+      this.secondary_token_reserve.value = newReserveIn;
+      this.primary_token_reserve.value = newReserveOut;
+    }
+
+    // Maintain constant product rule
+    this.k_value.value = newReserveIn * newReserveOut;
+
+    // Send output asset to user
+    if (swapType === 0) {
+      if (this.secondary_token_id.value === 0) {
+        sendPayment({
+          receiver: this.txn.sender,
+          amount: outputAmount,
+        });
+      } else {
+        sendAssetTransfer({
+          xferAsset: AssetID.fromUint64(this.secondary_token_id.value),
+          assetReceiver: this.txn.sender,
+          assetAmount: outputAmount,
+        });
+      }
+    }
+    if (swapType === 1) {
+      if (this.primary_token_id.value === 0) {
+        sendPayment({
+          receiver: this.txn.sender,
+          amount: outputAmount,
+        });
+      } else {
+        sendAssetTransfer({
+          xferAsset: AssetID.fromUint64(this.primary_token_id.value),
+          assetReceiver: this.txn.sender,
+          assetAmount: outputAmount,
+        });
+      }
+    }
+  }
+
   // Helper function returning the smaller of two values
   private min(a: uint64, b: uint64): uint64 {
     return a < b ? a : b;
   }
 }
 
-/* // Function: Remove Liquidity
-export function removeLiquidity(lpTokensBurned: uint64): void {
-    const primaryReserve = GLOBAL_STATE.ORA_RESERVE.get();
-    const secondaryReserve = GLOBAL_STATE.ALGO_RESERVE.get();
-    const totalLPSupply = GLOBAL_STATE.TOTAL_LP_SUPPLY.get();
+/* export function swap(inputAmount: uint64, swapType: string): void {
+    const oraReserve = GLOBAL_STATE.ORA_RESERVE.get();
+    const algoReserve = GLOBAL_STATE.ALGO_RESERVE.get();
+    const swapFeeBps = GLOBAL_STATE.SWAP_FEE_BPS.get();  // Fee in basis points (bps)
 
-    // Ensure valid LP token balance
-    assert(lpTokensBurned > 0, "Invalid LP amount");
-    assert(lpTokensBurned <= totalLPSupply, "Not enough LP supply");
+    let reserveIn: uint64;
+    let reserveOut: uint64;
 
-    // Calculate how much ORA + ALGO the user gets back
-    const oraWithdrawn = (lpTokensBurned * primaryReserve) / totalLPSupply;
-    const algoWithdrawn = (lpTokensBurned * secondaryReserve) / totalLPSupply;
+    // Determine if swapping ORA -> ALGO or ALGO -> ORA
+    if (swapType == "ORA_TO_ALGO") {
+        reserveIn = oraReserve;
+        reserveOut = algoReserve;
+    } else if (swapType == "ALGO_TO_ORA") {
+        reserveIn = algoReserve;
+        reserveOut = oraReserve;
+    } else {
+        assert(false, "Invalid swap type");
+    }
 
-    // Update global state (reduce reserves & total LP supply)
-    GLOBAL_STATE.ORA_RESERVE.put(primaryReserve - oraWithdrawn);
-    GLOBAL_STATE.ALGO_RESERVE.put(secondaryReserve - algoWithdrawn);
-    GLOBAL_STATE.TOTAL_LP_SUPPLY.put(totalLPSupply - lpTokensBurned);
-    GLOBAL_STATE.K_VALUE.put((primaryReserve - oraWithdrawn) * (secondaryReserve - algoWithdrawn));
+    // Ensure input is valid
+    assert(inputAmount > 0, "Invalid input amount");
 
-    // Burn LP tokens
-    burnLPTokens(Txn.sender(), lpTokensBurned);
+    // Calculate output using constant product formula
+    const inputAfterFee = (inputAmount * (10000 - swapFeeBps)) / 10000;
+    const numerator = reserveOut * inputAfterFee;
+    const denominator = reserveIn + inputAfterFee;
+    const outputAmount = numerator / denominator;
 
-    // Transfer ORA + ALGO back to the user
-    sendAsset(Txn.sender(), GLOBAL_STATE.LP_TOKEN_ID.get(), oraWithdrawn);
-    sendAlgo(Txn.sender(), algoWithdrawn);
-}
+    // Ensure output is valid
+    assert(outputAmount > 0, "Swap too small");
 
-// Function: Burn LP Tokens (Removes from supply)
-function burnLPTokens(owner: Address, amount: uint64): void {
-    const lpTokenID = GLOBAL_STATE.LP_TOKEN_ID.get();
-    assert(lpTokenID > 0, "LP Token not initialized");
+    // Update reserves
+    const newReserveIn = reserveIn + inputAfterFee;
+    const newReserveOut = reserveOut - outputAmount;
 
-    sendAsset(owner, lpTokenID, -amount);  // Burn LP tokens
-} */
+    if (swapType == "ORA_TO_ALGO") {
+        GLOBAL_STATE.ORA_RESERVE.put(newReserveIn);
+        GLOBAL_STATE.ALGO_RESERVE.put(newReserveOut);
+    } else {
+        GLOBAL_STATE.ALGO_RESERVE.put(newReserveIn);
+        GLOBAL_STATE.ORA_RESERVE.put(newReserveOut);
+    }
+
+    // Maintain constant product rule
+    GLOBAL_STATE.K_VALUE.put(newReserveIn * newReserveOut);
+
+    // Send output asset to user
+    if (swapType == "ORA_TO_ALGO") {
+        sendAlgo(Txn.sender(), outputAmount);
+    } else {
+        sendAsset(Txn.sender(), GLOBAL_STATE.LP_TOKEN_ID.get(), outputAmount);
+    } */

@@ -25,15 +25,15 @@
       13,
       14,
       15,
-      16
+      16,
+      17,
+      18
     ]
   },
   {
     "teal": 3,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      17,
-      18,
       19,
       20,
       21,
@@ -82,60 +82,60 @@
       64,
       65,
       66,
-      67
+      67,
+      68,
+      69
     ]
   },
   {
     "teal": 15,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      68,
-      69
+      70,
+      71
     ]
   },
   {
     "teal": 16,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      70
+      72
     ]
   },
   {
     "teal": 17,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      71,
-      72
+      73,
+      74
     ]
   },
   {
     "teal": 18,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      73
+      75
     ]
   },
   {
     "teal": 19,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      74,
-      75
+      76,
+      77
     ]
   },
   {
     "teal": 20,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      76
+      78
     ]
   },
   {
     "teal": 21,
     "source": "contracts/Mamm.algo.ts:12",
     "pc": [
-      77,
-      78,
       79,
       80,
       81,
@@ -159,7 +159,9 @@
       99,
       100,
       101,
-      102
+      102,
+      103,
+      104
     ]
   },
   {
@@ -167,2260 +169,2252 @@
     "source": "contracts/Mamm.algo.ts:12",
     "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
     "pc": [
-      103
+      105
     ]
   },
   {
     "teal": 30,
-    "source": "contracts/Mamm.algo.ts:48",
+    "source": "contracts/Mamm.algo.ts:50",
     "pc": [
-      104,
-      105,
-      106
-    ]
-  },
-  {
-    "teal": 31,
-    "source": "contracts/Mamm.algo.ts:48",
-    "pc": [
-      107
-    ]
-  },
-  {
-    "teal": 32,
-    "source": "contracts/Mamm.algo.ts:48",
-    "pc": [
+      106,
+      107,
       108
     ]
   },
   {
-    "teal": 36,
-    "source": "contracts/Mamm.algo.ts:48",
+    "teal": 31,
+    "source": "contracts/Mamm.algo.ts:50",
     "pc": [
-      109,
-      110,
-      111
+      109
     ]
   },
   {
-    "teal": 40,
-    "source": "contracts/Mamm.algo.ts:49",
+    "teal": 32,
+    "source": "contracts/Mamm.algo.ts:50",
     "pc": [
+      110
+    ]
+  },
+  {
+    "teal": 36,
+    "source": "contracts/Mamm.algo.ts:50",
+    "pc": [
+      111,
       112,
       113
     ]
   },
   {
-    "teal": 41,
-    "source": "contracts/Mamm.algo.ts:49",
+    "teal": 40,
+    "source": "contracts/Mamm.algo.ts:51",
     "pc": [
       114,
       115
     ]
   },
   {
-    "teal": 42,
-    "source": "contracts/Mamm.algo.ts:49",
+    "teal": 41,
+    "source": "contracts/Mamm.algo.ts:51",
     "pc": [
-      116
-    ]
-  },
-  {
-    "teal": 43,
-    "source": "contracts/Mamm.algo.ts:48",
-    "pc": [
+      116,
       117
     ]
   },
   {
-    "teal": 48,
-    "source": "contracts/Mamm.algo.ts:58",
+    "teal": 42,
+    "source": "contracts/Mamm.algo.ts:51",
     "pc": [
-      118,
-      119,
-      120
+      118
+    ]
+  },
+  {
+    "teal": 43,
+    "source": "contracts/Mamm.algo.ts:50",
+    "pc": [
+      119
+    ]
+  },
+  {
+    "teal": 48,
+    "source": "contracts/Mamm.algo.ts:60",
+    "pc": [
+      120,
+      121,
+      122
     ]
   },
   {
     "teal": 49,
-    "source": "contracts/Mamm.algo.ts:58",
+    "source": "contracts/Mamm.algo.ts:60",
     "pc": [
-      121,
-      122,
-      123
+      123,
+      124,
+      125
     ]
   },
   {
     "teal": 52,
-    "source": "contracts/Mamm.algo.ts:57",
+    "source": "contracts/Mamm.algo.ts:59",
     "pc": [
-      124,
-      125,
-      126
+      126,
+      127,
+      128
     ]
   },
   {
     "teal": 53,
-    "source": "contracts/Mamm.algo.ts:57",
+    "source": "contracts/Mamm.algo.ts:59",
     "pc": [
-      127,
-      128,
-      129
+      129,
+      130,
+      131
     ]
   },
   {
     "teal": 56,
-    "source": "contracts/Mamm.algo.ts:56",
+    "source": "contracts/Mamm.algo.ts:58",
     "pc": [
-      130,
-      131,
-      132
+      132,
+      133,
+      134
     ]
   },
   {
     "teal": 57,
-    "source": "contracts/Mamm.algo.ts:56",
+    "source": "contracts/Mamm.algo.ts:58",
     "pc": [
-      133
+      135
     ]
   },
   {
     "teal": 60,
-    "source": "contracts/Mamm.algo.ts:55",
+    "source": "contracts/Mamm.algo.ts:57",
     "pc": [
-      134,
-      135,
-      136
+      136,
+      137,
+      138
     ]
   },
   {
     "teal": 61,
-    "source": "contracts/Mamm.algo.ts:55",
+    "source": "contracts/Mamm.algo.ts:57",
     "pc": [
-      137
-    ]
-  },
-  {
-    "teal": 64,
-    "source": "contracts/Mamm.algo.ts:54",
-    "pc": [
-      138,
       139
     ]
   },
   {
-    "teal": 65,
-    "source": "contracts/Mamm.algo.ts:54",
+    "teal": 64,
+    "source": "contracts/Mamm.algo.ts:56",
     "pc": [
-      140
-    ]
-  },
-  {
-    "teal": 66,
-    "source": "contracts/Mamm.algo.ts:54",
-    "pc": [
+      140,
       141
     ]
   },
   {
-    "teal": 67,
-    "source": "contracts/Mamm.algo.ts:54",
+    "teal": 65,
+    "source": "contracts/Mamm.algo.ts:56",
     "pc": [
       142
     ]
   },
   {
-    "teal": 68,
-    "source": "contracts/Mamm.algo.ts:54",
+    "teal": 66,
+    "source": "contracts/Mamm.algo.ts:56",
     "pc": [
-      143,
+      143
+    ]
+  },
+  {
+    "teal": 67,
+    "source": "contracts/Mamm.algo.ts:56",
+    "pc": [
       144
     ]
   },
   {
-    "teal": 69,
-    "source": "contracts/Mamm.algo.ts:54",
+    "teal": 68,
+    "source": "contracts/Mamm.algo.ts:56",
     "pc": [
-      145
-    ]
-  },
-  {
-    "teal": 70,
-    "source": "contracts/Mamm.algo.ts:54",
-    "pc": [
+      145,
       146
     ]
   },
   {
-    "teal": 73,
-    "source": "contracts/Mamm.algo.ts:54",
-    "errorMessage": "argument 4 (mbrTxn) for initApplication must be a pay transaction",
+    "teal": 69,
+    "source": "contracts/Mamm.algo.ts:56",
     "pc": [
       147
     ]
   },
   {
+    "teal": 70,
+    "source": "contracts/Mamm.algo.ts:56",
+    "pc": [
+      148
+    ]
+  },
+  {
+    "teal": 73,
+    "source": "contracts/Mamm.algo.ts:56",
+    "errorMessage": "argument 4 (mbrTxn) for initApplication must be a pay transaction",
+    "pc": [
+      149
+    ]
+  },
+  {
     "teal": 76,
-    "source": "contracts/Mamm.algo.ts:53",
+    "source": "contracts/Mamm.algo.ts:55",
     "pc": [
-      148,
-      149,
-      150
-    ]
-  },
-  {
-    "teal": 77,
-    "source": "contracts/Mamm.algo.ts:53",
-    "pc": [
-      151
-    ]
-  },
-  {
-    "teal": 78,
-    "source": "contracts/Mamm.algo.ts:53",
-    "pc": [
+      150,
+      151,
       152
     ]
   },
   {
-    "teal": 82,
-    "source": "contracts/Mamm.algo.ts:53",
+    "teal": 77,
+    "source": "contracts/Mamm.algo.ts:55",
     "pc": [
-      153,
-      154,
-      155
+      153
+    ]
+  },
+  {
+    "teal": 78,
+    "source": "contracts/Mamm.algo.ts:55",
+    "pc": [
+      154
+    ]
+  },
+  {
+    "teal": 82,
+    "source": "contracts/Mamm.algo.ts:55",
+    "pc": [
+      155,
+      156,
+      157
     ]
   },
   {
     "teal": 85,
-    "source": "contracts/Mamm.algo.ts:53",
+    "source": "contracts/Mamm.algo.ts:55",
     "pc": [
-      156
-    ]
-  },
-  {
-    "teal": 89,
-    "source": "contracts/Mamm.algo.ts:60",
-    "pc": [
-      157,
       158
     ]
   },
   {
-    "teal": 90,
-    "source": "contracts/Mamm.algo.ts:60",
+    "teal": 89,
+    "source": "contracts/Mamm.algo.ts:62",
     "pc": [
-      159
+      159,
+      160
     ]
   },
   {
-    "teal": 91,
-    "source": "contracts/Mamm.algo.ts:60",
+    "teal": 90,
+    "source": "contracts/Mamm.algo.ts:62",
     "pc": [
-      160,
       161
     ]
   },
   {
-    "teal": 92,
-    "source": "contracts/Mamm.algo.ts:60",
+    "teal": 91,
+    "source": "contracts/Mamm.algo.ts:62",
     "pc": [
-      162
-    ]
-  },
-  {
-    "teal": 95,
-    "source": "contracts/Mamm.algo.ts:60",
-    "errorMessage": "Only admin can initialize the application",
-    "pc": [
+      162,
       163
     ]
   },
   {
-    "teal": 99,
+    "teal": 92,
     "source": "contracts/Mamm.algo.ts:62",
     "pc": [
       164
     ]
   },
   {
-    "teal": 100,
+    "teal": 95,
     "source": "contracts/Mamm.algo.ts:62",
+    "errorMessage": "Only admin can initialize the application",
     "pc": [
       165
     ]
   },
   {
-    "teal": 101,
-    "source": "contracts/Mamm.algo.ts:62",
+    "teal": 99,
+    "source": "contracts/Mamm.algo.ts:64",
     "pc": [
       166
     ]
   },
   {
-    "teal": 105,
-    "source": "contracts/Mamm.algo.ts:63",
+    "teal": 100,
+    "source": "contracts/Mamm.algo.ts:64",
     "pc": [
       167
     ]
   },
   {
-    "teal": 106,
-    "source": "contracts/Mamm.algo.ts:63",
+    "teal": 101,
+    "source": "contracts/Mamm.algo.ts:64",
     "pc": [
       168
     ]
   },
   {
-    "teal": 107,
-    "source": "contracts/Mamm.algo.ts:63",
+    "teal": 105,
+    "source": "contracts/Mamm.algo.ts:65",
     "pc": [
       169
     ]
   },
   {
-    "teal": 111,
-    "source": "contracts/Mamm.algo.ts:64",
+    "teal": 106,
+    "source": "contracts/Mamm.algo.ts:65",
     "pc": [
       170
     ]
   },
   {
-    "teal": 112,
-    "source": "contracts/Mamm.algo.ts:64",
+    "teal": 107,
+    "source": "contracts/Mamm.algo.ts:65",
     "pc": [
       171
     ]
   },
   {
-    "teal": 113,
-    "source": "contracts/Mamm.algo.ts:64",
+    "teal": 111,
+    "source": "contracts/Mamm.algo.ts:66",
     "pc": [
       172
     ]
   },
   {
-    "teal": 117,
-    "source": "contracts/Mamm.algo.ts:65",
+    "teal": 112,
+    "source": "contracts/Mamm.algo.ts:66",
     "pc": [
-      173,
+      173
+    ]
+  },
+  {
+    "teal": 113,
+    "source": "contracts/Mamm.algo.ts:66",
+    "pc": [
       174
     ]
   },
   {
-    "teal": 118,
-    "source": "contracts/Mamm.algo.ts:65",
+    "teal": 117,
+    "source": "contracts/Mamm.algo.ts:67",
     "pc": [
-      175
-    ]
-  },
-  {
-    "teal": 119,
-    "source": "contracts/Mamm.algo.ts:65",
-    "pc": [
+      175,
       176
     ]
   },
   {
-    "teal": 123,
-    "source": "contracts/Mamm.algo.ts:66",
+    "teal": 118,
+    "source": "contracts/Mamm.algo.ts:67",
     "pc": [
-      177,
+      177
+    ]
+  },
+  {
+    "teal": 119,
+    "source": "contracts/Mamm.algo.ts:67",
+    "pc": [
       178
     ]
   },
   {
-    "teal": 124,
-    "source": "contracts/Mamm.algo.ts:66",
+    "teal": 123,
+    "source": "contracts/Mamm.algo.ts:68",
     "pc": [
-      179
-    ]
-  },
-  {
-    "teal": 125,
-    "source": "contracts/Mamm.algo.ts:66",
-    "pc": [
+      179,
       180
     ]
   },
   {
-    "teal": 129,
-    "source": "contracts/Mamm.algo.ts:67",
+    "teal": 124,
+    "source": "contracts/Mamm.algo.ts:68",
     "pc": [
-      181,
+      181
+    ]
+  },
+  {
+    "teal": 125,
+    "source": "contracts/Mamm.algo.ts:68",
+    "pc": [
       182
     ]
   },
   {
-    "teal": 130,
-    "source": "contracts/Mamm.algo.ts:67",
+    "teal": 129,
+    "source": "contracts/Mamm.algo.ts:69",
     "pc": [
       183,
       184
     ]
   },
   {
-    "teal": 131,
-    "source": "contracts/Mamm.algo.ts:67",
+    "teal": 130,
+    "source": "contracts/Mamm.algo.ts:69",
     "pc": [
-      185
-    ]
-  },
-  {
-    "teal": 132,
-    "source": "contracts/Mamm.algo.ts:67",
-    "pc": [
+      185,
       186
     ]
   },
   {
-    "teal": 133,
-    "source": "contracts/Mamm.algo.ts:67",
+    "teal": 131,
+    "source": "contracts/Mamm.algo.ts:69",
     "pc": [
       187
     ]
   },
   {
+    "teal": 132,
+    "source": "contracts/Mamm.algo.ts:69",
+    "pc": [
+      188
+    ]
+  },
+  {
+    "teal": 133,
+    "source": "contracts/Mamm.algo.ts:69",
+    "pc": [
+      189
+    ]
+  },
+  {
     "teal": 134,
-    "source": "contracts/Mamm.algo.ts:67",
+    "source": "contracts/Mamm.algo.ts:69",
     "pc": [
-      188,
-      189,
-      190
-    ]
-  },
-  {
-    "teal": 135,
-    "source": "contracts/Mamm.algo.ts:67",
-    "pc": [
-      191
-    ]
-  },
-  {
-    "teal": 136,
-    "source": "contracts/Mamm.algo.ts:67",
-    "pc": [
+      190,
+      191,
       192
     ]
   },
   {
-    "teal": 137,
-    "source": "contracts/Mamm.algo.ts:67",
+    "teal": 135,
+    "source": "contracts/Mamm.algo.ts:69",
     "pc": [
       193
     ]
   },
   {
-    "teal": 141,
-    "source": "contracts/Mamm.algo.ts:68",
+    "teal": 136,
+    "source": "contracts/Mamm.algo.ts:69",
     "pc": [
-      194,
+      194
+    ]
+  },
+  {
+    "teal": 137,
+    "source": "contracts/Mamm.algo.ts:69",
+    "pc": [
       195
     ]
   },
   {
-    "teal": 142,
-    "source": "contracts/Mamm.algo.ts:68",
+    "teal": 141,
+    "source": "contracts/Mamm.algo.ts:70",
     "pc": [
       196,
-      197,
+      197
+    ]
+  },
+  {
+    "teal": 142,
+    "source": "contracts/Mamm.algo.ts:70",
+    "pc": [
       198,
       199,
       200,
       201,
-      202
+      202,
+      203,
+      204
     ]
   },
   {
     "teal": 143,
-    "source": "contracts/Mamm.algo.ts:68",
+    "source": "contracts/Mamm.algo.ts:70",
     "pc": [
-      203
-    ]
-  },
-  {
-    "teal": 147,
-    "source": "contracts/Mamm.algo.ts:69",
-    "pc": [
-      204,
       205
     ]
   },
   {
-    "teal": 148,
-    "source": "contracts/Mamm.algo.ts:69",
+    "teal": 147,
+    "source": "contracts/Mamm.algo.ts:71",
     "pc": [
       206,
       207
     ]
   },
   {
-    "teal": 149,
-    "source": "contracts/Mamm.algo.ts:69",
+    "teal": 148,
+    "source": "contracts/Mamm.algo.ts:71",
     "pc": [
-      208
+      208,
+      209
     ]
   },
   {
-    "teal": 153,
-    "source": "contracts/Mamm.algo.ts:70",
+    "teal": 149,
+    "source": "contracts/Mamm.algo.ts:71",
     "pc": [
-      209,
       210
     ]
   },
   {
-    "teal": 154,
-    "source": "contracts/Mamm.algo.ts:70",
+    "teal": 153,
+    "source": "contracts/Mamm.algo.ts:72",
     "pc": [
       211,
       212
     ]
   },
   {
-    "teal": 155,
-    "source": "contracts/Mamm.algo.ts:70",
+    "teal": 154,
+    "source": "contracts/Mamm.algo.ts:72",
     "pc": [
-      213
-    ]
-  },
-  {
-    "teal": 156,
-    "source": "contracts/Mamm.algo.ts:70",
-    "pc": [
+      213,
       214
     ]
   },
   {
-    "teal": 157,
-    "source": "contracts/Mamm.algo.ts:70",
+    "teal": 155,
+    "source": "contracts/Mamm.algo.ts:72",
     "pc": [
       215
     ]
   },
   {
+    "teal": 156,
+    "source": "contracts/Mamm.algo.ts:72",
+    "pc": [
+      216
+    ]
+  },
+  {
+    "teal": 157,
+    "source": "contracts/Mamm.algo.ts:72",
+    "pc": [
+      217
+    ]
+  },
+  {
     "teal": 158,
-    "source": "contracts/Mamm.algo.ts:70",
+    "source": "contracts/Mamm.algo.ts:72",
     "pc": [
-      216,
-      217,
-      218
-    ]
-  },
-  {
-    "teal": 159,
-    "source": "contracts/Mamm.algo.ts:70",
-    "pc": [
-      219
-    ]
-  },
-  {
-    "teal": 160,
-    "source": "contracts/Mamm.algo.ts:70",
-    "pc": [
+      218,
+      219,
       220
     ]
   },
   {
-    "teal": 161,
-    "source": "contracts/Mamm.algo.ts:70",
+    "teal": 159,
+    "source": "contracts/Mamm.algo.ts:72",
     "pc": [
       221
     ]
   },
   {
-    "teal": 165,
-    "source": "contracts/Mamm.algo.ts:71",
+    "teal": 160,
+    "source": "contracts/Mamm.algo.ts:72",
     "pc": [
-      222,
-      223,
+      222
+    ]
+  },
+  {
+    "teal": 161,
+    "source": "contracts/Mamm.algo.ts:72",
+    "pc": [
+      223
+    ]
+  },
+  {
+    "teal": 165,
+    "source": "contracts/Mamm.algo.ts:73",
+    "pc": [
       224,
       225,
       226,
       227,
       228,
       229,
-      230
+      230,
+      231,
+      232
     ]
   },
   {
     "teal": 166,
-    "source": "contracts/Mamm.algo.ts:71",
+    "source": "contracts/Mamm.algo.ts:73",
     "pc": [
-      231,
-      232,
-      233
+      233,
+      234,
+      235
     ]
   },
   {
     "teal": 167,
-    "source": "contracts/Mamm.algo.ts:71",
+    "source": "contracts/Mamm.algo.ts:73",
     "pc": [
-      234
+      236
     ]
   },
   {
     "teal": 171,
-    "source": "contracts/Mamm.algo.ts:72",
+    "source": "contracts/Mamm.algo.ts:74",
     "pc": [
-      235,
-      236,
       237,
       238,
       239,
       240,
       241,
-      242
-    ]
-  },
-  {
-    "teal": 172,
-    "source": "contracts/Mamm.algo.ts:72",
-    "pc": [
+      242,
       243,
       244
     ]
   },
   {
-    "teal": 173,
-    "source": "contracts/Mamm.algo.ts:72",
+    "teal": 172,
+    "source": "contracts/Mamm.algo.ts:74",
     "pc": [
-      245
+      245,
+      246
     ]
   },
   {
-    "teal": 178,
+    "teal": 173,
     "source": "contracts/Mamm.algo.ts:74",
     "pc": [
-      246,
       247
     ]
   },
   {
-    "teal": 179,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 178,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
       248,
       249
     ]
   },
   {
-    "teal": 180,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 179,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
       250,
       251
     ]
   },
   {
-    "teal": 181,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 180,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
-      252
-    ]
-  },
-  {
-    "teal": 184,
-    "source": "contracts/Mamm.algo.ts:74",
-    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}",
-    "pc": [
+      252,
       253
     ]
   },
   {
-    "teal": 187,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 181,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
-      254,
+      254
+    ]
+  },
+  {
+    "teal": 184,
+    "source": "contracts/Mamm.algo.ts:76",
+    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}",
+    "pc": [
       255
     ]
   },
   {
-    "teal": 188,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 187,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
       256,
       257
     ]
   },
   {
-    "teal": 189,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 188,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
       258,
       259
     ]
   },
   {
-    "teal": 190,
-    "source": "contracts/Mamm.algo.ts:74",
+    "teal": 189,
+    "source": "contracts/Mamm.algo.ts:76",
     "pc": [
-      260
-    ]
-  },
-  {
-    "teal": 193,
-    "source": "contracts/Mamm.algo.ts:74",
-    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"expected\":\"TOKEN_MBR * 3\"}",
-    "pc": [
+      260,
       261
     ]
   },
   {
-    "teal": 197,
+    "teal": 190,
     "source": "contracts/Mamm.algo.ts:76",
     "pc": [
-      262,
+      262
+    ]
+  },
+  {
+    "teal": 193,
+    "source": "contracts/Mamm.algo.ts:76",
+    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"expected\":\"TOKEN_MBR * 3\"}",
+    "pc": [
       263
     ]
   },
   {
-    "teal": 198,
-    "source": "contracts/Mamm.algo.ts:76",
+    "teal": 197,
+    "source": "contracts/Mamm.algo.ts:78",
     "pc": [
       264,
       265
     ]
   },
   {
-    "teal": 199,
-    "source": "contracts/Mamm.algo.ts:76",
+    "teal": 198,
+    "source": "contracts/Mamm.algo.ts:78",
     "pc": [
-      266
+      266,
+      267
     ]
   },
   {
-    "teal": 203,
-    "source": "contracts/Mamm.algo.ts:77",
+    "teal": 199,
+    "source": "contracts/Mamm.algo.ts:78",
     "pc": [
-      267,
       268
     ]
   },
   {
-    "teal": 204,
-    "source": "contracts/Mamm.algo.ts:77",
+    "teal": 203,
+    "source": "contracts/Mamm.algo.ts:79",
     "pc": [
       269,
       270
     ]
   },
   {
-    "teal": 205,
-    "source": "contracts/Mamm.algo.ts:77",
+    "teal": 204,
+    "source": "contracts/Mamm.algo.ts:79",
     "pc": [
-      271
-    ]
-  },
-  {
-    "teal": 213,
-    "source": "contracts/Mamm.algo.ts:80",
-    "pc": [
+      271,
       272
     ]
   },
   {
-    "teal": 214,
-    "source": "contracts/Mamm.algo.ts:80",
+    "teal": 205,
+    "source": "contracts/Mamm.algo.ts:79",
     "pc": [
       273
     ]
   },
   {
-    "teal": 215,
-    "source": "contracts/Mamm.algo.ts:80",
+    "teal": 213,
+    "source": "contracts/Mamm.algo.ts:82",
     "pc": [
-      274,
+      274
+    ]
+  },
+  {
+    "teal": 214,
+    "source": "contracts/Mamm.algo.ts:82",
+    "pc": [
       275
     ]
   },
   {
-    "teal": 219,
-    "source": "contracts/Mamm.algo.ts:81",
+    "teal": 215,
+    "source": "contracts/Mamm.algo.ts:82",
     "pc": [
       276,
       277
     ]
   },
   {
-    "teal": 220,
-    "source": "contracts/Mamm.algo.ts:81",
+    "teal": 219,
+    "source": "contracts/Mamm.algo.ts:83",
     "pc": [
-      278
+      278,
+      279
     ]
   },
   {
-    "teal": 221,
-    "source": "contracts/Mamm.algo.ts:81",
+    "teal": 220,
+    "source": "contracts/Mamm.algo.ts:83",
     "pc": [
-      279,
       280
     ]
   },
   {
-    "teal": 225,
-    "source": "contracts/Mamm.algo.ts:82",
+    "teal": 221,
+    "source": "contracts/Mamm.algo.ts:83",
     "pc": [
       281,
       282
     ]
   },
   {
-    "teal": 226,
-    "source": "contracts/Mamm.algo.ts:82",
+    "teal": 225,
+    "source": "contracts/Mamm.algo.ts:84",
     "pc": [
       283,
       284
     ]
   },
   {
-    "teal": 230,
-    "source": "contracts/Mamm.algo.ts:83",
+    "teal": 226,
+    "source": "contracts/Mamm.algo.ts:84",
     "pc": [
-      285
+      285,
+      286
     ]
   },
   {
-    "teal": 231,
-    "source": "contracts/Mamm.algo.ts:83",
+    "teal": 230,
+    "source": "contracts/Mamm.algo.ts:85",
     "pc": [
-      286,
       287
     ]
   },
   {
-    "teal": 234,
-    "source": "contracts/Mamm.algo.ts:80",
+    "teal": 231,
+    "source": "contracts/Mamm.algo.ts:85",
     "pc": [
-      288
+      288,
+      289
     ]
   },
   {
-    "teal": 235,
-    "source": "contracts/Mamm.algo.ts:80",
+    "teal": 234,
+    "source": "contracts/Mamm.algo.ts:82",
     "pc": [
-      289,
       290
     ]
   },
   {
-    "teal": 238,
-    "source": "contracts/Mamm.algo.ts:80",
+    "teal": 235,
+    "source": "contracts/Mamm.algo.ts:82",
     "pc": [
-      291
-    ]
-  },
-  {
-    "teal": 246,
-    "source": "contracts/Mamm.algo.ts:85",
-    "pc": [
+      291,
       292
     ]
   },
   {
-    "teal": 247,
-    "source": "contracts/Mamm.algo.ts:85",
+    "teal": 238,
+    "source": "contracts/Mamm.algo.ts:82",
     "pc": [
       293
     ]
   },
   {
-    "teal": 248,
-    "source": "contracts/Mamm.algo.ts:85",
+    "teal": 246,
+    "source": "contracts/Mamm.algo.ts:87",
     "pc": [
-      294,
+      294
+    ]
+  },
+  {
+    "teal": 247,
+    "source": "contracts/Mamm.algo.ts:87",
+    "pc": [
       295
     ]
   },
   {
-    "teal": 252,
-    "source": "contracts/Mamm.algo.ts:86",
+    "teal": 248,
+    "source": "contracts/Mamm.algo.ts:87",
     "pc": [
       296,
       297
     ]
   },
   {
-    "teal": 253,
-    "source": "contracts/Mamm.algo.ts:86",
+    "teal": 252,
+    "source": "contracts/Mamm.algo.ts:88",
     "pc": [
-      298
+      298,
+      299
     ]
   },
   {
-    "teal": 254,
-    "source": "contracts/Mamm.algo.ts:86",
+    "teal": 253,
+    "source": "contracts/Mamm.algo.ts:88",
     "pc": [
-      299,
       300
     ]
   },
   {
-    "teal": 258,
-    "source": "contracts/Mamm.algo.ts:87",
+    "teal": 254,
+    "source": "contracts/Mamm.algo.ts:88",
     "pc": [
       301,
       302
     ]
   },
   {
-    "teal": 259,
-    "source": "contracts/Mamm.algo.ts:87",
+    "teal": 258,
+    "source": "contracts/Mamm.algo.ts:89",
     "pc": [
       303,
       304
     ]
   },
   {
-    "teal": 263,
-    "source": "contracts/Mamm.algo.ts:88",
+    "teal": 259,
+    "source": "contracts/Mamm.algo.ts:89",
     "pc": [
-      305
+      305,
+      306
     ]
   },
   {
-    "teal": 264,
-    "source": "contracts/Mamm.algo.ts:88",
+    "teal": 263,
+    "source": "contracts/Mamm.algo.ts:90",
     "pc": [
-      306,
       307
     ]
   },
   {
-    "teal": 267,
-    "source": "contracts/Mamm.algo.ts:85",
+    "teal": 264,
+    "source": "contracts/Mamm.algo.ts:90",
     "pc": [
-      308
+      308,
+      309
     ]
   },
   {
-    "teal": 268,
-    "source": "contracts/Mamm.algo.ts:85",
+    "teal": 267,
+    "source": "contracts/Mamm.algo.ts:87",
     "pc": [
-      309,
       310
     ]
   },
   {
-    "teal": 271,
-    "source": "contracts/Mamm.algo.ts:85",
+    "teal": 268,
+    "source": "contracts/Mamm.algo.ts:87",
     "pc": [
-      311
-    ]
-  },
-  {
-    "teal": 281,
-    "source": "contracts/Mamm.algo.ts:92",
-    "pc": [
+      311,
       312
     ]
   },
   {
-    "teal": 282,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 271,
+    "source": "contracts/Mamm.algo.ts:87",
     "pc": [
-      313,
+      313
+    ]
+  },
+  {
+    "teal": 281,
+    "source": "contracts/Mamm.algo.ts:94",
+    "pc": [
       314
     ]
   },
   {
-    "teal": 283,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 282,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
       315,
       316
     ]
   },
   {
-    "teal": 287,
-    "source": "contracts/Mamm.algo.ts:93",
+    "teal": 283,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
-      317
+      317,
+      318
     ]
   },
   {
-    "teal": 288,
-    "source": "contracts/Mamm.algo.ts:93",
+    "teal": 287,
+    "source": "contracts/Mamm.algo.ts:95",
     "pc": [
-      318,
       319
     ]
   },
   {
-    "teal": 292,
-    "source": "contracts/Mamm.algo.ts:94",
+    "teal": 288,
+    "source": "contracts/Mamm.algo.ts:95",
     "pc": [
       320,
       321
     ]
   },
   {
-    "teal": 293,
-    "source": "contracts/Mamm.algo.ts:94",
+    "teal": 292,
+    "source": "contracts/Mamm.algo.ts:96",
     "pc": [
-      322
+      322,
+      323
     ]
   },
   {
-    "teal": 294,
-    "source": "contracts/Mamm.algo.ts:94",
+    "teal": 293,
+    "source": "contracts/Mamm.algo.ts:96",
     "pc": [
-      323,
       324
     ]
   },
   {
-    "teal": 298,
-    "source": "contracts/Mamm.algo.ts:95",
+    "teal": 294,
+    "source": "contracts/Mamm.algo.ts:96",
     "pc": [
       325,
       326
     ]
   },
   {
-    "teal": 299,
-    "source": "contracts/Mamm.algo.ts:95",
+    "teal": 298,
+    "source": "contracts/Mamm.algo.ts:97",
     "pc": [
-      327
+      327,
+      328
+    ]
+  },
+  {
+    "teal": 299,
+    "source": "contracts/Mamm.algo.ts:97",
+    "pc": [
+      329
     ]
   },
   {
     "teal": 300,
-    "source": "contracts/Mamm.algo.ts:95",
+    "source": "contracts/Mamm.algo.ts:97",
     "pc": [
-      328,
-      329,
-      330
-    ]
-  },
-  {
-    "teal": 301,
-    "source": "contracts/Mamm.algo.ts:95",
-    "pc": [
+      330,
       331,
       332
     ]
   },
   {
-    "teal": 305,
-    "source": "contracts/Mamm.algo.ts:96",
+    "teal": 301,
+    "source": "contracts/Mamm.algo.ts:97",
     "pc": [
       333,
       334
     ]
   },
   {
-    "teal": 306,
-    "source": "contracts/Mamm.algo.ts:96",
+    "teal": 305,
+    "source": "contracts/Mamm.algo.ts:98",
     "pc": [
-      335
+      335,
+      336
+    ]
+  },
+  {
+    "teal": 306,
+    "source": "contracts/Mamm.algo.ts:98",
+    "pc": [
+      337
     ]
   },
   {
     "teal": 307,
-    "source": "contracts/Mamm.algo.ts:96",
+    "source": "contracts/Mamm.algo.ts:98",
     "pc": [
-      336,
-      337,
-      338
-    ]
-  },
-  {
-    "teal": 308,
-    "source": "contracts/Mamm.algo.ts:96",
-    "pc": [
+      338,
       339,
       340
     ]
   },
   {
-    "teal": 312,
-    "source": "contracts/Mamm.algo.ts:97",
+    "teal": 308,
+    "source": "contracts/Mamm.algo.ts:98",
     "pc": [
       341,
       342
     ]
   },
   {
-    "teal": 313,
-    "source": "contracts/Mamm.algo.ts:97",
+    "teal": 312,
+    "source": "contracts/Mamm.algo.ts:99",
     "pc": [
-      343
+      343,
+      344
+    ]
+  },
+  {
+    "teal": 313,
+    "source": "contracts/Mamm.algo.ts:99",
+    "pc": [
+      345
     ]
   },
   {
     "teal": 314,
-    "source": "contracts/Mamm.algo.ts:97",
+    "source": "contracts/Mamm.algo.ts:99",
     "pc": [
-      344,
-      345,
-      346
-    ]
-  },
-  {
-    "teal": 315,
-    "source": "contracts/Mamm.algo.ts:97",
-    "pc": [
+      346,
       347,
       348
     ]
   },
   {
-    "teal": 318,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 315,
+    "source": "contracts/Mamm.algo.ts:99",
     "pc": [
-      349
+      349,
+      350
     ]
   },
   {
-    "teal": 319,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 318,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
-      350,
       351
     ]
   },
   {
-    "teal": 322,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 319,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
-      352
+      352,
+      353
     ]
   },
   {
-    "teal": 323,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 322,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
-      353,
       354
     ]
   },
   {
-    "teal": 324,
-    "source": "contracts/Mamm.algo.ts:92",
+    "teal": 323,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
       355,
       356
     ]
   },
   {
-    "teal": 328,
-    "source": "contracts/Mamm.algo.ts:99",
+    "teal": 324,
+    "source": "contracts/Mamm.algo.ts:94",
     "pc": [
       357,
       358
     ]
   },
   {
-    "teal": 329,
-    "source": "contracts/Mamm.algo.ts:99",
+    "teal": 328,
+    "source": "contracts/Mamm.algo.ts:101",
     "pc": [
       359,
       360
     ]
   },
   {
-    "teal": 330,
-    "source": "contracts/Mamm.algo.ts:99",
+    "teal": 329,
+    "source": "contracts/Mamm.algo.ts:101",
     "pc": [
-      361
-    ]
-  },
-  {
-    "teal": 334,
-    "source": "contracts/Mamm.algo.ts:100",
-    "pc": [
+      361,
       362
     ]
   },
   {
-    "teal": 335,
-    "source": "contracts/Mamm.algo.ts:100",
+    "teal": 330,
+    "source": "contracts/Mamm.algo.ts:101",
     "pc": [
       363
     ]
   },
   {
-    "teal": 336,
-    "source": "contracts/Mamm.algo.ts:100",
+    "teal": 334,
+    "source": "contracts/Mamm.algo.ts:102",
     "pc": [
       364
     ]
   },
   {
-    "teal": 337,
-    "source": "contracts/Mamm.algo.ts:53",
+    "teal": 335,
+    "source": "contracts/Mamm.algo.ts:102",
     "pc": [
       365
     ]
   },
   {
-    "teal": 342,
-    "source": "contracts/Mamm.algo.ts:104",
+    "teal": 336,
+    "source": "contracts/Mamm.algo.ts:102",
     "pc": [
-      366,
-      367,
-      368
+      366
+    ]
+  },
+  {
+    "teal": 337,
+    "source": "contracts/Mamm.algo.ts:55",
+    "pc": [
+      367
+    ]
+  },
+  {
+    "teal": 342,
+    "source": "contracts/Mamm.algo.ts:106",
+    "pc": [
+      368,
+      369,
+      370
     ]
   },
   {
     "teal": 343,
-    "source": "contracts/Mamm.algo.ts:104",
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      369
+      371
     ]
   },
   {
     "teal": 346,
-    "source": "contracts/Mamm.algo.ts:104",
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      370,
-      371,
-      372
+      372,
+      373,
+      374
     ]
   },
   {
     "teal": 347,
-    "source": "contracts/Mamm.algo.ts:104",
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      373
+      375
     ]
   },
   {
     "teal": 350,
-    "source": "contracts/Mamm.algo.ts:104",
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      374,
-      375,
-      376
-    ]
-  },
-  {
-    "teal": 351,
-    "source": "contracts/Mamm.algo.ts:104",
-    "pc": [
-      377
-    ]
-  },
-  {
-    "teal": 352,
-    "source": "contracts/Mamm.algo.ts:104",
-    "pc": [
+      376,
+      377,
       378
     ]
   },
   {
-    "teal": 356,
-    "source": "contracts/Mamm.algo.ts:104",
+    "teal": 351,
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      379,
-      380,
-      381
+      379
+    ]
+  },
+  {
+    "teal": 352,
+    "source": "contracts/Mamm.algo.ts:106",
+    "pc": [
+      380
+    ]
+  },
+  {
+    "teal": 356,
+    "source": "contracts/Mamm.algo.ts:106",
+    "pc": [
+      381,
+      382,
+      383
     ]
   },
   {
     "teal": 359,
-    "source": "contracts/Mamm.algo.ts:104",
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      382
-    ]
-  },
-  {
-    "teal": 360,
-    "source": "contracts/Mamm.algo.ts:104",
-    "pc": [
-      383,
       384
     ]
   },
   {
-    "teal": 364,
-    "source": "contracts/Mamm.algo.ts:105",
+    "teal": 360,
+    "source": "contracts/Mamm.algo.ts:106",
     "pc": [
-      385
-    ]
-  },
-  {
-    "teal": 365,
-    "source": "contracts/Mamm.algo.ts:105",
-    "pc": [
+      385,
       386
     ]
   },
   {
-    "teal": 366,
-    "source": "contracts/Mamm.algo.ts:105",
+    "teal": 364,
+    "source": "contracts/Mamm.algo.ts:107",
     "pc": [
-      387,
+      387
+    ]
+  },
+  {
+    "teal": 365,
+    "source": "contracts/Mamm.algo.ts:107",
+    "pc": [
       388
     ]
   },
   {
-    "teal": 370,
-    "source": "contracts/Mamm.algo.ts:106",
+    "teal": 366,
+    "source": "contracts/Mamm.algo.ts:107",
     "pc": [
-      389
-    ]
-  },
-  {
-    "teal": 371,
-    "source": "contracts/Mamm.algo.ts:106",
-    "pc": [
+      389,
       390
     ]
   },
   {
-    "teal": 372,
-    "source": "contracts/Mamm.algo.ts:106",
+    "teal": 370,
+    "source": "contracts/Mamm.algo.ts:108",
     "pc": [
-      391,
+      391
+    ]
+  },
+  {
+    "teal": 371,
+    "source": "contracts/Mamm.algo.ts:108",
+    "pc": [
       392
     ]
   },
   {
-    "teal": 376,
-    "source": "contracts/Mamm.algo.ts:107",
+    "teal": 372,
+    "source": "contracts/Mamm.algo.ts:108",
     "pc": [
-      393
-    ]
-  },
-  {
-    "teal": 377,
-    "source": "contracts/Mamm.algo.ts:107",
-    "pc": [
+      393,
       394
     ]
   },
   {
-    "teal": 378,
-    "source": "contracts/Mamm.algo.ts:107",
+    "teal": 376,
+    "source": "contracts/Mamm.algo.ts:109",
     "pc": [
-      395,
+      395
+    ]
+  },
+  {
+    "teal": 377,
+    "source": "contracts/Mamm.algo.ts:109",
+    "pc": [
       396
     ]
   },
   {
-    "teal": 383,
-    "source": "contracts/Mamm.algo.ts:112",
+    "teal": 378,
+    "source": "contracts/Mamm.algo.ts:109",
     "pc": [
       397,
       398
     ]
   },
   {
-    "teal": 384,
-    "source": "contracts/Mamm.algo.ts:112",
+    "teal": 383,
+    "source": "contracts/Mamm.algo.ts:114",
     "pc": [
-      399
-    ]
-  },
-  {
-    "teal": 385,
-    "source": "contracts/Mamm.algo.ts:112",
-    "pc": [
+      399,
       400
     ]
   },
   {
-    "teal": 386,
-    "source": "contracts/Mamm.algo.ts:112",
+    "teal": 384,
+    "source": "contracts/Mamm.algo.ts:114",
     "pc": [
-      401,
-      402,
-      403
+      401
     ]
   },
   {
-    "teal": 391,
-    "source": "contracts/Mamm.algo.ts:113",
+    "teal": 385,
+    "source": "contracts/Mamm.algo.ts:114",
     "pc": [
+      402
+    ]
+  },
+  {
+    "teal": 386,
+    "source": "contracts/Mamm.algo.ts:114",
+    "pc": [
+      403,
       404,
       405
     ]
   },
   {
-    "teal": 392,
-    "source": "contracts/Mamm.algo.ts:113",
+    "teal": 391,
+    "source": "contracts/Mamm.algo.ts:115",
     "pc": [
       406,
       407
     ]
   },
   {
-    "teal": 393,
-    "source": "contracts/Mamm.algo.ts:113",
+    "teal": 392,
+    "source": "contracts/Mamm.algo.ts:115",
     "pc": [
-      408
-    ]
-  },
-  {
-    "teal": 394,
-    "source": "contracts/Mamm.algo.ts:113",
-    "pc": [
+      408,
       409
     ]
   },
   {
-    "teal": 395,
-    "source": "contracts/Mamm.algo.ts:113",
+    "teal": 393,
+    "source": "contracts/Mamm.algo.ts:115",
     "pc": [
-      410,
+      410
+    ]
+  },
+  {
+    "teal": 394,
+    "source": "contracts/Mamm.algo.ts:115",
+    "pc": [
       411
     ]
   },
   {
-    "teal": 396,
-    "source": "contracts/Mamm.algo.ts:112",
+    "teal": 395,
+    "source": "contracts/Mamm.algo.ts:115",
     "pc": [
       412,
-      413,
-      414
+      413
     ]
   },
   {
-    "teal": 401,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 396,
+    "source": "contracts/Mamm.algo.ts:114",
     "pc": [
+      414,
       415,
       416
     ]
   },
   {
-    "teal": 402,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 401,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
       417,
       418
     ]
   },
   {
-    "teal": 403,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 402,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
-      419
-    ]
-  },
-  {
-    "teal": 404,
-    "source": "contracts/Mamm.algo.ts:117",
-    "pc": [
+      419,
       420
     ]
   },
   {
-    "teal": 405,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 403,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
-      421,
+      421
+    ]
+  },
+  {
+    "teal": 404,
+    "source": "contracts/Mamm.algo.ts:119",
+    "pc": [
       422
     ]
   },
   {
-    "teal": 406,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 405,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
-      423
-    ]
-  },
-  {
-    "teal": 407,
-    "source": "contracts/Mamm.algo.ts:117",
-    "pc": [
+      423,
       424
     ]
   },
   {
-    "teal": 408,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 406,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
       425
     ]
   },
   {
-    "teal": 409,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 407,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
       426
     ]
   },
   {
-    "teal": 410,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 408,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
       427
     ]
   },
   {
-    "teal": 413,
-    "source": "contracts/Mamm.algo.ts:117",
-    "errorMessage": "wideRatio failed",
+    "teal": 409,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
       428
     ]
   },
   {
-    "teal": 414,
-    "source": "contracts/Mamm.algo.ts:117",
+    "teal": 410,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
-      429,
+      429
+    ]
+  },
+  {
+    "teal": 413,
+    "source": "contracts/Mamm.algo.ts:119",
+    "errorMessage": "wideRatio failed",
+    "pc": [
       430
     ]
   },
   {
-    "teal": 418,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 414,
+    "source": "contracts/Mamm.algo.ts:119",
     "pc": [
-      431
+      431,
+      432
     ]
   },
   {
-    "teal": 419,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 418,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
-      432,
       433
     ]
   },
   {
-    "teal": 420,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 419,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
       434,
       435
     ]
   },
   {
-    "teal": 421,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 420,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
-      436
-    ]
-  },
-  {
-    "teal": 422,
-    "source": "contracts/Mamm.algo.ts:118",
-    "pc": [
+      436,
       437
     ]
   },
   {
-    "teal": 423,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 421,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
-      438,
+      438
+    ]
+  },
+  {
+    "teal": 422,
+    "source": "contracts/Mamm.algo.ts:120",
+    "pc": [
       439
     ]
   },
   {
-    "teal": 424,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 423,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
-      440
-    ]
-  },
-  {
-    "teal": 425,
-    "source": "contracts/Mamm.algo.ts:118",
-    "pc": [
+      440,
       441
     ]
   },
   {
-    "teal": 426,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 424,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
       442
     ]
   },
   {
-    "teal": 427,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 425,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
       443
     ]
   },
   {
-    "teal": 428,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 426,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
       444
     ]
   },
   {
-    "teal": 431,
-    "source": "contracts/Mamm.algo.ts:118",
-    "errorMessage": "wideRatio failed",
+    "teal": 427,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
       445
     ]
   },
   {
-    "teal": 432,
-    "source": "contracts/Mamm.algo.ts:118",
+    "teal": 428,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
-      446,
+      446
+    ]
+  },
+  {
+    "teal": 431,
+    "source": "contracts/Mamm.algo.ts:120",
+    "errorMessage": "wideRatio failed",
+    "pc": [
       447
     ]
   },
   {
-    "teal": 436,
-    "source": "contracts/Mamm.algo.ts:119",
+    "teal": 432,
+    "source": "contracts/Mamm.algo.ts:120",
     "pc": [
       448,
       449
     ]
   },
   {
-    "teal": 437,
-    "source": "contracts/Mamm.algo.ts:119",
+    "teal": 436,
+    "source": "contracts/Mamm.algo.ts:121",
     "pc": [
       450,
       451
     ]
   },
   {
-    "teal": 438,
-    "source": "contracts/Mamm.algo.ts:119",
+    "teal": 437,
+    "source": "contracts/Mamm.algo.ts:121",
     "pc": [
       452,
-      453,
-      454
+      453
     ]
   },
   {
-    "teal": 439,
-    "source": "contracts/Mamm.algo.ts:119",
+    "teal": 438,
+    "source": "contracts/Mamm.algo.ts:121",
     "pc": [
+      454,
       455,
       456
     ]
   },
   {
-    "teal": 444,
-    "source": "contracts/Mamm.algo.ts:123",
+    "teal": 439,
+    "source": "contracts/Mamm.algo.ts:121",
     "pc": [
-      457
+      457,
+      458
     ]
   },
   {
-    "teal": 445,
-    "source": "contracts/Mamm.algo.ts:123",
+    "teal": 444,
+    "source": "contracts/Mamm.algo.ts:125",
     "pc": [
-      458,
       459
     ]
   },
   {
-    "teal": 446,
-    "source": "contracts/Mamm.algo.ts:123",
+    "teal": 445,
+    "source": "contracts/Mamm.algo.ts:125",
     "pc": [
       460,
       461
     ]
   },
   {
-    "teal": 447,
-    "source": "contracts/Mamm.algo.ts:123",
+    "teal": 446,
+    "source": "contracts/Mamm.algo.ts:125",
     "pc": [
-      462
-    ]
-  },
-  {
-    "teal": 448,
-    "source": "contracts/Mamm.algo.ts:123",
-    "pc": [
+      462,
       463
     ]
   },
   {
-    "teal": 452,
-    "source": "contracts/Mamm.algo.ts:124",
+    "teal": 447,
+    "source": "contracts/Mamm.algo.ts:125",
     "pc": [
       464
     ]
   },
   {
-    "teal": 453,
-    "source": "contracts/Mamm.algo.ts:124",
+    "teal": 448,
+    "source": "contracts/Mamm.algo.ts:125",
     "pc": [
-      465,
+      465
+    ]
+  },
+  {
+    "teal": 452,
+    "source": "contracts/Mamm.algo.ts:126",
+    "pc": [
       466
     ]
   },
   {
-    "teal": 454,
-    "source": "contracts/Mamm.algo.ts:124",
+    "teal": 453,
+    "source": "contracts/Mamm.algo.ts:126",
     "pc": [
       467,
       468
     ]
   },
   {
-    "teal": 455,
-    "source": "contracts/Mamm.algo.ts:124",
+    "teal": 454,
+    "source": "contracts/Mamm.algo.ts:126",
     "pc": [
-      469
-    ]
-  },
-  {
-    "teal": 456,
-    "source": "contracts/Mamm.algo.ts:124",
-    "pc": [
+      469,
       470
     ]
   },
   {
-    "teal": 460,
-    "source": "contracts/Mamm.algo.ts:125",
+    "teal": 455,
+    "source": "contracts/Mamm.algo.ts:126",
     "pc": [
       471
     ]
   },
   {
-    "teal": 461,
-    "source": "contracts/Mamm.algo.ts:125",
+    "teal": 456,
+    "source": "contracts/Mamm.algo.ts:126",
     "pc": [
-      472,
+      472
+    ]
+  },
+  {
+    "teal": 460,
+    "source": "contracts/Mamm.algo.ts:127",
+    "pc": [
       473
     ]
   },
   {
-    "teal": 462,
-    "source": "contracts/Mamm.algo.ts:125",
+    "teal": 461,
+    "source": "contracts/Mamm.algo.ts:127",
     "pc": [
       474,
       475
     ]
   },
   {
-    "teal": 463,
-    "source": "contracts/Mamm.algo.ts:125",
+    "teal": 462,
+    "source": "contracts/Mamm.algo.ts:127",
     "pc": [
-      476
-    ]
-  },
-  {
-    "teal": 464,
-    "source": "contracts/Mamm.algo.ts:125",
-    "pc": [
+      476,
       477
     ]
   },
   {
-    "teal": 468,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 463,
+    "source": "contracts/Mamm.algo.ts:127",
     "pc": [
-      478,
+      478
+    ]
+  },
+  {
+    "teal": 464,
+    "source": "contracts/Mamm.algo.ts:127",
+    "pc": [
       479
     ]
   },
   {
-    "teal": 469,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 468,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
       480,
       481
     ]
   },
   {
-    "teal": 470,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 469,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
       482,
       483
     ]
   },
   {
-    "teal": 471,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 470,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
-      484
+      484,
+      485
     ]
   },
   {
-    "teal": 472,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 471,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
-      485,
       486
     ]
   },
   {
-    "teal": 473,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 472,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
       487,
       488
     ]
   },
   {
-    "teal": 474,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 473,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
-      489
-    ]
-  },
-  {
-    "teal": 475,
-    "source": "contracts/Mamm.algo.ts:126",
-    "pc": [
+      489,
       490
     ]
   },
   {
-    "teal": 476,
-    "source": "contracts/Mamm.algo.ts:126",
+    "teal": 474,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
       491
     ]
   },
   {
-    "teal": 484,
-    "source": "contracts/Mamm.algo.ts:129",
+    "teal": 475,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
       492
     ]
   },
   {
-    "teal": 485,
-    "source": "contracts/Mamm.algo.ts:129",
+    "teal": 476,
+    "source": "contracts/Mamm.algo.ts:128",
     "pc": [
       493
     ]
   },
   {
-    "teal": 486,
-    "source": "contracts/Mamm.algo.ts:129",
+    "teal": 484,
+    "source": "contracts/Mamm.algo.ts:131",
     "pc": [
-      494,
+      494
+    ]
+  },
+  {
+    "teal": 485,
+    "source": "contracts/Mamm.algo.ts:131",
+    "pc": [
       495
     ]
   },
   {
-    "teal": 490,
-    "source": "contracts/Mamm.algo.ts:130",
+    "teal": 486,
+    "source": "contracts/Mamm.algo.ts:131",
     "pc": [
       496,
       497
     ]
   },
   {
-    "teal": 491,
-    "source": "contracts/Mamm.algo.ts:130",
+    "teal": 490,
+    "source": "contracts/Mamm.algo.ts:132",
     "pc": [
-      498
+      498,
+      499
     ]
   },
   {
-    "teal": 492,
-    "source": "contracts/Mamm.algo.ts:130",
+    "teal": 491,
+    "source": "contracts/Mamm.algo.ts:132",
     "pc": [
-      499,
       500
     ]
   },
   {
-    "teal": 496,
-    "source": "contracts/Mamm.algo.ts:131",
+    "teal": 492,
+    "source": "contracts/Mamm.algo.ts:132",
     "pc": [
       501,
       502
     ]
   },
   {
-    "teal": 497,
-    "source": "contracts/Mamm.algo.ts:131",
+    "teal": 496,
+    "source": "contracts/Mamm.algo.ts:133",
     "pc": [
       503,
       504
     ]
   },
   {
-    "teal": 501,
-    "source": "contracts/Mamm.algo.ts:132",
+    "teal": 497,
+    "source": "contracts/Mamm.algo.ts:133",
     "pc": [
       505,
       506
     ]
   },
   {
-    "teal": 502,
-    "source": "contracts/Mamm.algo.ts:132",
+    "teal": 501,
+    "source": "contracts/Mamm.algo.ts:134",
     "pc": [
       507,
       508
     ]
   },
   {
-    "teal": 505,
-    "source": "contracts/Mamm.algo.ts:129",
+    "teal": 502,
+    "source": "contracts/Mamm.algo.ts:134",
     "pc": [
-      509
+      509,
+      510
     ]
   },
   {
-    "teal": 506,
-    "source": "contracts/Mamm.algo.ts:129",
+    "teal": 505,
+    "source": "contracts/Mamm.algo.ts:131",
     "pc": [
-      510,
       511
     ]
   },
   {
-    "teal": 509,
-    "source": "contracts/Mamm.algo.ts:129",
+    "teal": 506,
+    "source": "contracts/Mamm.algo.ts:131",
     "pc": [
-      512
-    ]
-  },
-  {
-    "teal": 513,
-    "source": "contracts/Mamm.algo.ts:134",
-    "pc": [
+      512,
       513
     ]
   },
   {
-    "teal": 514,
-    "source": "contracts/Mamm.algo.ts:134",
+    "teal": 509,
+    "source": "contracts/Mamm.algo.ts:131",
     "pc": [
       514
     ]
   },
   {
-    "teal": 515,
-    "source": "contracts/Mamm.algo.ts:134",
+    "teal": 513,
+    "source": "contracts/Mamm.algo.ts:136",
     "pc": [
       515
     ]
   },
   {
-    "teal": 516,
-    "source": "contracts/Mamm.algo.ts:134",
+    "teal": 514,
+    "source": "contracts/Mamm.algo.ts:136",
     "pc": [
-      516,
+      516
+    ]
+  },
+  {
+    "teal": 515,
+    "source": "contracts/Mamm.algo.ts:136",
+    "pc": [
       517
     ]
   },
   {
-    "teal": 517,
-    "source": "contracts/Mamm.algo.ts:134",
+    "teal": 516,
+    "source": "contracts/Mamm.algo.ts:136",
     "pc": [
-      518
-    ]
-  },
-  {
-    "teal": 518,
-    "source": "contracts/Mamm.algo.ts:134",
-    "pc": [
+      518,
       519
     ]
   },
   {
-    "teal": 519,
-    "source": "contracts/Mamm.algo.ts:104",
+    "teal": 517,
+    "source": "contracts/Mamm.algo.ts:136",
     "pc": [
       520
     ]
   },
   {
-    "teal": 524,
-    "source": "contracts/Mamm.algo.ts:137",
+    "teal": 518,
+    "source": "contracts/Mamm.algo.ts:136",
     "pc": [
-      521,
-      522,
-      523
+      521
+    ]
+  },
+  {
+    "teal": 519,
+    "source": "contracts/Mamm.algo.ts:106",
+    "pc": [
+      522
+    ]
+  },
+  {
+    "teal": 524,
+    "source": "contracts/Mamm.algo.ts:139",
+    "pc": [
+      523,
+      524,
+      525
     ]
   },
   {
     "teal": 525,
-    "source": "contracts/Mamm.algo.ts:137",
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      524
-    ]
-  },
-  {
-    "teal": 528,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
-      525,
       526
     ]
   },
   {
-    "teal": 529,
-    "source": "contracts/Mamm.algo.ts:137",
+    "teal": 528,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      527
-    ]
-  },
-  {
-    "teal": 530,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
+      527,
       528
     ]
   },
   {
-    "teal": 531,
-    "source": "contracts/Mamm.algo.ts:137",
+    "teal": 529,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
       529
     ]
   },
   {
-    "teal": 532,
-    "source": "contracts/Mamm.algo.ts:137",
+    "teal": 530,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      530,
+      530
+    ]
+  },
+  {
+    "teal": 531,
+    "source": "contracts/Mamm.algo.ts:139",
+    "pc": [
       531
     ]
   },
   {
-    "teal": 533,
-    "source": "contracts/Mamm.algo.ts:137",
+    "teal": 532,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      532
-    ]
-  },
-  {
-    "teal": 534,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
+      532,
       533
     ]
   },
   {
-    "teal": 537,
-    "source": "contracts/Mamm.algo.ts:137",
-    "errorMessage": "argument 1 (burnTxn) for removeLiquidity must be a axfer transaction",
+    "teal": 533,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
       534
     ]
   },
   {
+    "teal": 534,
+    "source": "contracts/Mamm.algo.ts:139",
+    "pc": [
+      535
+    ]
+  },
+  {
+    "teal": 537,
+    "source": "contracts/Mamm.algo.ts:139",
+    "errorMessage": "argument 1 (burnTxn) for removeLiquidity must be a axfer transaction",
+    "pc": [
+      536
+    ]
+  },
+  {
     "teal": 540,
-    "source": "contracts/Mamm.algo.ts:137",
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      535,
-      536,
-      537
-    ]
-  },
-  {
-    "teal": 541,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
-      538
-    ]
-  },
-  {
-    "teal": 542,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
+      537,
+      538,
       539
     ]
   },
   {
-    "teal": 546,
-    "source": "contracts/Mamm.algo.ts:137",
+    "teal": 541,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      540,
-      541,
-      542
+      540
+    ]
+  },
+  {
+    "teal": 542,
+    "source": "contracts/Mamm.algo.ts:139",
+    "pc": [
+      541
+    ]
+  },
+  {
+    "teal": 546,
+    "source": "contracts/Mamm.algo.ts:139",
+    "pc": [
+      542,
+      543,
+      544
     ]
   },
   {
     "teal": 549,
-    "source": "contracts/Mamm.algo.ts:137",
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      543
-    ]
-  },
-  {
-    "teal": 550,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
-      544,
       545
     ]
   },
   {
-    "teal": 554,
-    "source": "contracts/Mamm.algo.ts:138",
+    "teal": 550,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
-      546
-    ]
-  },
-  {
-    "teal": 555,
-    "source": "contracts/Mamm.algo.ts:138",
-    "pc": [
+      546,
       547
     ]
   },
   {
-    "teal": 556,
-    "source": "contracts/Mamm.algo.ts:138",
+    "teal": 554,
+    "source": "contracts/Mamm.algo.ts:140",
     "pc": [
-      548,
+      548
+    ]
+  },
+  {
+    "teal": 555,
+    "source": "contracts/Mamm.algo.ts:140",
+    "pc": [
       549
     ]
   },
   {
-    "teal": 560,
-    "source": "contracts/Mamm.algo.ts:139",
+    "teal": 556,
+    "source": "contracts/Mamm.algo.ts:140",
     "pc": [
-      550
-    ]
-  },
-  {
-    "teal": 561,
-    "source": "contracts/Mamm.algo.ts:139",
-    "pc": [
+      550,
       551
     ]
   },
   {
-    "teal": 562,
-    "source": "contracts/Mamm.algo.ts:139",
+    "teal": 560,
+    "source": "contracts/Mamm.algo.ts:141",
     "pc": [
-      552,
+      552
+    ]
+  },
+  {
+    "teal": 561,
+    "source": "contracts/Mamm.algo.ts:141",
+    "pc": [
       553
     ]
   },
   {
-    "teal": 566,
-    "source": "contracts/Mamm.algo.ts:140",
+    "teal": 562,
+    "source": "contracts/Mamm.algo.ts:141",
     "pc": [
-      554
-    ]
-  },
-  {
-    "teal": 567,
-    "source": "contracts/Mamm.algo.ts:140",
-    "pc": [
+      554,
       555
     ]
   },
   {
-    "teal": 568,
-    "source": "contracts/Mamm.algo.ts:140",
+    "teal": 566,
+    "source": "contracts/Mamm.algo.ts:142",
     "pc": [
-      556,
+      556
+    ]
+  },
+  {
+    "teal": 567,
+    "source": "contracts/Mamm.algo.ts:142",
+    "pc": [
       557
     ]
   },
   {
-    "teal": 572,
-    "source": "contracts/Mamm.algo.ts:143",
+    "teal": 568,
+    "source": "contracts/Mamm.algo.ts:142",
     "pc": [
       558,
       559
     ]
   },
   {
-    "teal": 573,
-    "source": "contracts/Mamm.algo.ts:143",
+    "teal": 572,
+    "source": "contracts/Mamm.algo.ts:145",
     "pc": [
-      560
-    ]
-  },
-  {
-    "teal": 574,
-    "source": "contracts/Mamm.algo.ts:143",
-    "pc": [
+      560,
       561
     ]
   },
   {
-    "teal": 577,
-    "source": "contracts/Mamm.algo.ts:143",
-    "errorMessage": "Invalid LP amount",
+    "teal": 573,
+    "source": "contracts/Mamm.algo.ts:145",
     "pc": [
       562
     ]
   },
   {
-    "teal": 581,
-    "source": "contracts/Mamm.algo.ts:144",
+    "teal": 574,
+    "source": "contracts/Mamm.algo.ts:145",
     "pc": [
-      563,
+      563
+    ]
+  },
+  {
+    "teal": 577,
+    "source": "contracts/Mamm.algo.ts:145",
+    "errorMessage": "Invalid LP amount",
+    "pc": [
       564
     ]
   },
   {
-    "teal": 582,
-    "source": "contracts/Mamm.algo.ts:144",
+    "teal": 581,
+    "source": "contracts/Mamm.algo.ts:146",
     "pc": [
       565,
       566
     ]
   },
   {
-    "teal": 583,
-    "source": "contracts/Mamm.algo.ts:144",
+    "teal": 582,
+    "source": "contracts/Mamm.algo.ts:146",
     "pc": [
-      567
-    ]
-  },
-  {
-    "teal": 586,
-    "source": "contracts/Mamm.algo.ts:144",
-    "errorMessage": "Not enough LP supply",
-    "pc": [
+      567,
       568
     ]
   },
   {
-    "teal": 596,
+    "teal": 583,
     "source": "contracts/Mamm.algo.ts:146",
     "pc": [
-      569,
+      569
+    ]
+  },
+  {
+    "teal": 586,
+    "source": "contracts/Mamm.algo.ts:146",
+    "errorMessage": "Not enough LP supply",
+    "pc": [
       570
     ]
   },
   {
-    "teal": 597,
-    "source": "contracts/Mamm.algo.ts:147",
+    "teal": 596,
+    "source": "contracts/Mamm.algo.ts:148",
     "pc": [
       571,
       572
     ]
   },
   {
-    "teal": 598,
-    "source": "contracts/Mamm.algo.ts:147",
+    "teal": 597,
+    "source": "contracts/Mamm.algo.ts:149",
     "pc": [
       573,
       574
     ]
   },
   {
-    "teal": 599,
-    "source": "contracts/Mamm.algo.ts:147",
+    "teal": 598,
+    "source": "contracts/Mamm.algo.ts:149",
     "pc": [
-      575
-    ]
-  },
-  {
-    "teal": 602,
-    "source": "contracts/Mamm.algo.ts:147",
-    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}",
-    "pc": [
+      575,
       576
     ]
   },
   {
-    "teal": 605,
-    "source": "contracts/Mamm.algo.ts:146",
+    "teal": 599,
+    "source": "contracts/Mamm.algo.ts:149",
     "pc": [
-      577,
+      577
+    ]
+  },
+  {
+    "teal": 602,
+    "source": "contracts/Mamm.algo.ts:149",
+    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}",
+    "pc": [
       578
     ]
   },
   {
-    "teal": 606,
+    "teal": 605,
     "source": "contracts/Mamm.algo.ts:148",
     "pc": [
       579,
@@ -2428,1141 +2422,2458 @@
     ]
   },
   {
-    "teal": 607,
-    "source": "contracts/Mamm.algo.ts:148",
+    "teal": 606,
+    "source": "contracts/Mamm.algo.ts:150",
     "pc": [
       581,
       582
     ]
   },
   {
-    "teal": 608,
-    "source": "contracts/Mamm.algo.ts:148",
+    "teal": 607,
+    "source": "contracts/Mamm.algo.ts:150",
     "pc": [
-      583
-    ]
-  },
-  {
-    "teal": 611,
-    "source": "contracts/Mamm.algo.ts:148",
-    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"assetReceiver\",\"expected\":\"this.app.address\"}",
-    "pc": [
+      583,
       584
     ]
   },
   {
-    "teal": 614,
-    "source": "contracts/Mamm.algo.ts:146",
+    "teal": 608,
+    "source": "contracts/Mamm.algo.ts:150",
     "pc": [
-      585,
+      585
+    ]
+  },
+  {
+    "teal": 611,
+    "source": "contracts/Mamm.algo.ts:150",
+    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"assetReceiver\",\"expected\":\"this.app.address\"}",
+    "pc": [
       586
     ]
   },
   {
-    "teal": 615,
-    "source": "contracts/Mamm.algo.ts:149",
+    "teal": 614,
+    "source": "contracts/Mamm.algo.ts:148",
     "pc": [
       587,
       588
     ]
   },
   {
-    "teal": 616,
-    "source": "contracts/Mamm.algo.ts:149",
+    "teal": 615,
+    "source": "contracts/Mamm.algo.ts:151",
     "pc": [
       589,
       590
     ]
   },
   {
-    "teal": 617,
-    "source": "contracts/Mamm.algo.ts:149",
+    "teal": 616,
+    "source": "contracts/Mamm.algo.ts:151",
     "pc": [
-      591
-    ]
-  },
-  {
-    "teal": 618,
-    "source": "contracts/Mamm.algo.ts:149",
-    "pc": [
+      591,
       592
     ]
   },
   {
-    "teal": 621,
-    "source": "contracts/Mamm.algo.ts:149",
-    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"xferAsset\",\"expected\":\"AssetID.fromUint64(this.lp_token_id.value)\"}",
+    "teal": 617,
+    "source": "contracts/Mamm.algo.ts:151",
     "pc": [
       593
     ]
   },
   {
-    "teal": 624,
-    "source": "contracts/Mamm.algo.ts:146",
+    "teal": 618,
+    "source": "contracts/Mamm.algo.ts:151",
     "pc": [
-      594,
+      594
+    ]
+  },
+  {
+    "teal": 621,
+    "source": "contracts/Mamm.algo.ts:151",
+    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"xferAsset\",\"expected\":\"AssetID.fromUint64(this.lp_token_id.value)\"}",
+    "pc": [
       595
     ]
   },
   {
-    "teal": 625,
-    "source": "contracts/Mamm.algo.ts:150",
+    "teal": 624,
+    "source": "contracts/Mamm.algo.ts:148",
     "pc": [
       596,
       597
     ]
   },
   {
-    "teal": 626,
-    "source": "contracts/Mamm.algo.ts:150",
+    "teal": 625,
+    "source": "contracts/Mamm.algo.ts:152",
     "pc": [
       598,
       599
     ]
   },
   {
-    "teal": 627,
-    "source": "contracts/Mamm.algo.ts:150",
+    "teal": 626,
+    "source": "contracts/Mamm.algo.ts:152",
     "pc": [
-      600
-    ]
-  },
-  {
-    "teal": 630,
-    "source": "contracts/Mamm.algo.ts:150",
-    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"assetAmount\",\"expected\":\"lpTokensBurned\"}",
-    "pc": [
+      600,
       601
     ]
   },
   {
-    "teal": 634,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 627,
+    "source": "contracts/Mamm.algo.ts:152",
     "pc": [
-      602,
+      602
+    ]
+  },
+  {
+    "teal": 630,
+    "source": "contracts/Mamm.algo.ts:152",
+    "errorMessage": "transaction verification failed: {\"txn\":\"burnTxn\",\"field\":\"assetAmount\",\"expected\":\"lpTokensBurned\"}",
+    "pc": [
       603
     ]
   },
   {
-    "teal": 635,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 634,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
       604,
       605
     ]
   },
   {
-    "teal": 636,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 635,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
-      606
-    ]
-  },
-  {
-    "teal": 637,
-    "source": "contracts/Mamm.algo.ts:154",
-    "pc": [
+      606,
       607
     ]
   },
   {
-    "teal": 638,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 636,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
-      608,
+      608
+    ]
+  },
+  {
+    "teal": 637,
+    "source": "contracts/Mamm.algo.ts:156",
+    "pc": [
       609
     ]
   },
   {
-    "teal": 639,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 638,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
-      610
-    ]
-  },
-  {
-    "teal": 640,
-    "source": "contracts/Mamm.algo.ts:154",
-    "pc": [
+      610,
       611
     ]
   },
   {
-    "teal": 641,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 639,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
       612
     ]
   },
   {
-    "teal": 642,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 640,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
       613
     ]
   },
   {
-    "teal": 643,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 641,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
       614
     ]
   },
   {
-    "teal": 646,
-    "source": "contracts/Mamm.algo.ts:154",
-    "errorMessage": "wideRatio failed",
+    "teal": 642,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
       615
     ]
   },
   {
-    "teal": 647,
-    "source": "contracts/Mamm.algo.ts:154",
+    "teal": 643,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
-      616,
+      616
+    ]
+  },
+  {
+    "teal": 646,
+    "source": "contracts/Mamm.algo.ts:156",
+    "errorMessage": "wideRatio failed",
+    "pc": [
       617
     ]
   },
   {
-    "teal": 651,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 647,
+    "source": "contracts/Mamm.algo.ts:156",
     "pc": [
       618,
       619
     ]
   },
   {
-    "teal": 652,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 651,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
       620,
       621
     ]
   },
   {
-    "teal": 653,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 652,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
-      622
-    ]
-  },
-  {
-    "teal": 654,
-    "source": "contracts/Mamm.algo.ts:155",
-    "pc": [
+      622,
       623
     ]
   },
   {
-    "teal": 655,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 653,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
-      624,
+      624
+    ]
+  },
+  {
+    "teal": 654,
+    "source": "contracts/Mamm.algo.ts:157",
+    "pc": [
       625
     ]
   },
   {
-    "teal": 656,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 655,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
-      626
-    ]
-  },
-  {
-    "teal": 657,
-    "source": "contracts/Mamm.algo.ts:155",
-    "pc": [
+      626,
       627
     ]
   },
   {
-    "teal": 658,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 656,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
       628
     ]
   },
   {
-    "teal": 659,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 657,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
       629
     ]
   },
   {
-    "teal": 660,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 658,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
       630
     ]
   },
   {
-    "teal": 663,
-    "source": "contracts/Mamm.algo.ts:155",
-    "errorMessage": "wideRatio failed",
+    "teal": 659,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
       631
     ]
   },
   {
-    "teal": 664,
-    "source": "contracts/Mamm.algo.ts:155",
+    "teal": 660,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
-      632,
+      632
+    ]
+  },
+  {
+    "teal": 663,
+    "source": "contracts/Mamm.algo.ts:157",
+    "errorMessage": "wideRatio failed",
+    "pc": [
       633
     ]
   },
   {
-    "teal": 668,
-    "source": "contracts/Mamm.algo.ts:158",
+    "teal": 664,
+    "source": "contracts/Mamm.algo.ts:157",
     "pc": [
-      634
+      634,
+      635
     ]
   },
   {
-    "teal": 669,
-    "source": "contracts/Mamm.algo.ts:158",
+    "teal": 668,
+    "source": "contracts/Mamm.algo.ts:160",
     "pc": [
-      635,
       636
     ]
   },
   {
-    "teal": 670,
-    "source": "contracts/Mamm.algo.ts:158",
+    "teal": 669,
+    "source": "contracts/Mamm.algo.ts:160",
     "pc": [
       637,
       638
     ]
   },
   {
-    "teal": 671,
-    "source": "contracts/Mamm.algo.ts:158",
+    "teal": 670,
+    "source": "contracts/Mamm.algo.ts:160",
     "pc": [
-      639
-    ]
-  },
-  {
-    "teal": 672,
-    "source": "contracts/Mamm.algo.ts:158",
-    "pc": [
+      639,
       640
     ]
   },
   {
-    "teal": 676,
-    "source": "contracts/Mamm.algo.ts:159",
+    "teal": 671,
+    "source": "contracts/Mamm.algo.ts:160",
     "pc": [
       641
     ]
   },
   {
-    "teal": 677,
-    "source": "contracts/Mamm.algo.ts:159",
+    "teal": 672,
+    "source": "contracts/Mamm.algo.ts:160",
     "pc": [
-      642,
+      642
+    ]
+  },
+  {
+    "teal": 676,
+    "source": "contracts/Mamm.algo.ts:161",
+    "pc": [
       643
     ]
   },
   {
-    "teal": 678,
-    "source": "contracts/Mamm.algo.ts:159",
+    "teal": 677,
+    "source": "contracts/Mamm.algo.ts:161",
     "pc": [
       644,
       645
     ]
   },
   {
-    "teal": 679,
-    "source": "contracts/Mamm.algo.ts:159",
+    "teal": 678,
+    "source": "contracts/Mamm.algo.ts:161",
     "pc": [
-      646
-    ]
-  },
-  {
-    "teal": 680,
-    "source": "contracts/Mamm.algo.ts:159",
-    "pc": [
+      646,
       647
     ]
   },
   {
-    "teal": 684,
-    "source": "contracts/Mamm.algo.ts:160",
+    "teal": 679,
+    "source": "contracts/Mamm.algo.ts:161",
     "pc": [
       648
     ]
   },
   {
-    "teal": 685,
-    "source": "contracts/Mamm.algo.ts:160",
+    "teal": 680,
+    "source": "contracts/Mamm.algo.ts:161",
     "pc": [
-      649,
+      649
+    ]
+  },
+  {
+    "teal": 684,
+    "source": "contracts/Mamm.algo.ts:162",
+    "pc": [
       650
     ]
   },
   {
-    "teal": 686,
-    "source": "contracts/Mamm.algo.ts:160",
+    "teal": 685,
+    "source": "contracts/Mamm.algo.ts:162",
     "pc": [
       651,
       652
     ]
   },
   {
-    "teal": 687,
-    "source": "contracts/Mamm.algo.ts:160",
+    "teal": 686,
+    "source": "contracts/Mamm.algo.ts:162",
     "pc": [
-      653
-    ]
-  },
-  {
-    "teal": 688,
-    "source": "contracts/Mamm.algo.ts:160",
-    "pc": [
+      653,
       654
     ]
   },
   {
-    "teal": 692,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 687,
+    "source": "contracts/Mamm.algo.ts:162",
     "pc": [
-      655,
+      655
+    ]
+  },
+  {
+    "teal": 688,
+    "source": "contracts/Mamm.algo.ts:162",
+    "pc": [
       656
     ]
   },
   {
-    "teal": 693,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 692,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
       657,
       658
     ]
   },
   {
-    "teal": 694,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 693,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
       659,
       660
     ]
   },
   {
-    "teal": 695,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 694,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
-      661
+      661,
+      662
     ]
   },
   {
-    "teal": 696,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 695,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
-      662,
       663
     ]
   },
   {
-    "teal": 697,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 696,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
       664,
       665
     ]
   },
   {
-    "teal": 698,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 697,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
-      666
-    ]
-  },
-  {
-    "teal": 699,
-    "source": "contracts/Mamm.algo.ts:161",
-    "pc": [
+      666,
       667
     ]
   },
   {
-    "teal": 700,
-    "source": "contracts/Mamm.algo.ts:161",
+    "teal": 698,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
       668
     ]
   },
   {
-    "teal": 704,
-    "source": "contracts/Mamm.algo.ts:164",
+    "teal": 699,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
       669
     ]
   },
   {
-    "teal": 705,
-    "source": "contracts/Mamm.algo.ts:164",
+    "teal": 700,
+    "source": "contracts/Mamm.algo.ts:163",
     "pc": [
       670
     ]
   },
   {
-    "teal": 706,
-    "source": "contracts/Mamm.algo.ts:164",
+    "teal": 704,
+    "source": "contracts/Mamm.algo.ts:166",
     "pc": [
       671
     ]
   },
   {
-    "teal": 707,
-    "source": "contracts/Mamm.algo.ts:164",
+    "teal": 705,
+    "source": "contracts/Mamm.algo.ts:166",
     "pc": [
-      672,
+      672
+    ]
+  },
+  {
+    "teal": 706,
+    "source": "contracts/Mamm.algo.ts:166",
+    "pc": [
       673
     ]
   },
   {
-    "teal": 708,
-    "source": "contracts/Mamm.algo.ts:164",
+    "teal": 707,
+    "source": "contracts/Mamm.algo.ts:166",
     "pc": [
-      674
-    ]
-  },
-  {
-    "teal": 709,
-    "source": "contracts/Mamm.algo.ts:164",
-    "pc": [
+      674,
       675
     ]
   },
   {
-    "teal": 714,
-    "source": "contracts/Mamm.algo.ts:167",
+    "teal": 708,
+    "source": "contracts/Mamm.algo.ts:166",
     "pc": [
-      676,
+      676
+    ]
+  },
+  {
+    "teal": 709,
+    "source": "contracts/Mamm.algo.ts:166",
+    "pc": [
       677
     ]
   },
   {
-    "teal": 715,
-    "source": "contracts/Mamm.algo.ts:167",
+    "teal": 714,
+    "source": "contracts/Mamm.algo.ts:169",
     "pc": [
-      678
-    ]
-  },
-  {
-    "teal": 716,
-    "source": "contracts/Mamm.algo.ts:167",
-    "pc": [
+      678,
       679
     ]
   },
   {
-    "teal": 717,
-    "source": "contracts/Mamm.algo.ts:167",
+    "teal": 715,
+    "source": "contracts/Mamm.algo.ts:169",
     "pc": [
       680
     ]
   },
   {
+    "teal": 716,
+    "source": "contracts/Mamm.algo.ts:169",
+    "pc": [
+      681
+    ]
+  },
+  {
+    "teal": 717,
+    "source": "contracts/Mamm.algo.ts:169",
+    "pc": [
+      682
+    ]
+  },
+  {
     "teal": 718,
-    "source": "contracts/Mamm.algo.ts:167",
+    "source": "contracts/Mamm.algo.ts:169",
     "pc": [
-      681,
-      682,
-      683
-    ]
-  },
-  {
-    "teal": 727,
-    "source": "contracts/Mamm.algo.ts:168",
-    "pc": [
-      684
-    ]
-  },
-  {
-    "teal": 728,
-    "source": "contracts/Mamm.algo.ts:168",
-    "pc": [
+      683,
+      684,
       685
     ]
   },
   {
-    "teal": 729,
-    "source": "contracts/Mamm.algo.ts:168",
+    "teal": 727,
+    "source": "contracts/Mamm.algo.ts:170",
     "pc": [
-      686,
+      686
+    ]
+  },
+  {
+    "teal": 728,
+    "source": "contracts/Mamm.algo.ts:170",
+    "pc": [
       687
     ]
   },
   {
-    "teal": 733,
-    "source": "contracts/Mamm.algo.ts:169",
+    "teal": 729,
+    "source": "contracts/Mamm.algo.ts:170",
     "pc": [
       688,
       689
     ]
   },
   {
-    "teal": 734,
-    "source": "contracts/Mamm.algo.ts:169",
+    "teal": 733,
+    "source": "contracts/Mamm.algo.ts:171",
     "pc": [
-      690
+      690,
+      691
     ]
   },
   {
-    "teal": 735,
-    "source": "contracts/Mamm.algo.ts:169",
+    "teal": 734,
+    "source": "contracts/Mamm.algo.ts:171",
     "pc": [
-      691,
       692
     ]
   },
   {
-    "teal": 739,
-    "source": "contracts/Mamm.algo.ts:170",
+    "teal": 735,
+    "source": "contracts/Mamm.algo.ts:171",
     "pc": [
       693,
       694
     ]
   },
   {
-    "teal": 740,
-    "source": "contracts/Mamm.algo.ts:170",
+    "teal": 739,
+    "source": "contracts/Mamm.algo.ts:172",
     "pc": [
       695,
       696
     ]
   },
   {
-    "teal": 744,
-    "source": "contracts/Mamm.algo.ts:171",
+    "teal": 740,
+    "source": "contracts/Mamm.algo.ts:172",
     "pc": [
       697,
       698
     ]
   },
   {
-    "teal": 745,
-    "source": "contracts/Mamm.algo.ts:171",
+    "teal": 744,
+    "source": "contracts/Mamm.algo.ts:173",
     "pc": [
       699,
       700
     ]
   },
   {
-    "teal": 748,
-    "source": "contracts/Mamm.algo.ts:168",
+    "teal": 745,
+    "source": "contracts/Mamm.algo.ts:173",
     "pc": [
-      701
+      701,
+      702
     ]
   },
   {
-    "teal": 749,
-    "source": "contracts/Mamm.algo.ts:168",
+    "teal": 748,
+    "source": "contracts/Mamm.algo.ts:170",
     "pc": [
-      702,
       703
     ]
   },
   {
-    "teal": 752,
-    "source": "contracts/Mamm.algo.ts:168",
+    "teal": 749,
+    "source": "contracts/Mamm.algo.ts:170",
     "pc": [
-      704
+      704,
+      705
+    ]
+  },
+  {
+    "teal": 752,
+    "source": "contracts/Mamm.algo.ts:170",
+    "pc": [
+      706
     ]
   },
   {
     "teal": 753,
-    "source": "contracts/Mamm.algo.ts:167",
+    "source": "contracts/Mamm.algo.ts:169",
     "pc": [
-      705,
-      706,
-      707
-    ]
-  },
-  {
-    "teal": 761,
-    "source": "contracts/Mamm.algo.ts:174",
-    "pc": [
-      708
-    ]
-  },
-  {
-    "teal": 762,
-    "source": "contracts/Mamm.algo.ts:174",
-    "pc": [
+      707,
+      708,
       709
     ]
   },
   {
-    "teal": 763,
-    "source": "contracts/Mamm.algo.ts:174",
+    "teal": 761,
+    "source": "contracts/Mamm.algo.ts:176",
     "pc": [
-      710,
+      710
+    ]
+  },
+  {
+    "teal": 762,
+    "source": "contracts/Mamm.algo.ts:176",
+    "pc": [
       711
     ]
   },
   {
-    "teal": 767,
-    "source": "contracts/Mamm.algo.ts:175",
+    "teal": 763,
+    "source": "contracts/Mamm.algo.ts:176",
     "pc": [
       712,
       713
     ]
   },
   {
-    "teal": 768,
-    "source": "contracts/Mamm.algo.ts:175",
+    "teal": 767,
+    "source": "contracts/Mamm.algo.ts:177",
     "pc": [
       714,
       715
     ]
   },
   {
-    "teal": 772,
-    "source": "contracts/Mamm.algo.ts:176",
+    "teal": 768,
+    "source": "contracts/Mamm.algo.ts:177",
     "pc": [
       716,
       717
     ]
   },
   {
-    "teal": 773,
-    "source": "contracts/Mamm.algo.ts:176",
+    "teal": 772,
+    "source": "contracts/Mamm.algo.ts:178",
     "pc": [
       718,
       719
     ]
   },
   {
-    "teal": 776,
-    "source": "contracts/Mamm.algo.ts:174",
+    "teal": 773,
+    "source": "contracts/Mamm.algo.ts:178",
     "pc": [
-      720
+      720,
+      721
     ]
   },
   {
-    "teal": 777,
-    "source": "contracts/Mamm.algo.ts:174",
+    "teal": 776,
+    "source": "contracts/Mamm.algo.ts:176",
     "pc": [
-      721,
       722
     ]
   },
   {
-    "teal": 780,
-    "source": "contracts/Mamm.algo.ts:174",
+    "teal": 777,
+    "source": "contracts/Mamm.algo.ts:176",
     "pc": [
-      723
+      723,
+      724
     ]
   },
   {
-    "teal": 786,
-    "source": "contracts/Mamm.algo.ts:179",
+    "teal": 780,
+    "source": "contracts/Mamm.algo.ts:176",
     "pc": [
-      724,
       725
     ]
   },
   {
-    "teal": 787,
-    "source": "contracts/Mamm.algo.ts:179",
+    "teal": 786,
+    "source": "contracts/Mamm.algo.ts:181",
     "pc": [
-      726
-    ]
-  },
-  {
-    "teal": 788,
-    "source": "contracts/Mamm.algo.ts:179",
-    "pc": [
+      726,
       727
     ]
   },
   {
-    "teal": 789,
-    "source": "contracts/Mamm.algo.ts:179",
+    "teal": 787,
+    "source": "contracts/Mamm.algo.ts:181",
     "pc": [
       728
     ]
   },
   {
+    "teal": 788,
+    "source": "contracts/Mamm.algo.ts:181",
+    "pc": [
+      729
+    ]
+  },
+  {
+    "teal": 789,
+    "source": "contracts/Mamm.algo.ts:181",
+    "pc": [
+      730
+    ]
+  },
+  {
     "teal": 790,
-    "source": "contracts/Mamm.algo.ts:179",
+    "source": "contracts/Mamm.algo.ts:181",
     "pc": [
-      729,
-      730,
-      731
-    ]
-  },
-  {
-    "teal": 799,
-    "source": "contracts/Mamm.algo.ts:180",
-    "pc": [
-      732
-    ]
-  },
-  {
-    "teal": 800,
-    "source": "contracts/Mamm.algo.ts:180",
-    "pc": [
+      731,
+      732,
       733
     ]
   },
   {
-    "teal": 801,
-    "source": "contracts/Mamm.algo.ts:180",
+    "teal": 799,
+    "source": "contracts/Mamm.algo.ts:182",
     "pc": [
-      734,
+      734
+    ]
+  },
+  {
+    "teal": 800,
+    "source": "contracts/Mamm.algo.ts:182",
+    "pc": [
       735
     ]
   },
   {
-    "teal": 805,
-    "source": "contracts/Mamm.algo.ts:181",
+    "teal": 801,
+    "source": "contracts/Mamm.algo.ts:182",
     "pc": [
       736,
       737
     ]
   },
   {
-    "teal": 806,
-    "source": "contracts/Mamm.algo.ts:181",
+    "teal": 805,
+    "source": "contracts/Mamm.algo.ts:183",
     "pc": [
-      738
+      738,
+      739
     ]
   },
   {
-    "teal": 807,
-    "source": "contracts/Mamm.algo.ts:181",
+    "teal": 806,
+    "source": "contracts/Mamm.algo.ts:183",
     "pc": [
-      739,
       740
     ]
   },
   {
-    "teal": 811,
-    "source": "contracts/Mamm.algo.ts:182",
+    "teal": 807,
+    "source": "contracts/Mamm.algo.ts:183",
     "pc": [
       741,
       742
     ]
   },
   {
-    "teal": 812,
-    "source": "contracts/Mamm.algo.ts:182",
+    "teal": 811,
+    "source": "contracts/Mamm.algo.ts:184",
     "pc": [
       743,
       744
     ]
   },
   {
-    "teal": 816,
-    "source": "contracts/Mamm.algo.ts:183",
+    "teal": 812,
+    "source": "contracts/Mamm.algo.ts:184",
     "pc": [
       745,
       746
     ]
   },
   {
-    "teal": 817,
-    "source": "contracts/Mamm.algo.ts:183",
+    "teal": 816,
+    "source": "contracts/Mamm.algo.ts:185",
     "pc": [
       747,
       748
     ]
   },
   {
-    "teal": 820,
-    "source": "contracts/Mamm.algo.ts:180",
+    "teal": 817,
+    "source": "contracts/Mamm.algo.ts:185",
     "pc": [
-      749
+      749,
+      750
     ]
   },
   {
-    "teal": 821,
-    "source": "contracts/Mamm.algo.ts:180",
+    "teal": 820,
+    "source": "contracts/Mamm.algo.ts:182",
     "pc": [
-      750,
       751
     ]
   },
   {
-    "teal": 824,
-    "source": "contracts/Mamm.algo.ts:180",
+    "teal": 821,
+    "source": "contracts/Mamm.algo.ts:182",
     "pc": [
-      752
+      752,
+      753
+    ]
+  },
+  {
+    "teal": 824,
+    "source": "contracts/Mamm.algo.ts:182",
+    "pc": [
+      754
     ]
   },
   {
     "teal": 825,
-    "source": "contracts/Mamm.algo.ts:179",
+    "source": "contracts/Mamm.algo.ts:181",
     "pc": [
-      753,
-      754,
-      755
-    ]
-  },
-  {
-    "teal": 833,
-    "source": "contracts/Mamm.algo.ts:186",
-    "pc": [
-      756
-    ]
-  },
-  {
-    "teal": 834,
-    "source": "contracts/Mamm.algo.ts:186",
-    "pc": [
+      755,
+      756,
       757
     ]
   },
   {
-    "teal": 835,
-    "source": "contracts/Mamm.algo.ts:186",
+    "teal": 833,
+    "source": "contracts/Mamm.algo.ts:188",
     "pc": [
-      758,
+      758
+    ]
+  },
+  {
+    "teal": 834,
+    "source": "contracts/Mamm.algo.ts:188",
+    "pc": [
       759
     ]
   },
   {
-    "teal": 839,
-    "source": "contracts/Mamm.algo.ts:187",
+    "teal": 835,
+    "source": "contracts/Mamm.algo.ts:188",
     "pc": [
       760,
       761
     ]
   },
   {
-    "teal": 840,
-    "source": "contracts/Mamm.algo.ts:187",
+    "teal": 839,
+    "source": "contracts/Mamm.algo.ts:189",
     "pc": [
       762,
       763
     ]
   },
   {
-    "teal": 844,
-    "source": "contracts/Mamm.algo.ts:188",
+    "teal": 840,
+    "source": "contracts/Mamm.algo.ts:189",
     "pc": [
       764,
       765
     ]
   },
   {
-    "teal": 845,
-    "source": "contracts/Mamm.algo.ts:188",
+    "teal": 844,
+    "source": "contracts/Mamm.algo.ts:190",
     "pc": [
       766,
       767
     ]
   },
   {
-    "teal": 848,
-    "source": "contracts/Mamm.algo.ts:186",
+    "teal": 845,
+    "source": "contracts/Mamm.algo.ts:190",
     "pc": [
-      768
+      768,
+      769
     ]
   },
   {
-    "teal": 849,
-    "source": "contracts/Mamm.algo.ts:186",
+    "teal": 848,
+    "source": "contracts/Mamm.algo.ts:188",
     "pc": [
-      769,
       770
     ]
   },
   {
-    "teal": 852,
-    "source": "contracts/Mamm.algo.ts:186",
+    "teal": 849,
+    "source": "contracts/Mamm.algo.ts:188",
     "pc": [
-      771
-    ]
-  },
-  {
-    "teal": 855,
-    "source": "contracts/Mamm.algo.ts:137",
-    "pc": [
+      771,
       772
     ]
   },
   {
-    "teal": 859,
-    "source": "contracts/Mamm.algo.ts:194",
+    "teal": 852,
+    "source": "contracts/Mamm.algo.ts:188",
     "pc": [
-      773,
-      774,
-      775
+      773
     ]
   },
   {
-    "teal": 863,
-    "source": "contracts/Mamm.algo.ts:195",
+    "teal": 855,
+    "source": "contracts/Mamm.algo.ts:139",
     "pc": [
+      774
+    ]
+  },
+  {
+    "teal": 860,
+    "source": "contracts/Mamm.algo.ts:197",
+    "pc": [
+      775,
       776,
       777
     ]
   },
   {
-    "teal": 864,
-    "source": "contracts/Mamm.algo.ts:195",
+    "teal": 861,
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
-      778,
-      779
+      778
+    ]
+  },
+  {
+    "teal": 864,
+    "source": "contracts/Mamm.algo.ts:197",
+    "pc": [
+      779,
+      780,
+      781
     ]
   },
   {
     "teal": 865,
-    "source": "contracts/Mamm.algo.ts:195",
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
-      780
+      782
     ]
   },
   {
-    "teal": 866,
-    "source": "contracts/Mamm.algo.ts:195",
+    "teal": 868,
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
-      781,
-      782,
-      783
-    ]
-  },
-  {
-    "teal": 867,
-    "source": "contracts/Mamm.algo.ts:195",
-    "pc": [
+      783,
       784,
       785
     ]
   },
   {
-    "teal": 868,
-    "source": "contracts/Mamm.algo.ts:195",
+    "teal": 869,
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
-      786,
-      787,
-      788
+      786
     ]
   },
   {
-    "teal": 871,
-    "source": "contracts/Mamm.algo.ts:195",
+    "teal": 870,
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
+      787
+    ]
+  },
+  {
+    "teal": 874,
+    "source": "contracts/Mamm.algo.ts:197",
+    "pc": [
+      788,
       789,
       790
     ]
   },
   {
-    "teal": 874,
-    "source": "contracts/Mamm.algo.ts:194",
+    "teal": 877,
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
       791
     ]
   },
   {
-    "teal": 877,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 878,
+    "source": "contracts/Mamm.algo.ts:197",
     "pc": [
       792,
-      793,
-      794,
-      795,
+      793
+    ]
+  },
+  {
+    "teal": 882,
+    "source": "contracts/Mamm.algo.ts:198",
+    "pc": [
+      794
+    ]
+  },
+  {
+    "teal": 883,
+    "source": "contracts/Mamm.algo.ts:198",
+    "pc": [
+      795
+    ]
+  },
+  {
+    "teal": 884,
+    "source": "contracts/Mamm.algo.ts:198",
+    "pc": [
       796,
       797
     ]
   },
   {
-    "teal": 878,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 888,
+    "source": "contracts/Mamm.algo.ts:199",
     "pc": [
-      798,
-      799,
-      800
+      798
     ]
   },
   {
-    "teal": 879,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 889,
+    "source": "contracts/Mamm.algo.ts:199",
     "pc": [
-      801,
+      799
+    ]
+  },
+  {
+    "teal": 890,
+    "source": "contracts/Mamm.algo.ts:199",
+    "pc": [
+      800,
+      801
+    ]
+  },
+  {
+    "teal": 894,
+    "source": "contracts/Mamm.algo.ts:200",
+    "pc": [
       802,
       803,
-      804
-    ]
-  },
-  {
-    "teal": 882,
-    "source": "contracts/Mamm.algo.ts:12",
-    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
-    "pc": [
-      805
-    ]
-  },
-  {
-    "teal": 885,
-    "source": "contracts/Mamm.algo.ts:12",
-    "pc": [
+      804,
+      805,
       806,
       807,
-      808,
-      809,
+      808
+    ]
+  },
+  {
+    "teal": 895,
+    "source": "contracts/Mamm.algo.ts:200",
+    "pc": [
+      809
+    ]
+  },
+  {
+    "teal": 896,
+    "source": "contracts/Mamm.algo.ts:200",
+    "pc": [
       810,
       811
     ]
   },
   {
-    "teal": 886,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 900,
+    "source": "contracts/Mamm.algo.ts:202",
     "pc": [
-      812,
+      812
+    ]
+  },
+  {
+    "teal": 901,
+    "source": "contracts/Mamm.algo.ts:202",
+    "pc": [
       813,
-      814,
-      815,
+      814
+    ]
+  },
+  {
+    "teal": 905,
+    "source": "contracts/Mamm.algo.ts:203",
+    "pc": [
+      815
+    ]
+  },
+  {
+    "teal": 906,
+    "source": "contracts/Mamm.algo.ts:203",
+    "pc": [
       816,
       817
     ]
   },
   {
-    "teal": 887,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 911,
+    "source": "contracts/Mamm.algo.ts:206",
     "pc": [
       818,
-      819,
-      820,
-      821,
-      822,
-      823
+      819
     ]
   },
   {
-    "teal": 888,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 912,
+    "source": "contracts/Mamm.algo.ts:206",
     "pc": [
-      824,
+      820
+    ]
+  },
+  {
+    "teal": 913,
+    "source": "contracts/Mamm.algo.ts:206",
+    "pc": [
+      821
+    ]
+  },
+  {
+    "teal": 914,
+    "source": "contracts/Mamm.algo.ts:206",
+    "pc": [
+      822,
+      823,
+      824
+    ]
+  },
+  {
+    "teal": 919,
+    "source": "contracts/Mamm.algo.ts:207",
+    "pc": [
       825,
       826
     ]
   },
   {
-    "teal": 889,
-    "source": "contracts/Mamm.algo.ts:12",
+    "teal": 920,
+    "source": "contracts/Mamm.algo.ts:207",
     "pc": [
       827,
-      828,
-      829,
-      830,
-      831,
-      832,
-      833,
-      834
+      828
     ]
   },
   {
-    "teal": 892,
+    "teal": 924,
+    "source": "contracts/Mamm.algo.ts:208",
+    "pc": [
+      829,
+      830
+    ]
+  },
+  {
+    "teal": 925,
+    "source": "contracts/Mamm.algo.ts:208",
+    "pc": [
+      831,
+      832
+    ]
+  },
+  {
+    "teal": 926,
+    "source": "contracts/Mamm.algo.ts:206",
+    "pc": [
+      833,
+      834,
+      835
+    ]
+  },
+  {
+    "teal": 931,
+    "source": "contracts/Mamm.algo.ts:209",
+    "pc": [
+      836,
+      837
+    ]
+  },
+  {
+    "teal": 932,
+    "source": "contracts/Mamm.algo.ts:209",
+    "pc": [
+      838
+    ]
+  },
+  {
+    "teal": 933,
+    "source": "contracts/Mamm.algo.ts:209",
+    "pc": [
+      839
+    ]
+  },
+  {
+    "teal": 934,
+    "source": "contracts/Mamm.algo.ts:209",
+    "pc": [
+      840,
+      841,
+      842
+    ]
+  },
+  {
+    "teal": 939,
+    "source": "contracts/Mamm.algo.ts:210",
+    "pc": [
+      843,
+      844
+    ]
+  },
+  {
+    "teal": 940,
+    "source": "contracts/Mamm.algo.ts:210",
+    "pc": [
+      845,
+      846
+    ]
+  },
+  {
+    "teal": 944,
+    "source": "contracts/Mamm.algo.ts:211",
+    "pc": [
+      847,
+      848
+    ]
+  },
+  {
+    "teal": 945,
+    "source": "contracts/Mamm.algo.ts:211",
+    "pc": [
+      849,
+      850
+    ]
+  },
+  {
+    "teal": 946,
+    "source": "contracts/Mamm.algo.ts:209",
+    "pc": [
+      851,
+      852,
+      853
+    ]
+  },
+  {
+    "teal": 951,
+    "source": "contracts/Mamm.algo.ts:213",
+    "pc": [
+      854
+    ]
+  },
+  {
+    "teal": 954,
+    "source": "contracts/Mamm.algo.ts:213",
+    "errorMessage": "Invalid swap type",
+    "pc": [
+      855
+    ]
+  },
+  {
+    "teal": 959,
+    "source": "contracts/Mamm.algo.ts:217",
+    "pc": [
+      856,
+      857
+    ]
+  },
+  {
+    "teal": 960,
+    "source": "contracts/Mamm.algo.ts:217",
+    "pc": [
+      858
+    ]
+  },
+  {
+    "teal": 961,
+    "source": "contracts/Mamm.algo.ts:217",
+    "pc": [
+      859
+    ]
+  },
+  {
+    "teal": 964,
+    "source": "contracts/Mamm.algo.ts:217",
+    "errorMessage": "Invalid input amount",
+    "pc": [
+      860
+    ]
+  },
+  {
+    "teal": 968,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      861,
+      862
+    ]
+  },
+  {
+    "teal": 969,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      863,
+      864
+    ]
+  },
+  {
+    "teal": 970,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      865,
+      866
+    ]
+  },
+  {
+    "teal": 971,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      867
+    ]
+  },
+  {
+    "teal": 972,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      868
+    ]
+  },
+  {
+    "teal": 973,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      869,
+      870
+    ]
+  },
+  {
+    "teal": 974,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      871
+    ]
+  },
+  {
+    "teal": 975,
+    "source": "contracts/Mamm.algo.ts:220",
+    "pc": [
+      872,
+      873
+    ]
+  },
+  {
+    "teal": 979,
+    "source": "contracts/Mamm.algo.ts:221",
+    "pc": [
+      874,
+      875
+    ]
+  },
+  {
+    "teal": 980,
+    "source": "contracts/Mamm.algo.ts:221",
+    "pc": [
+      876,
+      877
+    ]
+  },
+  {
+    "teal": 981,
+    "source": "contracts/Mamm.algo.ts:221",
+    "pc": [
+      878
+    ]
+  },
+  {
+    "teal": 982,
+    "source": "contracts/Mamm.algo.ts:221",
+    "pc": [
+      879,
+      880
+    ]
+  },
+  {
+    "teal": 986,
+    "source": "contracts/Mamm.algo.ts:222",
+    "pc": [
+      881,
+      882
+    ]
+  },
+  {
+    "teal": 987,
+    "source": "contracts/Mamm.algo.ts:222",
+    "pc": [
+      883,
+      884
+    ]
+  },
+  {
+    "teal": 988,
+    "source": "contracts/Mamm.algo.ts:222",
+    "pc": [
+      885
+    ]
+  },
+  {
+    "teal": 989,
+    "source": "contracts/Mamm.algo.ts:222",
+    "pc": [
+      886,
+      887
+    ]
+  },
+  {
+    "teal": 993,
+    "source": "contracts/Mamm.algo.ts:223",
+    "pc": [
+      888,
+      889
+    ]
+  },
+  {
+    "teal": 994,
+    "source": "contracts/Mamm.algo.ts:223",
+    "pc": [
+      890,
+      891
+    ]
+  },
+  {
+    "teal": 995,
+    "source": "contracts/Mamm.algo.ts:223",
+    "pc": [
+      892
+    ]
+  },
+  {
+    "teal": 996,
+    "source": "contracts/Mamm.algo.ts:223",
+    "pc": [
+      893,
+      894
+    ]
+  },
+  {
+    "teal": 1000,
+    "source": "contracts/Mamm.algo.ts:226",
+    "pc": [
+      895,
+      896
+    ]
+  },
+  {
+    "teal": 1001,
+    "source": "contracts/Mamm.algo.ts:226",
+    "pc": [
+      897
+    ]
+  },
+  {
+    "teal": 1002,
+    "source": "contracts/Mamm.algo.ts:226",
+    "pc": [
+      898
+    ]
+  },
+  {
+    "teal": 1005,
+    "source": "contracts/Mamm.algo.ts:226",
+    "errorMessage": "Swap too small",
+    "pc": [
+      899
+    ]
+  },
+  {
+    "teal": 1009,
+    "source": "contracts/Mamm.algo.ts:229",
+    "pc": [
+      900,
+      901
+    ]
+  },
+  {
+    "teal": 1010,
+    "source": "contracts/Mamm.algo.ts:229",
+    "pc": [
+      902,
+      903
+    ]
+  },
+  {
+    "teal": 1011,
+    "source": "contracts/Mamm.algo.ts:229",
+    "pc": [
+      904
+    ]
+  },
+  {
+    "teal": 1012,
+    "source": "contracts/Mamm.algo.ts:229",
+    "pc": [
+      905,
+      906
+    ]
+  },
+  {
+    "teal": 1016,
+    "source": "contracts/Mamm.algo.ts:230",
+    "pc": [
+      907,
+      908
+    ]
+  },
+  {
+    "teal": 1017,
+    "source": "contracts/Mamm.algo.ts:230",
+    "pc": [
+      909,
+      910
+    ]
+  },
+  {
+    "teal": 1018,
+    "source": "contracts/Mamm.algo.ts:230",
+    "pc": [
+      911
+    ]
+  },
+  {
+    "teal": 1019,
+    "source": "contracts/Mamm.algo.ts:230",
+    "pc": [
+      912,
+      913
+    ]
+  },
+  {
+    "teal": 1024,
+    "source": "contracts/Mamm.algo.ts:232",
+    "pc": [
+      914,
+      915
+    ]
+  },
+  {
+    "teal": 1025,
+    "source": "contracts/Mamm.algo.ts:232",
+    "pc": [
+      916
+    ]
+  },
+  {
+    "teal": 1026,
+    "source": "contracts/Mamm.algo.ts:232",
+    "pc": [
+      917
+    ]
+  },
+  {
+    "teal": 1027,
+    "source": "contracts/Mamm.algo.ts:232",
+    "pc": [
+      918,
+      919,
+      920
+    ]
+  },
+  {
+    "teal": 1032,
+    "source": "contracts/Mamm.algo.ts:233",
+    "pc": [
+      921
+    ]
+  },
+  {
+    "teal": 1033,
+    "source": "contracts/Mamm.algo.ts:233",
+    "pc": [
+      922,
+      923
+    ]
+  },
+  {
+    "teal": 1034,
+    "source": "contracts/Mamm.algo.ts:233",
+    "pc": [
+      924
+    ]
+  },
+  {
+    "teal": 1038,
+    "source": "contracts/Mamm.algo.ts:234",
+    "pc": [
+      925
+    ]
+  },
+  {
+    "teal": 1039,
+    "source": "contracts/Mamm.algo.ts:234",
+    "pc": [
+      926,
+      927
+    ]
+  },
+  {
+    "teal": 1040,
+    "source": "contracts/Mamm.algo.ts:234",
+    "pc": [
+      928
+    ]
+  },
+  {
+    "teal": 1041,
+    "source": "contracts/Mamm.algo.ts:232",
+    "pc": [
+      929,
+      930,
+      931
+    ]
+  },
+  {
+    "teal": 1046,
+    "source": "contracts/Mamm.algo.ts:236",
+    "pc": [
+      932
+    ]
+  },
+  {
+    "teal": 1047,
+    "source": "contracts/Mamm.algo.ts:236",
+    "pc": [
+      933,
+      934
+    ]
+  },
+  {
+    "teal": 1048,
+    "source": "contracts/Mamm.algo.ts:236",
+    "pc": [
+      935
+    ]
+  },
+  {
+    "teal": 1052,
+    "source": "contracts/Mamm.algo.ts:237",
+    "pc": [
+      936
+    ]
+  },
+  {
+    "teal": 1053,
+    "source": "contracts/Mamm.algo.ts:237",
+    "pc": [
+      937,
+      938
+    ]
+  },
+  {
+    "teal": 1054,
+    "source": "contracts/Mamm.algo.ts:237",
+    "pc": [
+      939
+    ]
+  },
+  {
+    "teal": 1059,
+    "source": "contracts/Mamm.algo.ts:241",
+    "pc": [
+      940,
+      941
+    ]
+  },
+  {
+    "teal": 1060,
+    "source": "contracts/Mamm.algo.ts:241",
+    "pc": [
+      942,
+      943
+    ]
+  },
+  {
+    "teal": 1061,
+    "source": "contracts/Mamm.algo.ts:241",
+    "pc": [
+      944,
+      945
+    ]
+  },
+  {
+    "teal": 1062,
+    "source": "contracts/Mamm.algo.ts:241",
+    "pc": [
+      946
+    ]
+  },
+  {
+    "teal": 1063,
+    "source": "contracts/Mamm.algo.ts:241",
+    "pc": [
+      947
+    ]
+  },
+  {
+    "teal": 1068,
+    "source": "contracts/Mamm.algo.ts:244",
+    "pc": [
+      948,
+      949
+    ]
+  },
+  {
+    "teal": 1069,
+    "source": "contracts/Mamm.algo.ts:244",
+    "pc": [
+      950
+    ]
+  },
+  {
+    "teal": 1070,
+    "source": "contracts/Mamm.algo.ts:244",
+    "pc": [
+      951
+    ]
+  },
+  {
+    "teal": 1071,
+    "source": "contracts/Mamm.algo.ts:244",
+    "pc": [
+      952,
+      953,
+      954
+    ]
+  },
+  {
+    "teal": 1077,
+    "source": "contracts/Mamm.algo.ts:245",
+    "pc": [
+      955,
+      956
+    ]
+  },
+  {
+    "teal": 1078,
+    "source": "contracts/Mamm.algo.ts:245",
+    "pc": [
+      957
+    ]
+  },
+  {
+    "teal": 1079,
+    "source": "contracts/Mamm.algo.ts:245",
+    "pc": [
+      958
+    ]
+  },
+  {
+    "teal": 1080,
+    "source": "contracts/Mamm.algo.ts:245",
+    "pc": [
+      959
+    ]
+  },
+  {
+    "teal": 1081,
+    "source": "contracts/Mamm.algo.ts:245",
+    "pc": [
+      960,
+      961,
+      962
+    ]
+  },
+  {
+    "teal": 1089,
+    "source": "contracts/Mamm.algo.ts:246",
+    "pc": [
+      963
+    ]
+  },
+  {
+    "teal": 1090,
+    "source": "contracts/Mamm.algo.ts:246",
+    "pc": [
+      964
+    ]
+  },
+  {
+    "teal": 1091,
+    "source": "contracts/Mamm.algo.ts:246",
+    "pc": [
+      965,
+      966
+    ]
+  },
+  {
+    "teal": 1095,
+    "source": "contracts/Mamm.algo.ts:247",
+    "pc": [
+      967,
+      968
+    ]
+  },
+  {
+    "teal": 1096,
+    "source": "contracts/Mamm.algo.ts:247",
+    "pc": [
+      969,
+      970
+    ]
+  },
+  {
+    "teal": 1100,
+    "source": "contracts/Mamm.algo.ts:248",
+    "pc": [
+      971,
+      972
+    ]
+  },
+  {
+    "teal": 1101,
+    "source": "contracts/Mamm.algo.ts:248",
+    "pc": [
+      973,
+      974
+    ]
+  },
+  {
+    "teal": 1104,
+    "source": "contracts/Mamm.algo.ts:246",
+    "pc": [
+      975
+    ]
+  },
+  {
+    "teal": 1105,
+    "source": "contracts/Mamm.algo.ts:246",
+    "pc": [
+      976,
+      977
+    ]
+  },
+  {
+    "teal": 1108,
+    "source": "contracts/Mamm.algo.ts:246",
+    "pc": [
+      978
+    ]
+  },
+  {
+    "teal": 1109,
+    "source": "contracts/Mamm.algo.ts:245",
+    "pc": [
+      979,
+      980,
+      981
+    ]
+  },
+  {
+    "teal": 1118,
+    "source": "contracts/Mamm.algo.ts:251",
+    "pc": [
+      982
+    ]
+  },
+  {
+    "teal": 1119,
+    "source": "contracts/Mamm.algo.ts:251",
+    "pc": [
+      983
+    ]
+  },
+  {
+    "teal": 1120,
+    "source": "contracts/Mamm.algo.ts:251",
+    "pc": [
+      984,
+      985
+    ]
+  },
+  {
+    "teal": 1124,
+    "source": "contracts/Mamm.algo.ts:252",
+    "pc": [
+      986,
+      987
+    ]
+  },
+  {
+    "teal": 1125,
+    "source": "contracts/Mamm.algo.ts:252",
+    "pc": [
+      988
+    ]
+  },
+  {
+    "teal": 1126,
+    "source": "contracts/Mamm.algo.ts:252",
+    "pc": [
+      989,
+      990
+    ]
+  },
+  {
+    "teal": 1130,
+    "source": "contracts/Mamm.algo.ts:253",
+    "pc": [
+      991,
+      992
+    ]
+  },
+  {
+    "teal": 1131,
+    "source": "contracts/Mamm.algo.ts:253",
+    "pc": [
+      993,
+      994
+    ]
+  },
+  {
+    "teal": 1135,
+    "source": "contracts/Mamm.algo.ts:254",
+    "pc": [
+      995,
+      996
+    ]
+  },
+  {
+    "teal": 1136,
+    "source": "contracts/Mamm.algo.ts:254",
+    "pc": [
+      997,
+      998
+    ]
+  },
+  {
+    "teal": 1139,
+    "source": "contracts/Mamm.algo.ts:251",
+    "pc": [
+      999
+    ]
+  },
+  {
+    "teal": 1140,
+    "source": "contracts/Mamm.algo.ts:251",
+    "pc": [
+      1000,
+      1001
+    ]
+  },
+  {
+    "teal": 1143,
+    "source": "contracts/Mamm.algo.ts:251",
+    "pc": [
+      1002
+    ]
+  },
+  {
+    "teal": 1151,
+    "source": "contracts/Mamm.algo.ts:258",
+    "pc": [
+      1003,
+      1004
+    ]
+  },
+  {
+    "teal": 1152,
+    "source": "contracts/Mamm.algo.ts:258",
+    "pc": [
+      1005
+    ]
+  },
+  {
+    "teal": 1153,
+    "source": "contracts/Mamm.algo.ts:258",
+    "pc": [
+      1006
+    ]
+  },
+  {
+    "teal": 1154,
+    "source": "contracts/Mamm.algo.ts:258",
+    "pc": [
+      1007,
+      1008,
+      1009
+    ]
+  },
+  {
+    "teal": 1160,
+    "source": "contracts/Mamm.algo.ts:259",
+    "pc": [
+      1010,
+      1011
+    ]
+  },
+  {
+    "teal": 1161,
+    "source": "contracts/Mamm.algo.ts:259",
+    "pc": [
+      1012
+    ]
+  },
+  {
+    "teal": 1162,
+    "source": "contracts/Mamm.algo.ts:259",
+    "pc": [
+      1013
+    ]
+  },
+  {
+    "teal": 1163,
+    "source": "contracts/Mamm.algo.ts:259",
+    "pc": [
+      1014
+    ]
+  },
+  {
+    "teal": 1164,
+    "source": "contracts/Mamm.algo.ts:259",
+    "pc": [
+      1015,
+      1016,
+      1017
+    ]
+  },
+  {
+    "teal": 1172,
+    "source": "contracts/Mamm.algo.ts:260",
+    "pc": [
+      1018
+    ]
+  },
+  {
+    "teal": 1173,
+    "source": "contracts/Mamm.algo.ts:260",
+    "pc": [
+      1019
+    ]
+  },
+  {
+    "teal": 1174,
+    "source": "contracts/Mamm.algo.ts:260",
+    "pc": [
+      1020,
+      1021
+    ]
+  },
+  {
+    "teal": 1178,
+    "source": "contracts/Mamm.algo.ts:261",
+    "pc": [
+      1022,
+      1023
+    ]
+  },
+  {
+    "teal": 1179,
+    "source": "contracts/Mamm.algo.ts:261",
+    "pc": [
+      1024,
+      1025
+    ]
+  },
+  {
+    "teal": 1183,
+    "source": "contracts/Mamm.algo.ts:262",
+    "pc": [
+      1026,
+      1027
+    ]
+  },
+  {
+    "teal": 1184,
+    "source": "contracts/Mamm.algo.ts:262",
+    "pc": [
+      1028,
+      1029
+    ]
+  },
+  {
+    "teal": 1187,
+    "source": "contracts/Mamm.algo.ts:260",
+    "pc": [
+      1030
+    ]
+  },
+  {
+    "teal": 1188,
+    "source": "contracts/Mamm.algo.ts:260",
+    "pc": [
+      1031,
+      1032
+    ]
+  },
+  {
+    "teal": 1191,
+    "source": "contracts/Mamm.algo.ts:260",
+    "pc": [
+      1033
+    ]
+  },
+  {
+    "teal": 1192,
+    "source": "contracts/Mamm.algo.ts:259",
+    "pc": [
+      1034,
+      1035,
+      1036
+    ]
+  },
+  {
+    "teal": 1201,
+    "source": "contracts/Mamm.algo.ts:265",
+    "pc": [
+      1037
+    ]
+  },
+  {
+    "teal": 1202,
+    "source": "contracts/Mamm.algo.ts:265",
+    "pc": [
+      1038
+    ]
+  },
+  {
+    "teal": 1203,
+    "source": "contracts/Mamm.algo.ts:265",
+    "pc": [
+      1039,
+      1040
+    ]
+  },
+  {
+    "teal": 1207,
+    "source": "contracts/Mamm.algo.ts:266",
+    "pc": [
+      1041,
+      1042
+    ]
+  },
+  {
+    "teal": 1208,
+    "source": "contracts/Mamm.algo.ts:266",
+    "pc": [
+      1043
+    ]
+  },
+  {
+    "teal": 1209,
+    "source": "contracts/Mamm.algo.ts:266",
+    "pc": [
+      1044,
+      1045
+    ]
+  },
+  {
+    "teal": 1213,
+    "source": "contracts/Mamm.algo.ts:267",
+    "pc": [
+      1046,
+      1047
+    ]
+  },
+  {
+    "teal": 1214,
+    "source": "contracts/Mamm.algo.ts:267",
+    "pc": [
+      1048,
+      1049
+    ]
+  },
+  {
+    "teal": 1218,
+    "source": "contracts/Mamm.algo.ts:268",
+    "pc": [
+      1050,
+      1051
+    ]
+  },
+  {
+    "teal": 1219,
+    "source": "contracts/Mamm.algo.ts:268",
+    "pc": [
+      1052,
+      1053
+    ]
+  },
+  {
+    "teal": 1222,
+    "source": "contracts/Mamm.algo.ts:265",
+    "pc": [
+      1054
+    ]
+  },
+  {
+    "teal": 1223,
+    "source": "contracts/Mamm.algo.ts:265",
+    "pc": [
+      1055,
+      1056
+    ]
+  },
+  {
+    "teal": 1226,
+    "source": "contracts/Mamm.algo.ts:265",
+    "pc": [
+      1057
+    ]
+  },
+  {
+    "teal": 1231,
+    "source": "contracts/Mamm.algo.ts:197",
+    "pc": [
+      1058
+    ]
+  },
+  {
+    "teal": 1235,
+    "source": "contracts/Mamm.algo.ts:275",
+    "pc": [
+      1059,
+      1060,
+      1061
+    ]
+  },
+  {
+    "teal": 1239,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1062,
+      1063
+    ]
+  },
+  {
+    "teal": 1240,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1064,
+      1065
+    ]
+  },
+  {
+    "teal": 1241,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1066
+    ]
+  },
+  {
+    "teal": 1242,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1067,
+      1068,
+      1069
+    ]
+  },
+  {
+    "teal": 1243,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1070,
+      1071
+    ]
+  },
+  {
+    "teal": 1244,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1072,
+      1073,
+      1074
+    ]
+  },
+  {
+    "teal": 1247,
+    "source": "contracts/Mamm.algo.ts:276",
+    "pc": [
+      1075,
+      1076
+    ]
+  },
+  {
+    "teal": 1250,
+    "source": "contracts/Mamm.algo.ts:275",
+    "pc": [
+      1077
+    ]
+  },
+  {
+    "teal": 1253,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1078,
+      1079,
+      1080,
+      1081,
+      1082,
+      1083
+    ]
+  },
+  {
+    "teal": 1254,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1084,
+      1085,
+      1086
+    ]
+  },
+  {
+    "teal": 1255,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1087,
+      1088,
+      1089,
+      1090
+    ]
+  },
+  {
+    "teal": 1258,
+    "source": "contracts/Mamm.algo.ts:12",
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "pc": [
+      1091
+    ]
+  },
+  {
+    "teal": 1261,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1092,
+      1093,
+      1094,
+      1095,
+      1096,
+      1097
+    ]
+  },
+  {
+    "teal": 1262,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1098,
+      1099,
+      1100,
+      1101,
+      1102,
+      1103
+    ]
+  },
+  {
+    "teal": 1263,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109
+    ]
+  },
+  {
+    "teal": 1264,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1110,
+      1111,
+      1112,
+      1113,
+      1114,
+      1115
+    ]
+  },
+  {
+    "teal": 1265,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1116,
+      1117,
+      1118
+    ]
+  },
+  {
+    "teal": 1266,
+    "source": "contracts/Mamm.algo.ts:12",
+    "pc": [
+      1119,
+      1120,
+      1121,
+      1122,
+      1123,
+      1124,
+      1125,
+      1126,
+      1127,
+      1128
+    ]
+  },
+  {
+    "teal": 1269,
     "source": "contracts/Mamm.algo.ts:12",
     "errorMessage": "this contract does not implement the given ABI method for call NoOp",
     "pc": [
-      835
+      1129
     ]
   }
 ]
