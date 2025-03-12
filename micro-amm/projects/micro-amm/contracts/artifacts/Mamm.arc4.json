@@ -96,6 +96,66 @@
       "returns": {
         "type": "void"
       }
+    },
+    {
+      "name": "updateSwapFee",
+      "args": [
+        {
+          "name": "newFee",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "updateProtocolFee",
+      "args": [
+        {
+          "name": "newFee",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "updateAdmin",
+      "args": [
+        {
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "updateTreasury",
+      "args": [
+        {
+          "name": "newTreasury",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "updateMinimumBalance",
+      "args": [
+        {
+          "name": "newMBR",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
     }
   ]
 }

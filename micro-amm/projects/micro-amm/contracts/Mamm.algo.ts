@@ -9,6 +9,8 @@ const VERSION = 1000;
 // The minimum balance requirement for holding tokens
 const TOKEN_MBR = 100_000;
 
+const LP_TOKEN_SUPPLY = 99_999_999_999_999;
+
 // This class defines the main contract, storing and managing global state
 export class Mamm extends Contract {
   // TEAL program version to compile and run
@@ -79,12 +81,12 @@ export class Mamm extends Contract {
     this.lp_token_decimals.value = 6;
     this.lp_token_url.value = lpAssetURL;
     this.contract_version.value = VERSION;
-    this.minimum_balance.value = TOKEN_MBR * 3;
+    this.minimum_balance.value = TOKEN_MBR * 4;
     this.swap_fee_bps.value = swapFeeBps;
     this.protocol_fee_bps.value = protocolFeeBps;
     this.treasury_address.value = treasuryAddress;
 
-    verifyPayTxn(mbrTxn, { receiver: this.app.address, amount: TOKEN_MBR * 3 });
+    verifyPayTxn(mbrTxn, { receiver: this.app.address, amount: TOKEN_MBR * 4 + 3_000 });
 
     this.primary_token_id.value = primaryAssetId;
     this.secondary_token_id.value = secondaryAssetId;
@@ -94,23 +96,26 @@ export class Mamm extends Contract {
       xferAsset: AssetID.fromUint64(this.primary_token_id.value),
       assetReceiver: this.app.address,
       assetAmount: 0,
+      fee: 1_000,
     });
     sendAssetTransfer({
       xferAsset: AssetID.fromUint64(this.secondary_token_id.value),
       assetReceiver: this.app.address,
       assetAmount: 0,
+      fee: 1_000,
     });
 
     // mint LP tokens
     const lpAssetId = sendAssetCreation({
-      configAssetTotal: 99_999_999_999_999,
+      configAssetTotal: LP_TOKEN_SUPPLY,
       configAssetDecimals: this.lp_token_decimals.value,
       configAssetName: this.lp_token_name.value,
       configAssetUnitName: this.lp_token_symbol.value,
       configAssetURL: this.lp_token_url.value,
+      fee: 1_000,
     }); // 1000 fee covered by sender
     this.lp_token_id.value = lpAssetId.id;
-    this.total_lp_supply.value = 99_999_999_999_999;
+    this.total_lp_supply.value = LP_TOKEN_SUPPLY;
   }
 
   // Adds liquidity to the pool and mints the appropriate number of LP tokens
