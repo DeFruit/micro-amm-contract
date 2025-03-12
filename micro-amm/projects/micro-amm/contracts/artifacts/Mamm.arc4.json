@@ -52,6 +52,22 @@
       "returns": {
         "type": "void"
       }
+    },
+    {
+      "name": "removeLiquidity",
+      "args": [
+        {
+          "name": "burnTxn",
+          "type": "axfer"
+        },
+        {
+          "name": "lpTokensBurned",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
     }
   ]
 }
