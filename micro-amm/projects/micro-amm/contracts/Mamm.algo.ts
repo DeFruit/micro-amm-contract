@@ -101,8 +101,8 @@ export class Mamm extends Contract {
     }
     // Case 2: Adding Liquidity (Matching Pool Ratio)
     else {
-      const mintFromOra = (primaryAmount * totalLPSupply) / primaryReserve;
-      const mintFromAlgo = (secondaryAmount * totalLPSupply) / secondaryReserve;
+      const mintFromOra = wideRatio([primaryAmount, totalLPSupply], [primaryReserve]);
+      const mintFromAlgo = wideRatio([secondaryAmount * totalLPSupply], [secondaryReserve]);
       lpTokensMinted = this.min(mintFromOra, mintFromAlgo);
     }
 
@@ -124,44 +124,3 @@ export class Mamm extends Contract {
     return a < b ? a : b;
   }
 }
-
-/*
-
-// Function: Add Liquidity
-export function addLiquidity(oraAmount: uint64, algoAmount: uint64): void {
-    const oraReserve = GLOBAL_STATE.ORA_RESERVE.get();
-    const algoReserve = GLOBAL_STATE.ALGO_RESERVE.get();
-    const totalLPSupply = GLOBAL_STATE.TOTAL_LP_SUPPLY.get();
-
-    let lpTokensMinted: uint64;
-
-    // Case 1: Initial Liquidity
-    if (totalLPSupply == 0) {
-        lpTokensMinted = sqrt(oraAmount * algoAmount);
-    }
-    // Case 2: Adding Liquidity (Matching Pool Ratio)
-    else {
-        const mintFromOra = (oraAmount * totalLPSupply) / oraReserve;
-        const mintFromAlgo = (algoAmount * totalLPSupply) / algoReserve;
-        lpTokensMinted = min(mintFromOra, mintFromAlgo);
-    }
-
-    // Update global state
-    GLOBAL_STATE.ORA_RESERVE.put(oraReserve + oraAmount);
-    GLOBAL_STATE.ALGO_RESERVE.put(algoReserve + algoAmount);
-    GLOBAL_STATE.TOTAL_LP_SUPPLY.put(totalLPSupply + lpTokensMinted);
-    GLOBAL_STATE.K_VALUE.put((oraReserve + oraAmount) * (algoReserve + algoAmount));
-
-    // Mint LP tokens
-    mintLPTokens(Txn.sender(), lpTokensMinted);
-}
-
-// Function: Mint LP Tokens (Simplified Example)
-function mintLPTokens(recipient: Address, amount: uint64): void {
-    // Ensure LP token is already created
-    const lpTokenID = GLOBAL_STATE.LP_TOKEN_ID.get();
-    assert(lpTokenID > 0, "LP Token not initialized");
-
-    sendAsset(recipient, lpTokenID, amount);
-}
- */
