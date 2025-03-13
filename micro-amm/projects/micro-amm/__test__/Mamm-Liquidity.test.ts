@@ -23,15 +23,16 @@ let algorand: algokit.AlgorandClient;
 //--------------------------------------------------------
 // Relevant user accounts ------------------------------------
 let deployerAccount: TransactionSignerAccount;
-let secondaryAdminAccount: TransactionSignerAccount;
 let treasuryAccount: TransactionSignerAccount;
+let firstLPAccount: TransactionSignerAccount;
+let secondLPAccount: TransactionSignerAccount;
 //--------------------------------------------------------
 // Relevant assets -------------------------------------------
 let primaryAssetId: bigint;
 let secondaryAssetId: bigint;
 //--------------------------------------------------------
 
-describe('Mamm config testing', () => {
+describe('Mamm liquidity testing', () => {
   beforeEach(fixture.newScope);
 
   beforeAll(async () => {
@@ -46,6 +47,14 @@ describe('Mamm config testing', () => {
     treasuryAccount = await algorand.account.kmd.getOrCreateWalletAccount('treasury-account', algos(100));
     algorand.account.setSignerFromAccount(treasuryAccount);
     await algorand.account.ensureFundedFromEnvironment(treasuryAccount.addr, algokit.algos(10));
+
+    firstLPAccount = await algorand.account.kmd.getOrCreateWalletAccount('first-lp-account', algos(100));
+    algorand.account.setSignerFromAccount(firstLPAccount);
+    await algorand.account.ensureFundedFromEnvironment(firstLPAccount.addr, algokit.algos(10));
+
+    secondLPAccount = await algorand.account.kmd.getOrCreateWalletAccount('second-lp-account', algos(100));
+    algorand.account.setSignerFromAccount(secondLPAccount);
+    await algorand.account.ensureFundedFromEnvironment(secondLPAccount.addr, algokit.algos(10));
 
     const deployerInfo = await algorand.account.getInformation(deployerAccount.addr);
     const treasuryInfo = await algorand.account.getInformation(treasuryAccount.addr);
@@ -76,6 +85,49 @@ describe('Mamm config testing', () => {
       url: 'https://secondary-asset-url.com',
     });
     secondaryAssetId = secondaryCreateTxn.assetId;
+
+    // Opt in LP accounts to assets
+    await algorand.send.assetOptIn({
+      sender: firstLPAccount.addr,
+      assetId: primaryAssetId,
+    });
+    await algorand.send.assetOptIn({
+      sender: firstLPAccount.addr,
+      assetId: secondaryAssetId,
+    });
+    await algorand.send.assetOptIn({
+      sender: secondLPAccount.addr,
+      assetId: primaryAssetId,
+    });
+    await algorand.send.assetOptIn({
+      sender: secondLPAccount.addr,
+      assetId: secondaryAssetId,
+    });
+    // Fund LP accounts --------------------------------------
+    await algorand.send.assetTransfer({
+      sender: deployerAccount.addr,
+      receiver: firstLPAccount.addr,
+      assetId: primaryAssetId,
+      amount: 100_000n,
+    });
+    await algorand.send.assetTransfer({
+      sender: deployerAccount.addr,
+      receiver: firstLPAccount.addr,
+      assetId: secondaryAssetId,
+      amount: 100_000n,
+    });
+    await algorand.send.assetTransfer({
+      sender: deployerAccount.addr,
+      receiver: secondLPAccount.addr,
+      assetId: primaryAssetId,
+      amount: 100_000n,
+    });
+    await algorand.send.assetTransfer({
+      sender: deployerAccount.addr,
+      receiver: secondLPAccount.addr,
+      assetId: secondaryAssetId,
+      amount: 100_000n,
+    });
 
     // Setup app clients -------------------------------------
     const factory = algorand.client.getTypedAppFactory(MammFactory, { defaultSender: deployerAccount.addr });
@@ -127,91 +179,59 @@ describe('Mamm config testing', () => {
     expect(globalState.treasuryAddress).toBe(treasuryAccount.addr);
   });
 
-  test('Update protocol fee', async () => {
-    await mammClient.send.updateProtocolFee({ args: { newFee: 10n } });
-    const globalState = await mammClient.state.global.getAll();
-    expect(globalState.protocolFeeBps).toBe(10n);
-  });
+  test('Add liquidity as LP 1', async () => {
+    const globalStateBefore = await mammClient.state.global.getAll();
+    const lpTokenId = globalStateBefore.lpTokenId || 0n;
+    const lpTokenSupply = globalStateBefore.totalLpSupply || 0n;
+    const primaryReserve = globalStateBefore.primaryTokenReserve || 0n;
+    const secondaryReserve = globalStateBefore.secondaryTokenReserve || 0n;
 
-  test('Update protocol fee as non admin', async () => {
-    const nonAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('non-admin-account', algos(100));
-    algorand.account.setSignerFromAccount(nonAdminAccount);
-    await expect(
-      mammClient.send.updateProtocolFee({ args: { newFee: 10n }, sender: nonAdminAccount.addr })
-    ).rejects.toThrowError();
-  });
+    expect(lpTokenId).toBeGreaterThan(0n);
 
-  test('Update swap fee', async () => {
-    await mammClient.send.updateSwapFee({ args: { newFee: 10n } });
-    const globalState = await mammClient.state.global.getAll();
-    expect(globalState.swapFeeBps).toBe(10n);
-  });
+    const primaryAmount = 100_000n;
+    const secondaryAmount = 100_000n;
 
-  test('Update swap fee as non admin', async () => {
-    const nonAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('non-admin-account', algos(100));
-    algorand.account.setSignerFromAccount(nonAdminAccount);
-    await expect(
-      mammClient.send.updateSwapFee({ args: { newFee: 10n }, sender: nonAdminAccount.addr })
-    ).rejects.toThrowError();
-  });
-
-  test('Update treasury address', async () => {
-    const newTreasuryAccount = await algorand.account.kmd.getOrCreateWalletAccount('new-treasury-account', algos(100));
-    await mammClient.send.updateTreasury({
-      args: { newTreasury: newTreasuryAccount.addr },
-      sender: deployerAccount.addr,
+    await algorand.send.assetOptIn({
+      sender: firstLPAccount.addr,
+      assetId: lpTokenId,
     });
+
+    const primaryAssetTransfer = algorand.createTransaction.assetTransfer({
+      sender: firstLPAccount.addr,
+      receiver: mammClient.appAddress,
+      assetId: primaryAssetId,
+      amount: primaryAmount,
+    });
+    const secondaryAssetTransfer = algorand.createTransaction.assetTransfer({
+      sender: firstLPAccount.addr,
+      receiver: mammClient.appAddress,
+      assetId: secondaryAssetId,
+      amount: secondaryAmount,
+    });
+
+    await mammClient.send.addLiquidity({
+      args: {
+        primaryAssetTransfer,
+        secondaryAssetTransfer,
+        primaryAmount,
+        secondaryAmount,
+      },
+      extraFee: algokit.microAlgos(2_000),
+      sender: firstLPAccount.addr,
+    });
+
+    const expectedLPMint = BigInt(Math.sqrt(Number(primaryAmount * secondaryAmount)));
+    const expectedKValue = BigInt((primaryAmount + primaryReserve) * (secondaryReserve + secondaryAmount));
+    expect(expectedLPMint).toBe(100_000n);
+    const firstUserLPBalance = await algorand.client.algod
+      .accountAssetInformation(firstLPAccount.addr, Number(lpTokenId))
+      .do();
+    expect(firstUserLPBalance['asset-holding'].amount).toBe(Number(expectedLPMint));
+
     const globalState = await mammClient.state.global.getAll();
-    expect(globalState.treasuryAddress).toBe(newTreasuryAccount.addr);
-  });
-
-  test('Update treasury address as non admin', async () => {
-    const nonAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('non-admin-account', algos(100));
-    algorand.account.setSignerFromAccount(nonAdminAccount);
-
-    algorand.account.setSignerFromAccount(nonAdminAccount);
-    await expect(
-      mammClient.send.updateTreasury({ args: { newTreasury: nonAdminAccount.addr }, sender: nonAdminAccount.addr })
-    ).rejects.toThrowError();
-  });
-
-  test('Update minimum balance', async () => {
-    await mammClient.send.updateMinimumBalance({ args: { newMbr: 1_000n } });
-    const globalState = await mammClient.state.global.getAll();
-    expect(globalState.minimumBalance).toBe(1_000n);
-  });
-
-  test('Update minimum balance as non admin', async () => {
-    const nonAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('non-admin-account', algos(100));
-    algorand.account.setSignerFromAccount(nonAdminAccount);
-
-    await expect(
-      mammClient.send.updateMinimumBalance({ args: { newMbr: 1_000n }, sender: nonAdminAccount.addr })
-    ).rejects.toThrowError();
-  });
-
-  test('update admin non admin account', async () => {
-    const nonAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('non-admin-account', algos(100));
-    algorand.account.setSignerFromAccount(nonAdminAccount);
-    await expect(
-      mammClient.send.updateAdmin({ args: { newAdmin: nonAdminAccount.addr }, sender: nonAdminAccount.addr })
-    ).rejects.toThrowError();
-  });
-
-  test('update admin', async () => {
-    secondaryAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('new-admin-account', algos(100));
-    algorand.account.setSignerFromAccount(secondaryAdminAccount);
-    algorand.account.setDefaultSigner(secondaryAdminAccount);
-    await mammClient.send.updateAdmin({ args: { newAdmin: secondaryAdminAccount.addr }, sender: deployerAccount.addr });
-    const globalState = await mammClient.state.global.getAll();
-    expect(globalState.admin).toBe(secondaryAdminAccount.addr);
-  });
-
-  test.skip('delete application', async () => {
-    await mammClient.send.updateContractEnding({ args: { newEnding: 1n }, sender: secondaryAdminAccount.addr });
-    const globalState = await mammClient.state.global.getAll();
-    expect(globalState.contractEnding).toBe(1n);
-    await mammClient.send.delete.deleteApplication({ args: {}, sender: secondaryAdminAccount.addr });
-    await expect(mammClient.state.global.getAll()).rejects.toThrowError();
+    expect(globalState.primaryTokenReserve).toBe(primaryReserve + primaryAmount);
+    expect(globalState.secondaryTokenReserve).toBe(secondaryReserve + secondaryAmount);
+    expect(globalState.totalLpSupply).toBe(lpTokenSupply - expectedLPMint);
+    expect(globalState.kValue).toBe(expectedKValue);
   });
 });

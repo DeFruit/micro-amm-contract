@@ -29,6 +29,8 @@ export class Mamm extends Contract {
 
   total_lp_supply = GlobalStateKey<uint64>({ key: 'tlps' });
 
+  lp_tokens_issued = GlobalStateKey<uint64>({ key: 'lpti' });
+
   k_value = GlobalStateKey<uint64>({ key: 'k' });
 
   lp_token_id = GlobalStateKey<uint64>({ key: 'lp' });
@@ -51,11 +53,45 @@ export class Mamm extends Contract {
 
   minimum_balance = GlobalStateKey<uint64>({ key: 'minbal' }); // can be updated
 
+  contract_ending = GlobalStateKey<uint64>({ key: 'end' });
+
   contract_version = GlobalStateKey<uint64>({ key: 'version' });
 
+  // Lifecycle functions
   // Initializes admin to the creator of the application
   createApplication(): void {
     this.admin.value = this.txn.sender;
+  }
+
+  deleteApplication(): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can delete the application');
+    assert(this.contract_ending.value === 1, 'Contract needs to be ending first');
+    assert(this.primary_token_reserve.value === 0, 'Primary reserve must be empty');
+    assert(this.secondary_token_reserve.value === 0, 'Secondary reserve must be empty');
+
+    // opt out of primary and secondary
+    sendAssetTransfer({
+      xferAsset: AssetID.fromUint64(this.primary_token_id.value),
+      assetReceiver: this.admin.value,
+      assetAmount: 0,
+      assetCloseTo: this.admin.value,
+      fee: 1_000,
+    });
+    sendAssetTransfer({
+      xferAsset: AssetID.fromUint64(this.secondary_token_id.value),
+      assetReceiver: this.admin.value,
+      assetAmount: 0,
+      assetCloseTo: this.admin.value,
+      fee: 1_000,
+    });
+    this.minimum_balance.value = TOKEN_MBR * 2;
+    /*     const algoToSend = this.app.address.balance - this.minimum_balance.value - 1000;
+    sendPayment({
+      receiver: this.admin.value,
+      amount: algoToSend,
+      fee: 1_000,
+    }); */
+    this.deleteApplication();
   }
 
   // Prepares the application, including opting in to assets and creating the LP token
@@ -119,15 +155,35 @@ export class Mamm extends Contract {
   }
 
   // Adds liquidity to the pool and mints the appropriate number of LP tokens
-  addLiquidity(primaryAmount: uint64, secondaryAmount: uint64): void {
+  addLiquidity(
+    primaryAmount: uint64,
+    secondaryAmount: uint64,
+    primaryAssetTransfer: AssetTransferTxn,
+    secondaryAssetTransfer: AssetTransferTxn
+  ): void {
     const primaryReserve = this.primary_token_reserve.value;
     const secondaryReserve = this.secondary_token_reserve.value;
     const totalLPSupply = this.total_lp_supply.value;
+    const lpTokensIssued = this.lp_tokens_issued.value;
+
+    // Ensure valid input amounts
+    verifyAssetTransferTxn(primaryAssetTransfer, {
+      sender: this.txn.sender,
+      assetReceiver: this.app.address,
+      xferAsset: AssetID.fromUint64(this.primary_token_id.value),
+      assetAmount: primaryAmount,
+    });
+    verifyAssetTransferTxn(secondaryAssetTransfer, {
+      sender: this.txn.sender,
+      assetReceiver: this.app.address,
+      xferAsset: AssetID.fromUint64(this.secondary_token_id.value),
+      assetAmount: secondaryAmount,
+    });
 
     let lpTokensMinted: uint64;
 
     // Case 1: Initial Liquidity
-    if (totalLPSupply === 0) {
+    if (lpTokensIssued === 0) {
       lpTokensMinted = sqrt(primaryAmount * secondaryAmount);
     }
     // Case 2: Adding Liquidity (Matching Pool Ratio)
@@ -140,8 +196,9 @@ export class Mamm extends Contract {
     // Update the global state for reserves and total LP supply
     this.primary_token_reserve.value = primaryReserve + primaryAmount;
     this.secondary_token_reserve.value = secondaryReserve + secondaryAmount;
-    this.total_lp_supply.value = totalLPSupply + lpTokensMinted;
+    this.total_lp_supply.value = totalLPSupply - lpTokensMinted;
     this.k_value.value = (primaryReserve + primaryAmount) * (secondaryReserve + secondaryAmount);
+    this.lp_tokens_issued.value = lpTokensIssued + lpTokensMinted;
 
     // Mint LP tokens
     sendAssetTransfer({
@@ -149,7 +206,6 @@ export class Mamm extends Contract {
       assetReceiver: this.txn.sender,
       assetAmount: lpTokensMinted,
     });
-    this.total_lp_supply.value = this.total_lp_supply.value - lpTokensMinted;
   }
 
   removeLiquidity(burnTxn: AssetTransferTxn, lpTokensBurned: uint64): void {
@@ -180,6 +236,7 @@ export class Mamm extends Contract {
 
     // Burn LP tokens
     this.total_lp_supply.value = this.total_lp_supply.value + lpTokensBurned;
+    this.lp_tokens_issued.value = this.lp_tokens_issued.value - lpTokensBurned;
 
     // Transfer primary and secondary back to user
     if (this.primary_token_id.value !== 0) {
@@ -363,5 +420,10 @@ export class Mamm extends Contract {
   updateMinimumBalance(newMBR: uint64): void {
     assert(this.admin.value === this.txn.sender, 'Only admin can update the minimum balance requirement');
     this.minimum_balance.value = newMBR;
+  }
+
+  updateContractEnding(newEnding: uint64): void {
+    assert(this.admin.value === this.txn.sender, 'Only admin can update the contract ending');
+    this.contract_ending.value = newEnding;
   }
 }
