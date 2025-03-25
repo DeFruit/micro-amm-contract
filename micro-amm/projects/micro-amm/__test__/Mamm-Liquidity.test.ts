@@ -159,7 +159,7 @@ describe('Mamm liquidity testing', () => {
         lpAssetUrl: 'https://lp-asset-url.com',
         swapFeeBps: 30,
         protocolFeeBps: 5,
-        treasuryAddress: treasuryAccount.addr,
+        treasuryAddress: treasuryAccount.addr.toString(),
       },
     });
     const globalState = await mammClient.state.global.getAll();
@@ -226,7 +226,7 @@ describe('Mamm liquidity testing', () => {
     const firstUserLPBalance = await algorand.client.algod
       .accountAssetInformation(firstLPAccount.addr, Number(lpTokenId))
       .do();
-    expect(firstUserLPBalance['asset-holding'].amount).toBe(Number(expectedLPMint));
+    expect(firstUserLPBalance.assetHolding?.amount).toBe(Number(expectedLPMint));
 
     const globalState = await mammClient.state.global.getAll();
     expect(globalState.primaryTokenReserve).toBe(primaryReserve + primaryAmount);

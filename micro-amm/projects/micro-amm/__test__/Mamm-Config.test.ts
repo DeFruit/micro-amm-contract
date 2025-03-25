@@ -107,7 +107,7 @@ describe('Mamm config testing', () => {
         lpAssetUrl: 'https://lp-asset-url.com',
         swapFeeBps: 30,
         protocolFeeBps: 5,
-        treasuryAddress: treasuryAccount.addr,
+        treasuryAddress: treasuryAccount.addr.toString(),
       },
     });
     const globalState = await mammClient.state.global.getAll();
@@ -124,7 +124,7 @@ describe('Mamm config testing', () => {
     expect(globalState.minimumBalance).toBe(400_000n);
     expect(globalState.swapFeeBps).toBe(SWAP_FEE_BPS);
     expect(globalState.protocolFeeBps).toBe(PROTOCOL_FEE_BPS);
-    expect(globalState.treasuryAddress).toBe(treasuryAccount.addr);
+    expect(globalState.treasuryAddress).toBe(treasuryAccount.addr.toString());
   });
 
   test('Update protocol fee', async () => {
@@ -158,11 +158,11 @@ describe('Mamm config testing', () => {
   test('Update treasury address', async () => {
     const newTreasuryAccount = await algorand.account.kmd.getOrCreateWalletAccount('new-treasury-account', algos(100));
     await mammClient.send.updateTreasury({
-      args: { newTreasury: newTreasuryAccount.addr },
+      args: { newTreasury: newTreasuryAccount.addr.toString() },
       sender: deployerAccount.addr,
     });
     const globalState = await mammClient.state.global.getAll();
-    expect(globalState.treasuryAddress).toBe(newTreasuryAccount.addr);
+    expect(globalState.treasuryAddress).toBe(newTreasuryAccount.addr.toString());
   });
 
   test('Update treasury address as non admin', async () => {
@@ -171,7 +171,10 @@ describe('Mamm config testing', () => {
 
     algorand.account.setSignerFromAccount(nonAdminAccount);
     await expect(
-      mammClient.send.updateTreasury({ args: { newTreasury: nonAdminAccount.addr }, sender: nonAdminAccount.addr })
+      mammClient.send.updateTreasury({
+        args: { newTreasury: nonAdminAccount.addr.toString() },
+        sender: nonAdminAccount.addr,
+      })
     ).rejects.toThrowError();
   });
 
@@ -194,7 +197,7 @@ describe('Mamm config testing', () => {
     const nonAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('non-admin-account', algos(100));
     algorand.account.setSignerFromAccount(nonAdminAccount);
     await expect(
-      mammClient.send.updateAdmin({ args: { newAdmin: nonAdminAccount.addr }, sender: nonAdminAccount.addr })
+      mammClient.send.updateAdmin({ args: { newAdmin: nonAdminAccount.addr.toString() }, sender: nonAdminAccount.addr })
     ).rejects.toThrowError();
   });
 
@@ -202,9 +205,12 @@ describe('Mamm config testing', () => {
     secondaryAdminAccount = await algorand.account.kmd.getOrCreateWalletAccount('new-admin-account', algos(100));
     algorand.account.setSignerFromAccount(secondaryAdminAccount);
     algorand.account.setDefaultSigner(secondaryAdminAccount);
-    await mammClient.send.updateAdmin({ args: { newAdmin: secondaryAdminAccount.addr }, sender: deployerAccount.addr });
+    await mammClient.send.updateAdmin({
+      args: { newAdmin: secondaryAdminAccount.addr.toString() },
+      sender: deployerAccount.addr,
+    });
     const globalState = await mammClient.state.global.getAll();
-    expect(globalState.admin).toBe(secondaryAdminAccount.addr);
+    expect(globalState.admin).toBe(secondaryAdminAccount.addr.toString());
   });
 
   test.skip('delete application', async () => {
